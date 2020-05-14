@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="header">
+  <h1>Support For You</h1>
+  <p>Together we make a difference !!</p>
+</div>
+
+<div class="topnav">
+  <a href="#About">About Us</a>
+  <a href="#">Login</a>
+  <a href="#">Sign Up</a>
+  
+</div>
+
+<div class="header">
+  
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="slide1.png" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="slide2.png" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="slide3.png" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+
+</div>
+<div class="footer"></div>
+  <h2 id="About">About Us</h2>
+  <p>At this time in COVID-19, many people are isolated in their houses. SupportForYou is a website where people who need help and donators can meet each other. 
+    The donators can provide tangible and non-tangible aids to needy people.  
+    This is a volunteer help website totally depending on the people who want to help those in need but need a platform. It makes possible to donate items, time and care. 
+    </p>
+</div>
+<script>
+  var slideIndex = 0;
+  showSlides();
+  
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+   
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    
+    slides[slideIndex-1].style.display = "block";  
+   
+    setTimeout(showSlides, 3000); // Change image every 2 seconds
+  }
+  </script>
+
+</body>
+</html>
