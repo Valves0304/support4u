@@ -3,7 +3,7 @@
 // ---------------------------------------------------------------------------
 require_once($_SERVER['DOCUMENT_ROOT'] . '/connection.php');
 
-class Util 
+class Util
 {
     // *******************************************************************************************************
     // *** sendEmail
@@ -11,18 +11,18 @@ class Util
     // ***
     // *** sends a plain text or html email
     // ***
-    public static function sendEmail($from, $to, $subject, $message, $replyTo) 
+    public static function sendEmail($from, $to, $subject, $message, $replyTo)
     {
 
         // To send HTML mail, the Content-type header must be set
         $headers  = 'MIME-Version: 1.0' . "\r\n";
         $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
- 
+
         // Create email headers
         $headers .= 'From: ' . $from ."\r\n" .
                     'Reply-To: ' . $replyTo ."\r\n" .
                     'X-Mailer: PHP/' . phpversion();
- 
+
         // Sending email
         if (!mail($to, $subject, $message, $headers)) {
             $msgException  = 'There was an error sending email: <BR>';
@@ -37,10 +37,10 @@ class Util
             error_log($msgException, 3, getenv('LOG_FILE'));
 
             throw new exception ($msgException);
-            
+
         }
     }
- 
+
 
     // *******************************************************************************************************
     // *** hash_equals
@@ -65,39 +65,49 @@ class Util
             return !$ret;
         }
     }
-    
+
+    // *******************************************************************************************************
+    // *** createLink
+    // *******************************************************************************************************
+    // ***
+    // *** Returns the appropriate URL given a Controller and Action
+    public static function createLink($controller, $action)
+    {
+        return 'http://support4u.website/s4u.php?c=' . $controller . '&action=' . $action;
+    }
+
     // *******************************************************************************************************
     // *** createSelect
     // *******************************************************************************************************
-    // ***
-    // *** cria uma tag HTML select a partir de um array de objetos 
-    // *** a função espera receber o nome dos métodos a chamar para obter os valores do select
-    // *** é possível informar um valor de chave para vir selecionado
-    // *** obs: apenas os itens <OPTION> são gerados, por conta das várias opções de SELECT
-    public static function createSelect($lista, $funcaoChave, $funcaoTexto, $chaveSelecionada = NULL, $funcaoTextoData = NULL) 
+    // *** s4u
+    // *** creates an HTML select tag from an array of objects
+    // *** this function expects to receive called method name to get the select values
+    // *** It is possible to enter a key value to be selected
+    // note: only <OPTION> items are generated, due to the various SELECT options
+    public static function createSelect($list, $functionKey, $functionText, $selectedKey = NULL, $functionTextData = NULL)
     {
         $output = '';
-        
-        foreach($lista as $objeto) {
 
-            $output .= '<OPTION VALUE=' 
-                    .  $objeto->{$funcaoChave}() 
-                    .  (!is_null($funcaoTextoData) ? ' data-aux="' . $objeto->{$funcaoTextoData}() . '" ' : '')
-                    .  ((!is_null($chaveSelecionada) and $objeto->{$funcaoChave}() == $chaveSelecionada) ? ' SELECTED>' : '>')
-                    .  $objeto->{$funcaoTexto}() 
+        foreach($list as $objeto) {
+
+            $output .= '<OPTION VALUE='
+                    .  $objeto->{$functionKey}()
+                    .  (!is_null($functionTextData) ? ' data-aux="' . $objeto->{$functionTextData}() . '" ' : '')
+                    .  ((!is_null($selectedKey) and $objeto->{$functionKey}() == $selectedKey) ? ' SELECTED>' : '>')
+                    .  $objeto->{$functionText}()
                     . '</OPTION> <BR>';
-        }    
+        }
 
         return $output;
     }
-    
-    
+
+
     // *******************************************************************************************************
     // *** resizeImage
     // *******************************************************************************************************
     // ***
     // *** Resize an image and keep the proportions
-    // *** @author Allison Beckwith <allison@planetargon.com>  
+    // *** @author Allison Beckwith <allison@planetargon.com>
     public static function resizeImage($filename, $type, $max_width, $max_height)
     {
         list($orig_width, $orig_height) = getimagesize($filename);
@@ -118,105 +128,105 @@ class Util
         }
 
         $imagemNova = imagecreatetruecolor($width, $height);
-        
-        // tenta criar imagem a partir do arquivo informado. 
+
+        // tenta criar imagem a partir do arquivo informado.
         switch($type){
             case 'image/bmp': $imagemAntiga = Util::imagecreatefrombmp($filename); break;
             case 'image/gif': $imagemAntiga = imagecreatefromgif($filename); break;
             case 'image/jpeg': $imagemAntiga = imagecreatefromjpeg($filename); break;
             case 'image/png': $imagemAntiga = imagecreatefrompng($filename); break;
             default : return null;
-        }        
+        }
 
-        imagecopyresampled($imagemNova, $imagemAntiga, 0, 0, 0, 0, 
+        imagecopyresampled($imagemNova, $imagemAntiga, 0, 0, 0, 0,
                                      $width, $height, $orig_width, $orig_height);
 
         return $imagemNova;
     }
-    
-    // não há função nativa em PHP para criar um bmp
-    public static function imagecreatefrombmp( $filename ) 
-    { 
-        $file = fopen( $filename, "rb" ); 
-        $read = fread( $file, 10 ); 
-        while( !feof( $file ) && $read != "" ) 
-        { 
-            $read .= fread( $file, 1024 ); 
-        } 
-        $temp = unpack( "H*", $read ); 
-        $hex = $temp[1]; 
-        $header = substr( $hex, 0, 104 ); 
-        $body = str_split( substr( $hex, 108 ), 6 ); 
-        if( substr( $header, 0, 4 ) == "424d" ) 
-        { 
-            $header = substr( $header, 4 ); 
-            // Remove some stuff? 
-            $header = substr( $header, 32 ); 
-            // Get the width 
-            $width = hexdec( substr( $header, 0, 2 ) ); 
-            // Remove some stuff? 
-            $header = substr( $header, 8 ); 
-            // Get the height 
-            $height = hexdec( substr( $header, 0, 2 ) ); 
-            unset( $header ); 
-        } 
-        $x = 0; 
-        $y = 1; 
-        $image = imagecreatetruecolor( $width, $height ); 
-        foreach( $body as $rgb ) 
-        { 
-            $r = hexdec( substr( $rgb, 4, 2 ) ); 
-            $g = hexdec( substr( $rgb, 2, 2 ) ); 
-            $b = hexdec( substr( $rgb, 0, 2 ) ); 
-            $color = imagecolorallocate( $image, $r, $g, $b ); 
-            imagesetpixel( $image, $x, $height-$y, $color ); 
-            $x++; 
-            if( $x >= $width ) 
-            { 
-                $x = 0; 
-                $y++; 
-            } 
-        } 
-        return $image; 
-    }  
-    
+
+    // nï¿½o hï¿½ funï¿½ï¿½o nativa em PHP para criar um bmp
+    public static function imagecreatefrombmp( $filename )
+    {
+        $file = fopen( $filename, "rb" );
+        $read = fread( $file, 10 );
+        while( !feof( $file ) && $read != "" )
+        {
+            $read .= fread( $file, 1024 );
+        }
+        $temp = unpack( "H*", $read );
+        $hex = $temp[1];
+        $header = substr( $hex, 0, 104 );
+        $body = str_split( substr( $hex, 108 ), 6 );
+        if( substr( $header, 0, 4 ) == "424d" )
+        {
+            $header = substr( $header, 4 );
+            // Remove some stuff?
+            $header = substr( $header, 32 );
+            // Get the width
+            $width = hexdec( substr( $header, 0, 2 ) );
+            // Remove some stuff?
+            $header = substr( $header, 8 );
+            // Get the height
+            $height = hexdec( substr( $header, 0, 2 ) );
+            unset( $header );
+        }
+        $x = 0;
+        $y = 1;
+        $image = imagecreatetruecolor( $width, $height );
+        foreach( $body as $rgb )
+        {
+            $r = hexdec( substr( $rgb, 4, 2 ) );
+            $g = hexdec( substr( $rgb, 2, 2 ) );
+            $b = hexdec( substr( $rgb, 0, 2 ) );
+            $color = imagecolorallocate( $image, $r, $g, $b );
+            imagesetpixel( $image, $x, $height-$y, $color );
+            $x++;
+            if( $x >= $width )
+            {
+                $x = 0;
+                $y++;
+            }
+        }
+        return $image;
+    }
+
     // *******************************************************************************************************
     // *** validaCPF
     // *******************************************************************************************************
     // ***
     public static function validaCPF($cpf = null) {
-     
+
         // Verifica se um numero foi informado
         if(empty($cpf)) {
             return false;
         }
-     
+
         // Elimina possivel mascara
         $cpf = preg_replace('/[^0-9]/', '', $cpf);
         $cpf = str_pad($cpf, 11, '0', STR_PAD_LEFT);
-        // Verifica se o numero de digitos informados e igual a 11 
+        // Verifica se o numero de digitos informados e igual a 11
         if (strlen($cpf) != 11) {
             return false;
         }
-        // Verifica se nenhuma das sequencias invalidas abaixo 
+        // Verifica se nenhuma das sequencias invalidas abaixo
         // foi digitada. Caso afirmativo, retorna falso
-        else if ($cpf == '00000000000' || 
-            $cpf == '11111111111' || 
-            $cpf == '22222222222' || 
-            $cpf == '33333333333' || 
-            $cpf == '44444444444' || 
-            $cpf == '55555555555' || 
-            $cpf == '66666666666' || 
-            $cpf == '77777777777' || 
-            $cpf == '88888888888' || 
+        else if ($cpf == '00000000000' ||
+            $cpf == '11111111111' ||
+            $cpf == '22222222222' ||
+            $cpf == '33333333333' ||
+            $cpf == '44444444444' ||
+            $cpf == '55555555555' ||
+            $cpf == '66666666666' ||
+            $cpf == '77777777777' ||
+            $cpf == '88888888888' ||
             $cpf == '99999999999') {
             return false;
          // Calcula os digitos verificadores para verificar se o
-         // CPF é válido
-         } else {   
-             
+         // CPF ï¿½ vï¿½lido
+         } else {
+
             for ($t = 9; $t < 11; $t++) {
-                 
+
                 for ($d = 0, $c = 0; $c < $t; $c++) {
                     $d += $cpf{$c} * (($t + 1) - $c);
                 }
@@ -225,11 +235,11 @@ class Util
                     return false;
                 }
             }
-     
+
             return true;
         }
-    }    
-    
+    }
+
     //Luhn algorithm identifier verification
     public static function checksum($card_number)
     {
@@ -241,7 +251,7 @@ class Util
 
         return array_sum(str_split($card_number_checksum)) % 10 === 0;
     }
-    
+
     // realiza teste de expressao regular para determinar o tipo de cartao
     public static function cardType($number)
     {
@@ -266,43 +276,43 @@ class Util
 	    }
 	    return $brand;
     }
-    
+
     //  Executa query no banco de dados
     public static function query($query) {
         $db = Db::getInstance();
         $dadosRetorno = array();
-      
+
         try {
             $result = $db->query($query);
         } catch (Exception $e) {
             return null;
         }
-        
+
         if (is_null($result)) {
             return null;
         }
         // retorna um array com os valores
         if (is_object($result)) {
             while($linha = $result->fetch_assoc()) {
-    
-                array_push($dadosRetorno, $linha);  
+
+                array_push($dadosRetorno, $linha);
             }
             return $dadosRetorno;
         } else {
             return $result;
         }
     }
-    
+
     // *******************************************************************************************************
     // *** acertaCase
     // *******************************************************************************************************
     // ***
     // *** converte string para camelCase
-    public static function acertaCase($texto) 
+    public static function acertaCase($texto)
     {
         return ucwords(strtolower($texto));
     }
-    
+
     // *******************************************************************************************************
     // *** removeAcentos
     // *******************************************************************************************************
@@ -311,7 +321,7 @@ class Util
     public static function removeAcentos($string) {
         if ( !preg_match('/[\x80-\xff]/', $string) )
             return $string;
-    
+
         $chars = array(
         // Decompositions for Latin-1 Supplement
         chr(195).chr(128) => 'A', chr(195).chr(129) => 'A',
@@ -408,12 +418,12 @@ class Util
         chr(197).chr(188) => 'z', chr(197).chr(189) => 'Z',
         chr(197).chr(190) => 'z', chr(197).chr(191) => 's'
         );
-    
+
         $string = strtr($string, $chars);
-    
+
         return $string;
-    }    
-    
+    }
+
     // *******************************************************************************************************
     // *** postCURL
     // *******************************************************************************************************
@@ -425,47 +435,46 @@ class Util
         foreach ( $post_data as $key => $value) {
             $post_items[] = $key . '=' . urlencode($value);
         }
-        
+
         //create the final string to be posted using implode()
         $post_string = implode ('&', $post_items);
-        
+
         //create cURL connection
         $curl_connection = curl_init($url);
-        
+
         //set options
         curl_setopt($curl_connection, CURLOPT_CONNECTTIMEOUT, 5);
         curl_setopt($curl_connection, CURLOPT_USERAGENT, "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)");
         curl_setopt($curl_connection, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($curl_connection, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($curl_connection, CURLOPT_FOLLOWLOCATION, 1);
-        
+
         //set data to be posted
         curl_setopt($curl_connection, CURLOPT_POSTFIELDS, $post_string);
-        
+
         //perform our request
         $result = curl_exec($curl_connection);
-        
+
         //show information regarding the request
         // d (curl_getinfo($curl_connection), $post_string);
-        
+
         //close the connection
         curl_close($curl_connection);
-        
+
         return $result;
 
     }
-    
+
     function urlString($post_data) {
         //traverse array and prepare data for posting (key1=value1)
         foreach ( $post_data as $key => $value) {
             $post_items[] = $key . '=' . urlencode($value);
         }
-        
+
         //create the final string to be posted using implode()
         $post_string = implode ('&', $post_items);
-        
+
         return $post_string;
     }
-  
-}
 
+}

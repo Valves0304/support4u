@@ -1,19 +1,21 @@
 <?php
-// Boiler
-// ViewPagesSobre.php: definiçao da view Sobre do controller cPages
-// autor: Dudu Waghabi
+// S4U
+// ViewPagesAbout.php: About view of CtlPages
+// autor: Support4u team
 // ---------------------------------------------------------------------------
-// a view exibe a página Sobre
-class ViewPagesAbout 
+class ViewPagesAbout
 {
     public function output()
     {
-        $output  = file_get_contents('classes/Views/htmlTemplates/headerPrincipal.html');
-        $output .= '<div><h1>Sobre</h1></div>';
-        $output .= '<div>Boiler is:<li>Fontes<li>Gambazza<li>Maya<li>Roxo</div>';
-        $output .= '<div><BR><a href="boiler.php?c=CtlPages&action=home">Voltar para home</a></div>';
+        $output  = ViewPagesHTMLHeader::output();
 
-        $output = str_replace('{versao}', getenv('VER'), $output);
+        $output .= file_get_contents('classes/Views/Pages/about.html');
+
+        $output .= '<div><BR><a href="' . Util::createLink("CtlPages","home") . '>Voltar para home</a></div>';
+
+        $output .= file_get_contents('classes/Views/Pages/footer.html');
+
+        $output = str_replace('{version}', getenv('VER'), $output);
         return $output;
 
     }

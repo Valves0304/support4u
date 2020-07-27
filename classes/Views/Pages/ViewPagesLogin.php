@@ -15,22 +15,22 @@ class ViewPagesLogin
 
     public function output()
     {
-        //$output  = ViewUserHeaderHTML::output();
-        $output  = file_get_contents('classes/Views/Pages/header.html');
+        $output  = ViewPagesHTMLHeader::output();
         $output .= file_get_contents('classes/Views/Pages/login.html');
         $output .= file_get_contents('classes/Views/Pages/footer.html');
 
 
-        // substituição de variáveis
+        // variables replacement
         if (!is_null($this->controllerModel->codError)) {
             $output = str_replace('{estilo_erro}', 'has-error', $output);
-            $output = str_replace('{mensagem_erro}', $this->controllerModel->msgError, $output);
+            $output = str_replace('{s4uErrorMesage}', $this->controllerModel->msgError, $output);
         } else {
             $output = str_replace('{estilo_erro}', '', $output);
-            $output = str_replace('{mensagem_erro}', '', $output);
+            $output = str_replace('{s4uErrorMesage}', '', $output);
         }
-
-        $output = str_replace('{versao}', getenv('VER'), $output);
+        $output = str_replace('{s4uLogin}', Util::createLink("CtlUsers","login"), $output);
+        $output = str_replace('{s4uRegister}', Util::createLink("CtlUsers","userRegister"), $output);
+        $output = str_replace('{version}', getenv('VER'), $output);
         return $output;
     }
 }

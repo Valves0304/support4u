@@ -35,34 +35,46 @@ class MdlUsers
             first_name,
             last_name,
             email,
-            age,
-            language_id,
             address,
             city_id,
             latitude,
             longitude,
             user_login,
             user_pass)'
-        . ' VALUES (?,?,?,?,?,?,?,?,?,?,?)');
+        . ' VALUES (?,?,?,?,?,?,?,?,?)');
+
+        $pass=$user->getCryptUserPass();
+        $exp=$user->getPassExpired();
+        $id=$user->getUserId();
+
+        $fname  = $user->getFirstName();
+        $lname  = $user->getLastName();
+        $email  = $user->getEmail();
+        $address= $user->getAddress();
+        $city   = $user->getCityId();
+        $lat    = $user->getLatitude();
+        $long   = $user->getLongitude();
+        $long   = $user->getLongitude();
+        $login  = $user->getUserLogin();
+        $pass   = $user->getCryptUserPass();
 
         // add values to the query
-        $qryInsert->bind_param('sssiisissss',
-                                $user->getFirstName(),
-                                $user->getLasttName(),
-                                $user->getEmail(),
-                                $user->getAge(),
-                                $user->getLanguageId(),
-                                $user->getAddress(),
-                                $user->getCityId(),
-                                $user->getLatitude(),
-                                $user->getLongitude(),
-                                $user->getUserLogin(),
-                                $user->getCryptUser_pass());
+        $qryInsert->bind_param('ssssiiiss',
+                                $fname,
+                                $lname,
+                                $email,
+                                $address,
+                                $city,
+                                $lat,
+                                $long,
+                                $login,
+                                $pass);
+
 
         // it runs insert query
         if ($qryInsert->execute() === TRUE) {
             // it gets the last id genereated by auto insert from DB and update object with this id
-            $city->setUser_id(mysqli_insert_id($db));
+            $user->setUserId(mysqli_insert_id($db));
         } else {
             // log error
             error_log(date('DATE_ATOM') . ' - Insert user Error ', 3, getenv('LOG_FILE'));
@@ -74,6 +86,44 @@ class MdlUsers
         return $user;
     }
 
+
+    // *******************************************************************************************************
+    // *** insert New User
+    // *******************************************************************************************************
+    // ***
+    // *** Insert new user from a parameter object user
+    // ***    - if success, it gets user_id created from DB and update object
+    public static function insertNewUser(User $user)
+    {
+        // get instance from DB
+        $db = Db::getInstance();
+
+        // it creates INSERT Query
+        $qryInsert = $db->prepare('INSERT INTO user_s4u (
+            user_login,
+            user_pass,
+            pass_expired)'
+        . ' VALUES (?,?,"N")');
+
+        // add values to the query
+        $qryInsert->bind_param('ss',
+                                $user->getUserLogin(),
+                                $user->getCryptUser_pass());
+
+        // it runs insert query
+        if ($qryInsert->execute() === TRUE) {
+            // it gets the last id genereated by auto insert from DB and update object with this id
+            $user->setUserId(mysqli_insert_id($db));
+        } else {
+            // log error
+            error_log(date('DATE_ATOM') . ' - Insert user Error ', 3, getenv('LOG_FILE'));
+            error_log('                         - erro: ' . $qryInsert->error_list, 3, getenv('LOG_FILE'));
+
+            throw new exception ('Data Base Fails. Insert not perfomed. ');
+        }
+
+        return $user;
+    }
     // *******************************************************************************************************
     // *** updateUser
     // *******************************************************************************************************
@@ -87,33 +137,32 @@ class MdlUsers
 
         // it creates UPDATE Query
         $qryUpdate = $db->prepare(' UPDATE user_s4u SET user_pass=? ,'
-                                . '  first_name=? , last_name=? , email=? , age=? , language_id=? , address=?,  city_id=?, latitude=?, longitude=? '
+                                . '  first_name=? , last_name=? , email=? , address=?,  city_id=?, latitude=?, longitude=?, pass_expired=? '
                                 . '             WHERE user_id=?');
 
                                     $pass=$user->getCryptUserPass();
                                     $fname =$user->getFirstName();
-                                    $lname=$user->getLasttName();
+                                    $lname=$user->getLastName();
                                     $email=$user->getEmail();
-                                    $age=$user->getAge();
-                                    $lang=$user->getLanguageId();
                                     $address=$user->getAddress();
                                     $city=$user->getCityId();
                                     $lat=$user->getLatitude();
                                     $long=$user->getLongitude();
+                                    $exp=$user->getPassExpired();
                                     $id=$user->getUserId();
+                                    // user Login never changes
 
         // add values to the query
-        $qryUpdate->bind_param('ssssiisissi',
+        $qryUpdate->bind_param('sssssisssi',
                                 $pass,
                                 $fname,
                                 $lname,
                                 $email,
-                                $age,
-                                $lang,
                                 $address,
                                 $city,
                                 $lat,
                                 $long,
+                                $exp,
                                 $id);
 
         // it runs UPDATE query
@@ -126,6 +175,7 @@ class MdlUsers
             throw new exception ('Data Base Fails. Update not perfomed. ');
         }
     }
+
 
     // *******************************************************************************************************
     // *** listUsers
@@ -162,17 +212,17 @@ class MdlUsers
         while($user = $result->fetch_assoc()) {
 
             $userData = new User();
-            $userData->setUser_id($user['user_id']);
+            $userData->setUserId($user['user_id']);
+            $userData->setUserLogin($user['user_login']);
             $userData->setCryptUserPass($user['user_pass']);
             $userData->setFirstName($user['first_name']);
-            $userData->setLast_name($user['last_name']);
+            $userData->setLastName($user['last_name']);
             $userData->setEmail($user['email']);
-            $userData->setAge($user['age']);
-            $userData->setLanguage_id($user['language_id']);
             $userData->setAddress($user['address']);
-            $userData->setCity_id($user['city_id']);
+            $userData->setCityId($user['city_id']);
             $userData->setLatitude($user['latitude']);
             $userData->setLongitude($user['longitude']);
+            $userData->setPassExpired($user['pass_expired']);
 
             array_push($userList, $userData);
 
@@ -206,40 +256,8 @@ class MdlUsers
     // *** Return user based on user email
     // ***
     public static function findUserEmail($userEmail) {
-        return (MdlUsers::listUsers('email = ' . $userEmail)[0]);
+        return (MdlUsers::listUsers('email = "' . $userEmail . '"')[0]);
     }
-
-//
-// I dont have forget my password because I dont have way to send email
-//
-
-public function registerUser()
-{
-
-    // GET values
-    $userLogin  = isset($_GET['usuario']) ? $_GET['usuario'] : FALSE;
-
-    // condições de autorização INTERESSANTE!!!!
-    //if (($userLogin AND $userLogin != $_SESSION['USUARIO'])  {                // apenas adms podem alterar por idAtleta
-    //    $this->view = new ViewPagesSemPermissao();
-    //    return;
-    //}
-
-    // prepara o modelo
-    $this->model->user = new User();
-
-    // carrega informações atuais na tela
-    if ($userLogin) {
-        $this->model->user = MdlUsers::findUserLogin($userLogin);
-    }
-
-    $this->view = new ViewUserRegister($this->model);
-
-
-    // exibe informações para atualização/inclusão
-    //$this->view = new ViewAtletasAtualizaCadastro($this->model);
-}
-
 
 }
 // *******************************************************************************************************
@@ -255,14 +273,13 @@ class User
     private	$first_name;
     private	$last_name;
     private	$email;
-    private	$age;
-    private	$language_id;
     private	$address;
     private	$city_id;
     private	$latitude;
     private	$longitude;
     private $user_login;
     private $user_pass;
+    private $pass_expired;
 
     // getters e setters
     //	User_id
@@ -270,7 +287,7 @@ class User
     {
       return $this->user_id;
     }
-    public function setUser_id($user_id)
+    public function setUserId($user_id)
     {
       $this->user_id  = $user_id;
     }
@@ -286,11 +303,11 @@ class User
     }
 
     //	Last_name
-    public function getLasttName()
+    public function getLastName()
     {
       return $this->last_name;
     }
-    public function setLast_name($last_name)
+    public function setLastName($last_name)
     {
       $this->last_name = $last_name;
     }
@@ -304,25 +321,14 @@ class User
     {
       $this->email = $email;
     }
-
-    //	Age
-    public function getAge()
+    //	Flag Pass Exired
+    public function getPassExpired()
     {
-      return $this->age;
+      return $this->pass_expired;
     }
-    public function setAge($age)
+    public function setPassExpired($pass_expired)
     {
-      $this->age = $age;
-    }
-
-    //	Language_id
-    public function getLanguageId()
-    {
-      return $this->language_id;
-    }
-    public function setLanguage_id($language_id)
-    {
-      $this->language_id = $language_id;
+      $this->pass_expired = $pass_expired;
     }
 
     //	Address
@@ -339,7 +345,7 @@ class User
     {
       return $this->city_id;
     }
-    public function setCity_id($city_id)
+    public function setCityId($city_id)
     {
       $this->city_id = $city_id;
     }
@@ -405,11 +411,5 @@ class User
 
             // crypto pass
             $this->user_pass = crypt($pass, $salt);
-
-
-            //$this->setObsUsuario($pass);
-
-            // atualiza a data de expiração da senha
-            //$this->setDataExpiracaoSenha((new DateTimeImmutable())->add(new DateInterval(Usuario::PRAZO_EXPIRACAO_SENHA)));
         }
 }

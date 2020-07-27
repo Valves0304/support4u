@@ -13,17 +13,23 @@ class ViewNewRequest
 
     public function output()
     {
-        $output = file_get_contents('classes/Views/Pages/header.html');
+        $output  = ViewPagesHTMLHeader::output();
         $output .= file_get_contents('classes/Views/Requests/newRequest.html');
         $output .= file_get_contents('classes/Views/Pages/footer.html');
 
         // variables replacement
-        $output = str_replace('{version}', getenv('VER'), $output); // Waghabi esse nao funciona
-        if (isset($_SESSION['NOME_USUARIO'])) {
-          $output = str_replace('{msg-usuario}','Hello '. $_SESSION['NOME_USUARIO'] , $output);
-        } else {
-          $output = str_replace('{msg-usuario}','Login', '<a href=s4u.php?c=CtlPagess&action=login><span class="fa fa-sign-in red-boiler-background"></span> Login</a>', $output);
-        }
+        $output = str_replace('{version}', getenv('VER'), $output);
+
+        // agora você está chegando num problema que eu tive e cuja solução foi aquela view estática ViewUsuariosCabecalhoHTML (que hoje acho que deveria ser ViewPagesCabecalhoHTML)
+
+        // a questão é: você vai repetir esse código em todas as views do sistema? Imagina o inferno de manutenção quando quiser mudar a mensagem, por exemplo.
+
+        // por outro lado, encher o HTML de código é terrível, e quebra a SoC (Separation of Concerns).
+
+        // A solução que encontrei foi criar uma view estática, a ser chamada por todas as views, que construa o cabeçalho. Ela vai concentrar toda a inteligêcia do cabeçalho,
+        // como essas mudanças de itens de menu e links, no caso de usuário logado, ou a depender do nível.
+
+
 
         return $output;
     }

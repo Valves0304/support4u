@@ -1,20 +1,20 @@
 <?php
-// Boiler
-// ViewPagesErro.php: definiçao da view de Erro do controller cPages
-// autor: Dudu Waghabi
+// S4u
+// ViewPagesError.php: View Errors from controller ctlPages
+// autor: Vinicius Alves
 // ---------------------------------------------------------------------------
-// a view exibe uma tela de erro 
+// Error screen
 class ViewPagesErro {
     private $controllerModel;   // modelo modificado pelo controller
 
-    public function __construct($model) 
+    public function __construct($model)
     {
         $this->controllerModel = $model;
     }
-    
-    public function output() 
+
+    public function output()
     {
-        $output  = ViewUsuariosCabecalhoHTML::output();
+        $output  = ViewPagesHTMLHeader::output();
         $output .= '<div class="container-fluid">
                       <div class="row">
                         <div class="col-sm-3 col-sm-offset-1">
@@ -26,9 +26,9 @@ class ViewPagesErro {
         $output .= '      <div class="red-boiler"><BR><a href=boiler.php?c=CtlPages&action=home>Voltar para home</a></div>';
         $output .= '</div></div></div>';
         $output .= file_get_contents('classes/Views/Pages/footer.html');
-        
+
         $output = str_replace('{versao}', getenv('VER'), $output);
-        
+
         return $output;
     }
 }

@@ -8,9 +8,9 @@
 // - registerUsuario
 class CtlUsers
 {
-    // Atributos
-    public $view;   // view escolhida pelo controller
-    private $model; // modelo do controller, a ser modificado
+    // Attributes
+    public $view;   // Controller chosen view
+    private $model; // Controller model
 
     // Construtor
     public function __construct()
@@ -19,8 +19,8 @@ class CtlUsers
         $this->model = new MdlUsers();
     }
 
-    // Métodos
-    // Ações
+    // Methods
+    // Actions
 
     public function emailList()
     {
@@ -29,9 +29,7 @@ class CtlUsers
 
     public function login($userLogin = null)
     {
-        // esse usuário do parâmetro serve para quando o sistema encontra (no CtlPages/login) um cookie com o nome do usuário e loga ele direto, sem precisar de senha
-        // na maior parte das vezes, você vai receber usuário e senha via $_POST[]:
-        // $_POST['login'] e $_POST['password']
+        // this parameter user is for when the system finds (in CtlPages / login) a cookie with the username and logs it directly, without needing a password
 
         $this->view = new ViewPagesLogin($this->model);
         if (isset($_POST['login'])) {
@@ -45,6 +43,11 @@ class CtlUsers
         {
             $mdl = new MdlPages();
             $mdl->msgError = 'User or password wrong';
+
+            if (empty($_POST['login'])){
+              $mdl->msgError = '';
+            }
+
             $mdl->codError = 1;
             $this->view = new ViewPagesLogin($mdl);
             return;
@@ -54,15 +57,14 @@ class CtlUsers
         $_SESSION['USUARIO'] = $this->model->usuario->getUserLogin();
         $_SESSION['NOME_USUARIO'] = $this->model->usuario->getFirstName();
 
-
         // define a view de novo request
-        $this->view = new ViewNewRequest();
+        $this->view = new ViewGetStarted();
 
     }
 
 
         // verifica se a senha está expirada e chama a tela de troca de senha
-/*      if ($this->model->usuario->getDataExpiracaoSenha() < new DateTime()) {
+/*      if ($this->model->user->getDataExpiracaoSenha() < new DateTime()) {
             $this->model->msgErro = 'Sua senha expirou. Por favor, informe uma nova senha';
             $this->model->campoErro = 1;
             $this->view = new ViewUsuariosTrocaSenha($this->model);
@@ -75,7 +77,7 @@ class CtlUsers
         unset($_SESSION['USUARIO']);
         unset($_SESSION['ID_USUARIO']);
         unset($_SESSION['NOME_USUARIO']);
-        unset($_SESSION['NIVAUT']);
+//        unset($_SESSION['NIVAUT']);
 //        setcookie ('boilerchannel', '', time() - 1); // expira o cookie
         $this->view = new ViewPagesHome();
 
@@ -91,15 +93,15 @@ class CtlUsers
             return;
         }
 
-        $this->model->usuario = MdlUsuarios::encontraUsuarioLogin($_POST['login']);
-        if ($this->model->usuario === NULL) {
-            $this->model->usuario = MdlUsuarios::encontraUsuarioEmail($_POST['login']);
+        $this->model->user = Mdlusers::encontraUsuarioLogin($_POST['login']);
+        if ($this->model->user === NULL) {
+            $this->model->user = Mdlusers::encontraUsuarioEmail($_POST['login']);
         }
-        if ($this->model->usuario === NULL) {
-            $this->model->usuario = MdlUsuarios::encontraUsuarioCPF($_POST['login']);
+        if ($this->model->user === NULL) {
+            $this->model->user = Mdlusers::encontraUsuarioCPF($_POST['login']);
         }
 
-        if ($this->model->usuario === NULL) {
+        if ($this->model->user === NULL) {
             $mdl = new MdlPages();
             $mdl->msgErro = 'Usuário não encontrado';
             $mdl->campoErro = 1;
@@ -115,11 +117,11 @@ class CtlUsers
         $this->model->usuario->expiraSenha();
 
         // atualiza usuario
-        MdlUsuarios::atualizaUsuario($this->model->usuario);
+        Mdlusers::atualizaUsuario($this->model->user);
 
         // envia email
         Util::enviaEmailTemplate('suporte@boilerchannel.com',
-                                 $this->model->usuario->getEmailUsuario(),
+                                 $this->model->user->getEmailUsuario(),
                                  '3c630bc5-e407-494e-ad34-2054c365863c',
                                  array('%senha%' => $novaSenha));
 
@@ -135,8 +137,8 @@ class CtlUsers
             throw new Exception('Senha ou confirmação não informados');
         }
 
-        $this->model->usuario = MdlUsuarios::encontraUsuarioLogin($_SESSION['USUARIO']);
-        if ($this->model->usuario === NULL) {
+        $this->model->user = Mdlusers::encontraUsuarioLogin($_SESSION['user']);
+        if ($this->model->user === NULL) {
             $mdl = new MdlPages();
             $mdl->msgErro = 'Usuário ou senha incorretos';
             $mdl->campoErro = 1;
@@ -178,103 +180,167 @@ class CtlUsers
         $this->view = new ViewUsuariosSucessoTrocaSenha($this->model);
     }
 
-    public function UserRegister()
+    public function userRegister()
     {
-        $this->view = new ViewUserRegister();
+      //  $this->view = new ViewUserRegister();
+      //  $_SESSION['USUARIO']);
+      if (isset($_SESSION['USUARIO'])){
+        $this->model->user = MdlUsers::findUserLogin($_SESSION['USUARIO']);
+      }else{
+        $this->model->user = new User();
+      }
+        // exibe informações para atualização/inclusão
+      $this->view = new ViewUserRegister($this->model);
     }
 
-    public function register()
+    // *******************************************************************************************************
+    // *** userUpdate
+    // *******************************************************************************************************
+    // insert or update user based on user registration form
+    //
+    public function userUpdate()
     {
+        // checks whether it's an update or insert
+        if (isset($_SESSION['USUARIO'])) {
+            $this->model->user = MdlUsers::findUserLogin($_SESSION['USUARIO']);
+        } else {
+            $this->model->user = new User();
+            $this->model->user->setUserLogin($_POST['login']);
+            $this->model->user->setUserPass($_POST['pass']);
+        }
 
-        // recebe parâmetros
-        $userLogin  = isset($_GET['usuario']) ? $_GET['usuario'] : FALSE;
-        $idAtleta      = isset($_GET['idAtleta']) ? $_GET['idAtleta'] : FALSE;
-        $indPreCadastro= isset($_GET['pre']) ? TRUE : FALSE;
+        // sets the User object with form input
+        //The FILTER_SANITIZE_EMAIL filter removes all illegal characters from an email address
+        $this->model->user->setFirstName($_POST['firstname']);
+        $this->model->user->setLastName($_POST['lastname']);
+        $this->model->user->setEmail(filter_var($_POST['email'], FILTER_SANITIZE_EMAIL));
+        $this->model->user->setCityId($_POST['cityId']);
+        $this->model->user->setAddress($_POST['address']);
 
-        // condições de autorização
-        if (($userLogin AND $userLogin != $_SESSION['USUARIO']) OR              // apenas o próprio usuário pode realizar esta operação
-            ($idAtleta AND !($indPreCadastro) AND                                     // pode ser um pré-cadastro, ou então
-             $_SESSION['NIVAUT'] > Usuario::AUT_USUARIO_ADM_EVENTO)) {                // apenas adms podem alterar por idAtleta
-            $this->view = new ViewPagesSemPermissao();
+        // validates form input
+        if ($this->userFormValidation($this->model->user)) {
+
+            // error found. Return to user form and display error message
+            $this->view = new ViewUserRegister($this->model);
             return;
         }
 
-        // prepara o modelo
-        $this->model->atleta = new Atleta();
-        $this->model->usuario = new Usuario();
+        // insert or update user
+        if ($this->model->user->getUserId() === NULL) {
 
-        // carrega informações atuais na tela
-        if ($userLogin) {
-            $this->model->atleta = MdlAtletas::encontraAtletaLogin($userLogin);
-            $this->model->usuario = MdlUsuarios::encontraUsuarioLogin($userLogin);
-        }
+            MdlUsers::insertUser($this->model->user);
 
-        if ($idAtleta) {
-            $this->model->atleta = MdlAtletas::encontraAtleta($idAtleta);
-            if (!is_null($this->model->atleta) and !is_null($this->model->atleta->getIdUsuario())) {
-                if ($indPreCadastro) {
-                    // erro: usuário já cadastrado - envia para a tela de login
-                    $this->view = new ViewPagesLogin(new MdlPages());
-                    return;
-                } else {
-                    $this->model->usuario = MdlUsuarios::encontraUsuario($this->model->atleta->getIdUsuario());
-                }
-            }
-        }
+            // log user in
+            $_SESSION['ID_USUARIO'] = $this->model->user->getUserId();
+            $_SESSION['USUARIO'] = $this->model->user->getUserLogin();
+            $_SESSION['NOME_USUARIO'] = $this->model->user->getFirstName();
 
-        // caso não seja um novo atleta, e o atleta não for encontrado...
-        if (($userLogin OR $idAtleta) AND ($this->model->atleta === NULL)) {
-            throw new Exception ('Atleta não encontrado');
+            // define the view
+            $this->view = new ViewNewRequest();
+
         } else {
-            // prepara o acesso a foto do atleta, se houver
-            $this->model->atleta->setNomeArquivoFotoAtleta();
-        }
 
-        // exibe informações para atualização/inclusão
-        $this->view = new ViewAtletasAtualizaCadastro($this->model);
+            MdlUsers::updateUser($this->model->user);
+
+            // user could have changed names...
+            $_SESSION['NOME_USUARIO'] = $this->model->user->getFirstName();
+
+            // define the view
+            $this->view = new ViewNewRequest();
+        }
     }
 
-
     // *******************************************************************************************************
-    // *** listaUsuarios
+    // *** userFormValidation
     // *******************************************************************************************************
-    // ***
-    // *** exibe todos os usuarios que atendem ao critério passado
-    // ***
-    public function listaUsuarios()
+    // - PRIVATE method, should be called only within Class' scope
+    // - MUST receive valid User object
+    // - Sets Model's error field and message
+    // - Returns on the first error found
+    // - Returns 1 on error, 0 on success
+    private function userFormValidation($user)
     {
-        // recebe parâmetros idEvento, tipo da lista e limite (paginação)
-        $limite = isset($_GET['l']) ? $_GET['l'] : null;
-        $tipo_lista = isset($_GET['lista']) ? $_GET['lista'] : 1;
-        $evento = isset($_GET['idEvento']) ? $_GET['idEvento'] : null;
-        if (!($evento) AND $tipo_lista == 1) {
-            throw new Exception('Evento não informado');
+        $this->model->errorField = null;
+        $this->model->errorMsg = null;
+
+        // On new user, login must be unique and password must be a valid one
+        if ($user->getUserId() === NULL) {
+            if ($user->getUserLogin() == '') {
+                $this->model->errorField = 6;
+                $this->model->errorMsg = "Must inform user login";
+                return 1;
+            }
+
+            if (MdlUsers::findUserLogin($user->getUserLogin())) {
+                $this->model->errorField = 6;
+                $this->model->errorMsg = "Login already taken";
+                return 1;
+            }
+
+            if (!(CtlUsers::passwordValidation($_POST['pass']))) {
+                $this->model->errorField = 7;
+                $this->model->errorMsg = "Password not valid - at least six characters and 1 number";
+                return 1;
+            }
+
         }
 
-        // determina criterio
-        if ($tipo_lista == 1) {
-            $criterio = 'id_evento = ' . $this->model->dadosTransacao->dadosInscricaoEvento->idEvento;
-        } else {
-            $criterio = null;
+        // user first and last name
+        if ($user->getFirstName() == '') {
+            $this->model->errorField = 1;
+            $this->model->errorMsg = "Please inform first name";
+            return 1;
         }
 
-        $this->model->listaUsuarios = $this->model->listaUsuarios($criterio, $limite);
-        $this->view = new ViewUsuariosLista($this->model);
+        if ($user->getLastName() == '') {
+            $this->model->errorField = 2;
+            $this->model->errorMsg = "Please inform last name";
+            return 1;
+        }
 
+        // email must be informed, valid and unique
+        if ($user->getEmail() == '') {
+            $this->model->errorField = 3;
+            $this->model->errorMsg = "Please inform email";
+            return 1;
+        }
+
+        if (!filter_var($user->getEmail(), FILTER_VALIDATE_EMAIL)) {
+            $this->model->errorField = 3;
+            $this->model->errorMsg = "Please inform valid email";
+            return 1;
+        }
+
+        $userEmail = MdlUsers::findUserEmail($user->getEmail());
+        if (!is_null($userEmail) and $userEmail->getUserId() <> $user->getUserId() ) {
+            $this->model->errorField = 3;
+            $this->model->errorMsg = "Email already taken";
+            return 1;
+        }
+
+        // Missing City and Address validation!
+
+
+        // No errors
+        return 0;
     }
 
-    public static function validaSenha($senha) {
+
+    // *******************************************************************************************************
+    // *** passwordValidation
+    // *******************************************************************************************************
+    public static function passwordValidation($pass) {
         $r1='/[A-Z]/';  //Uppercase
         $r2='/[a-z]/';  //lowercase
         $r4='/[0-9]/';  //numbers
 
-   //     if(preg_match_all($r1,$senha)<1) return FALSE;
+   //     if(preg_match_all($r1,$pass)<1) return FALSE;
 
-   //     if(preg_match_all($r2,$senha)<1 or preg_match_all($r1,$senha)<1) return FALSE;
+   //     if(preg_match_all($r2,$pass)<1 or preg_match_all($r1,$pass)<1) return FALSE;
 
-        if(preg_match_all($r4,$senha)<1) return FALSE;
+        if(preg_match_all($r4,$pass)<1) return FALSE;
 
-        if(strlen($senha)<7) return FALSE;
+        if(strlen($pass)<6) return FALSE;
 
         return TRUE;
     }
