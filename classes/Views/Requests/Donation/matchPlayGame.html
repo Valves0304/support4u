@@ -1,0 +1,28 @@
+
+<link rel="stylesheet" type="text/css" href="../classes/Views/Style/styleRequest.css">
+<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css">
+<body>
+   <div class="header">
+      <h1>Donation Confirmation</h1>
+   </div>
+   <div class="main">
+   <div class="float: left; width: 500px;">
+   	  	<form action="{s4uConfirmation}" name="confirmMatch" id="confirmMatch" method="POST">
+   	  		<h2>
+   	  			OK Lets Play GAME<BR></BR>
+                We are going to send {s4uPlayerName} your email address.
+                He / She will invite you to play soon.<BR></BR>
+          </h2>
+    	    {s4uTableRequests}
+            <p class="submit">
+    	    	<input type="submit" name="commit" value="Ok. Send this email" />
+        	 </p>
+        	</form>
+           	<form action="{s4uCancel}" name="cancelMatch" id="cancelMatch" method="POST">
+           		<p class="submit">
+                    <input type="submit" name="cancel" value="No. Don't send my email" />
+                </p>
+            </form>
+      </div>
+   </div>
+</body>

@@ -3,7 +3,7 @@
 // ViewPagesHome.php: Home Page View Home definition from controller ctlPages
 // ---------------------------------------------------------------------------
 // view Home Page
-class ViewWalkDogDonation
+class ViewPhoneCallDonation
 {
     private $controllerModel;   // model modified by controller
 
@@ -15,7 +15,7 @@ class ViewWalkDogDonation
     public function output()
     {
         $output  = ViewPagesHTMLHeader::output();
-        $output .= file_get_contents('classes/Views/Requests/Donation/donationWalkDog.html');
+        $output .= file_get_contents('classes/Views/Requests/Donation/donationPhoneCall.html');
         $output .= file_get_contents('classes/Views/Pages/footer.html');
 
         // variables replacement

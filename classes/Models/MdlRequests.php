@@ -62,7 +62,9 @@ class MdlRequests
                                     unit_id,
                                     quantity)' . ' VALUES (?,?,?,?,?,?,?,?,?,?)');
         // add values to the query
+        error_reporting(E_ALL & ~E_NOTICE);
         $qryInsert->bind_param('iiiissisii', $requestItem->getRequestId() , $requestItem->getTypeTime() , $requestItem->getBestTime() , $requestItem->getLangId() , $requestItem->getItem() , $requestItem->getPhone() , $requestItem->getGameId() , $requestItem->getGameName() , $requestItem->getUnitId() , $requestItem->getQuantity());
+        error_reporting(E_ALL);
 
         // it runs insert query
         if ($qryInsert->execute() === true)
@@ -154,7 +156,7 @@ class MdlRequests
         {
             $query .= ' LIMIT ' . $limit;
         }
-//        echo $query;
+
         try
         {
             $result = $db->query($query);
@@ -174,13 +176,23 @@ class MdlRequests
         // return array with values
         while ($requestItem = $result->fetch_assoc())
         {
-
             $requestItemData = new RequestItem();
+
+            $langName = "";
+
+             if($requestItem['lang_id'] != NULL){
+              $languageData = new Language();
+              $languageData = MdlLanguages::findLanguage($requestItem['lang_id']);
+              $langName = $languageData->getLangName();
+            }
+
+
             $requestItemData->setItemsId($requestItem['items_id']);
             $requestItemData->setRequestId($requestItem['request_id']);
-            $requestItemData->setBestTime($requestItem['best_time']);
+            $requestItemData->setBestTime(MdlRequests::translateBestTime($requestItem['best_time']));
             $requestItemData->setTypeTime($requestItem['type_time']);
             $requestItemData->setLangId($requestItem['lang_id']);
+            $requestItemData->setLangName($langName);
             $requestItemData->setItem($requestItem['item']);
             $requestItemData->setPhone($requestItem['phone']);
             $requestItemData->setGameId($requestItem['game_id']);
@@ -216,7 +228,9 @@ class MdlRequests
                                     user_id_donor,
                                     status)' . ' VALUES (?,?,?,?,?,?)');
         // add values to the query
+        error_reporting(E_ALL & ~E_NOTICE);
         $qryInsert->bind_param('iisiii', $request->getRequestId() , $request->getRequestType() , $request->getRequestDate() , $request->getUserIdReq() , $request->getUserIdDonor() , $request->getStatusRequest());
+        error_reporting(E_ALL);
 
         // it runs insert query
         if ($qryInsert->execute() === true)
@@ -300,8 +314,8 @@ class MdlRequests
         // request array creation
         $requestList = array();
 
-        $query = 'select r.request_id, r.req_type, r.req_date, r.user_id_req, r.user_id_donor, r.status ' . 
-                 '  from request r, request_items ri ' . 
+        $query = 'select r.request_id, r.req_type, r.req_date, r.user_id_req, r.user_id_donor, r.status ' .
+                 '  from request r, request_items ri ' .
                  ' where ri.request_id = r.request_id ' . (is_null($crit) ? '' : 'and ' . $crit);
 
         $query .= ' group by r.request_id, r.req_type, r.req_date, r.user_id_req, r.user_id_donor, r.status ';
@@ -310,7 +324,7 @@ class MdlRequests
         {
             $query .= ' LIMIT ' . $limit;
         }
-        //echo $query;
+        echo $query;
         try
         {
             $result = $db->query($query);
@@ -330,12 +344,31 @@ class MdlRequests
         // return array with values
         while ($request = $result->fetch_assoc())
         {
+           $nameReq   = "";
+           $nameDonor = "";
 
-            $requestData = new Request();
+           $requestData = new Request();
+
+            if($request['user_id_req'] != NULL){
+              $userReq = new User();
+              $userReq = MdlUsers::findUser($request['user_id_req']);
+              $nameReq = $userReq->getFirstName();
+              $emailReq = $userReq->getEmail();
+            }
+
+            if($request['user_id_donor'] != NULL){
+              $userDonor = new User();
+              $userDonor = MdlUsers::findUser($request['user_id_donor']);
+              $nameDonor = $userDonor->getFirstName();
+            }
+
             $requestData->setRequestId($request['request_id']);
             $requestData->setRequestType($request['req_type']);
             $requestData->setRequestDate($request['req_date']);
             $requestData->setUserIdReq($request['user_id_req']);
+            $requestData->setUserNameReq($nameReq);
+            $requestData->setUserNameDonor($nameDonor);
+            $requestData->setUserEmailReq($emailReq);
             $requestData->setUserIdDonor($request['user_id_donor']);
             $requestData->setStatusRequest($request['status']);
 
@@ -366,7 +399,7 @@ class MdlRequests
         return (MdlRequests::listRequests('request_id = ' . $requestId) [0]);
     }
     // *******************************************************************************************************
-    // *** find walk dog request
+    // *** find requests
     // *******************************************************************************************************
     // ***
     // *** Return request based on request_id
@@ -377,17 +410,17 @@ class MdlRequests
         return (MdlRequests::listRequests('type_time = ' . MdlRequests::DOG . ' and best_time = ' . $bestTime));
     }
 
+    public static function listGameRequests($criteria)
+    {
+        return (MdlRequests::listRequests('type_time = ' . MdlRequests::GAME . ' AND ' . $criteria));
+    }
+    public static function listPhoneCallRequests($criteria)
+    {
+        return (MdlRequests::listRequests('type_time = ' . MdlRequests::TALK . ' AND ' . $criteria));
+    }
+
     // *******************************************************************************************************
-    // *** find request items
-    // *******************************************************************************************************
-    // ***
-    // *** Return request Items based on request_id
-    // ***
-    //  public static function findUserLogin($userLogin) {
-    //      return (MdlRequests::listRequetItems('user_login = ' . $userLogin)[0]);
-    //}
-    // *******************************************************************************************************
-    // *** find requests
+    // *** find User requests
     // *******************************************************************************************************
     // ***
     // *** Return array of request based on $userIdReq
@@ -396,7 +429,58 @@ class MdlRequests
     {
         return (MdlRequests::listRequests('user_id_req = ' . $userIdReq) [0]);
     }
+
+// *******************************************************************************************************
+// *** translate Best Time
+// *******************************************************************************************************
+// ***
+// *** Return array of request based on $userIdReq
+// ***
+  public static function translateBestTime($bestTime)
+{
+    $bestTimeDescription = ' Anytime '; // default color
+    switch ($bestTime) {
+        case MdlRequests::MORNING : $bestTimeDescription = ' Morning';
+            break;
+        case MdlRequests::AFTERNOON : $bestTimeDescription = ' Afternoon';
+                break;
+        case MdlRequests::NIGHT : $bestTimeDescription = ' Night';
+                break;
+    }
+    return $bestTimeDescription;
+  }
+
+  public static function confirmDonation($requestId, $userIdDonor, $status)
+  { echo 'request ID ' . $requestId . '</BR>' ;
+    echo 'User ID ' . $userIdDonor. '</BR> ';
+    echo 'Status ' . $status.  '</BR>' ;
+      // get instance from DB
+      $db = Db::getInstance();
+
+      // it creates UPDATE Query
+      $qryUpdate = $db->prepare(' UPDATE request SET user_id_donor=?, status=? WHERE request_id=?');
+
+      // add values to the query
+      $qryUpdate->bind_param('iii', $userIdDonor , $status , $requestId);
+
+
+
+      // it runs UPDATE query
+      if ($qryUpdate->execute() === false)
+      {
+          // if Error it generates a Log
+          error_log(date('DATE_ATOM') . ' - Fail Request Update', 3, getenv('LOG_FILE'));
+          error_log('                         - erro: ' . $qryUpdate->error_list, 3, getenv('LOG_FILE'));
+
+          throw new exception('Data Base Fails. Update not perfomed. ');
+      }
+
+  }
+
 }
+
+
+
 
 // *******************************************************************************************************
 // *** Class
@@ -411,6 +495,7 @@ class RequestItem
     private $bestTime;
     private $typeTime;
     private $langId;
+    private $langName;
     private $item;
     private $phone;
     private $gameId;
@@ -468,7 +553,15 @@ class RequestItem
     {
         $this->langId = $langId;
     }
-
+    //Language Name from Language table
+    public function getLangName()
+    {
+        return $this->langName;
+    }
+    public function setLangName($langName)
+    {
+        $this->langName = $langName;
+    }
     //Item requested
     public function getItem()
     {
@@ -543,7 +636,10 @@ class Request
     private $reqType;
     private $reqDate;
     private $userIdReq;
+    private $userNameReq;
+    private $userEmailReq;
     private $userIdDonor;
+    private $userNameDonor;
     private $status;
     private $requestItems = array();
 
@@ -614,6 +710,33 @@ class Request
     public function setRequestItems($requestItems)
     {
         $this->requestItems = $requestItems;
+    }
+    // First User that is requiring Help
+    public function getUserNameReq()
+    {
+        return $this->userNameReq;
+    }
+    public function setUserNameReq($userNameReq)
+    {
+        $this->userNameReq = $userNameReq;
+    }
+    // Email User that is requiring Help
+    public function getUserEmailReq()
+    {
+        return $this->userEmailReq;
+    }
+    public function setUserEmailReq($userEmailReq)
+    {
+        $this->userEmailReq = $userEmailReq;
+    }
+    // Name Donor
+    public function getUserNameDonor()
+    {
+        return $this->userNameDonor;
+    }
+    public function setUserNameDonor($userNameDonor)
+    {
+        $this->userNameDonor = $userNameDonor;
     }
     public function addRequestItem(RequestItem $requestItem)
     {

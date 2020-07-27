@@ -1922,3 +1922,165 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home1/s4u/public_html/requestdog.php on line 17
+[07-Jul-2020 19:35:36 America/Chicago] PHP Parse error:  syntax error, unexpected 'CtlRequests' (T_STRING), expecting ',' or ')' in /home1/s4u/public_html/classes/Views/Requests/ViewChooseDonation.php on line 26
+[07-Jul-2020 19:37:28 America/Chicago] PHP Fatal error:  Cannot declare class ViewPlayGame, because the name is already in use in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php on line 6
+[07-Jul-2020 17:49:31 America/Vancouver] PHP Warning:  file_get_contents(classes/Views/Requests/Request/reqGrocery.html): failed to open stream: No such file or directory in /home1/s4u/public_html/classes/Views/Requests/ViewNewGroceryRequest.php on line 19
+[07-Jul-2020 18:05:11 America/Vancouver] PHP Warning:  file_get_contents(classes/Views/Requests/Donation/DonationPlayGame.html): failed to open stream: No such file or directory in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php on line 17
+[07-Jul-2020 18:05:39 America/Vancouver] PHP Warning:  file_get_contents(classes/Views/Requests/Donation/DonationPlayGame.html): failed to open stream: No such file or directory in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php on line 17
+[07-Jul-2020 18:06:31 America/Vancouver] PHP Warning:  file_get_contents(classes/Views/Requests/Donation/DonationPlayGame.html): failed to open stream: No such file or directory in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php on line 17
+[07-Jul-2020 18:28:31 America/Vancouver] PHP Fatal error:  Uncaught Error: Class 'Requests' not found in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php:29
+Stack trace:
+#0 /home1/s4u/public_html/s4u.php(90): ViewPlayGameDonation->output()
+#1 {main}
+  thrown in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php on line 29
+[07-Jul-2020 18:29:25 America/Vancouver] PHP Fatal error:  Uncaught Error: Call to undefined method MdlRequests::listRequets() in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php:29
+Stack trace:
+#0 /home1/s4u/public_html/s4u.php(90): ViewPlayGameDonation->output()
+#1 {main}
+  thrown in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php on line 29
+[08-Jul-2020 07:38:17 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 219
+[08-Jul-2020 07:38:17 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 219
+[08-Jul-2020 07:38:17 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 219
+[08-Jul-2020 07:38:17 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 219
+[08-Jul-2020 07:38:17 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 219
+[08-Jul-2020 07:38:17 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 219
+[08-Jul-2020 07:38:17 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 65
+[08-Jul-2020 07:38:17 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 65
+[08-Jul-2020 07:38:17 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 65
+[08-Jul-2020 07:38:17 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 65
+[08-Jul-2020 07:38:17 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 65
+[08-Jul-2020 07:38:17 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 65
+[08-Jul-2020 07:38:17 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 65
+[08-Jul-2020 07:38:17 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 65
+[08-Jul-2020 07:38:17 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 65
+[08-Jul-2020 07:38:17 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 65
+[08-Jul-2020 07:39:32 America/Vancouver] PHP Notice:  Undefined index: gameId in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 94
+[08-Jul-2020 07:39:32 America/Vancouver] PHP Notice:  Undefined index: gameName in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 95
+[08-Jul-2020 07:39:32 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 219
+[08-Jul-2020 07:39:32 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 219
+[08-Jul-2020 07:39:32 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 219
+[08-Jul-2020 07:39:32 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 219
+[08-Jul-2020 07:39:32 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 219
+[08-Jul-2020 07:39:32 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 219
+[08-Jul-2020 07:39:32 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 65
+[08-Jul-2020 07:39:32 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 65
+[08-Jul-2020 07:39:32 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 65
+[08-Jul-2020 07:39:32 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 65
+[08-Jul-2020 07:39:32 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 65
+[08-Jul-2020 07:39:32 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 65
+[08-Jul-2020 07:39:32 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 65
+[08-Jul-2020 07:39:32 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 65
+[08-Jul-2020 07:39:32 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 65
+[08-Jul-2020 07:39:32 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 65
+[08-Jul-2020 18:41:58 America/Vancouver] PHP Notice:  Undefined property: ViewPhoneCall::$controllerModel in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCall.php on line 34
+[08-Jul-2020 18:41:58 America/Vancouver] PHP Notice:  Trying to get property of non-object in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCall.php on line 34
+[08-Jul-2020 18:42:01 America/Vancouver] PHP Notice:  Undefined index: gameId in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 94
+[08-Jul-2020 18:42:01 America/Vancouver] PHP Notice:  Undefined index: gameName in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 95
+[08-Jul-2020 18:42:01 America/Vancouver] PHP Notice:  Undefined index: reqTime in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 107
+[08-Jul-2020 18:42:01 America/Vancouver] PHP Notice:  Undefined property: ViewPhoneCall::$controllerModel in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCall.php on line 34
+[08-Jul-2020 18:42:01 America/Vancouver] PHP Notice:  Trying to get property of non-object in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCall.php on line 34
+[08-Jul-2020 18:46:25 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 219
+[08-Jul-2020 18:46:25 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 219
+[08-Jul-2020 18:46:25 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 219
+[08-Jul-2020 18:46:25 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 219
+[08-Jul-2020 18:46:25 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 219
+[08-Jul-2020 18:46:25 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 219
+[08-Jul-2020 18:46:25 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 65
+[08-Jul-2020 18:46:25 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 65
+[08-Jul-2020 18:46:25 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 65
+[08-Jul-2020 18:46:25 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 65
+[08-Jul-2020 18:46:25 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 65
+[08-Jul-2020 18:46:25 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 65
+[08-Jul-2020 18:46:25 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 65
+[08-Jul-2020 18:46:25 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 65
+[08-Jul-2020 18:46:25 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 65
+[08-Jul-2020 18:46:25 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 65
+[08-Jul-2020 18:51:49 America/Vancouver] PHP Fatal error:  Uncaught Error: Call to undefined method MdlRequests::getRequestItems() in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCall.php:26
+Stack trace:
+#0 /home1/s4u/public_html/s4u.php(90): ViewPhoneCall->output()
+#1 {main}
+  thrown in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCall.php on line 26
+[08-Jul-2020 18:52:18 America/Vancouver] PHP Notice:  Undefined offset: 0 in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCall.php on line 26
+[08-Jul-2020 18:52:18 America/Vancouver] PHP Fatal error:  Uncaught Error: Call to a member function getLangId() on null in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCall.php:26
+Stack trace:
+#0 /home1/s4u/public_html/s4u.php(90): ViewPhoneCall->output()
+#1 {main}
+  thrown in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCall.php on line 26
+[08-Jul-2020 20:05:25 America/Vancouver] PHP Fatal error:  Uncaught Error: Call to undefined method Request::getIdReq() in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php:33
+Stack trace:
+#0 /home1/s4u/public_html/s4u.php(90): ViewPlayGameDonation->output()
+#1 {main}
+  thrown in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php on line 33
+[08-Jul-2020 20:21:02 America/Vancouver] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function MdlRequests::listGameRequests(), 0 passed in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 189 and exactly 1 expected in /home1/s4u/public_html/classes/Models/MdlRequests.php:384
+Stack trace:
+#0 /home1/s4u/public_html/classes/Controllers/CtlRequests.php(189): MdlRequests::listGameRequests()
+#1 /home1/s4u/public_html/s4u.php(73): CtlRequests->newPlayDonation(NULL)
+#2 {main}
+  thrown in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 384
+[08-Jul-2020 20:22:16 America/Vancouver] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function MdlRequests::listGameRequests(), 0 passed in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 189 and exactly 1 expected in /home1/s4u/public_html/classes/Models/MdlRequests.php:384
+Stack trace:
+#0 /home1/s4u/public_html/classes/Controllers/CtlRequests.php(189): MdlRequests::listGameRequests()
+#1 /home1/s4u/public_html/s4u.php(73): CtlRequests->newPlayDonation(NULL)
+#2 {main}
+  thrown in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 384
+[08-Jul-2020 20:22:18 America/Vancouver] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function MdlRequests::listGameRequests(), 0 passed in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 189 and exactly 1 expected in /home1/s4u/public_html/classes/Models/MdlRequests.php:384
+Stack trace:
+#0 /home1/s4u/public_html/classes/Controllers/CtlRequests.php(189): MdlRequests::listGameRequests()
+#1 /home1/s4u/public_html/s4u.php(73): CtlRequests->newPlayDonation(NULL)
+#2 {main}
+  thrown in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 384
+[08-Jul-2020 20:22:53 America/Vancouver] PHP Fatal error:  Uncaught Error: Call to a member function getRequestId() on null in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php:32
+Stack trace:
+#0 /home1/s4u/public_html/s4u.php(90): ViewPlayGameDonation->output()
+#1 {main}
+  thrown in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php on line 32
+[08-Jul-2020 20:31:46 America/Vancouver] PHP Recoverable fatal error:  Object of class Game could not be converted to string in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php on line 35
+[08-Jul-2020 20:32:28 America/Vancouver] PHP Fatal error:  Uncaught Error: Call to a member function getGameName() on null in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php:35
+Stack trace:
+#0 /home1/s4u/public_html/s4u.php(90): ViewPlayGameDonation->output()
+#1 {main}
+  thrown in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php on line 35
+[08-Jul-2020 20:40:14 America/Vancouver] PHP Notice:  Trying to get property of non-object in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 327
+[08-Jul-2020 20:40:14 America/Vancouver] PHP Fatal error:  Uncaught Error: Call to a member function getRequestId() on null in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php:33
+Stack trace:
+#0 /home1/s4u/public_html/s4u.php(90): ViewPlayGameDonation->output()
+#1 {main}
+  thrown in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php on line 33
+[08-Jul-2020 20:41:14 America/Vancouver] PHP Notice:  Trying to get property of non-object in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 327
+[08-Jul-2020 20:41:14 America/Vancouver] PHP Fatal error:  Uncaught Error: Call to a member function getRequestId() on null in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php:33
+Stack trace:
+#0 /home1/s4u/public_html/s4u.php(90): ViewPlayGameDonation->output()
+#1 {main}
+  thrown in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php on line 33
+[08-Jul-2020 20:43:01 America/Vancouver] PHP Fatal error:  Uncaught Error: Call to a member function getRequestId() on null in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php:33
+Stack trace:
+#0 /home1/s4u/public_html/s4u.php(90): ViewPlayGameDonation->output()
+#1 {main}
+  thrown in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php on line 33
+[08-Jul-2020 20:43:14 America/Vancouver] PHP Fatal error:  Uncaught Error: Call to a member function getRequestId() on null in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php:33
+Stack trace:
+#0 /home1/s4u/public_html/s4u.php(90): ViewPlayGameDonation->output()
+#1 {main}
+  thrown in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php on line 33
+[08-Jul-2020 20:44:24 America/Vancouver] PHP Fatal error:  Uncaught Error: Call to a member function getRequestId() on null in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php:34
+Stack trace:
+#0 /home1/s4u/public_html/s4u.php(90): ViewPlayGameDonation->output()
+#1 {main}
+  thrown in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php on line 34
+[08-Jul-2020 22:45:06 America/Chicago] PHP Parse error:  syntax error, unexpected '$tableRequests' (T_VARIABLE), expecting function (T_FUNCTION) or const (T_CONST) in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php on line 40
+[08-Jul-2020 20:45:36 America/Vancouver] PHP Fatal error:  Uncaught Error: Call to a member function getRequestId() on null in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php:34
+Stack trace:
+#0 /home1/s4u/public_html/s4u.php(90): ViewPlayGameDonation->output()
+#1 {main}
+  thrown in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php on line 34
+[08-Jul-2020 20:50:11 America/Vancouver] PHP Fatal error:  Uncaught Error: Call to a member function getRequestId() on null in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php:37
+Stack trace:
+#0 /home1/s4u/public_html/s4u.php(90): ViewPlayGameDonation->output()
+#1 {main}
+  thrown in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php on line 37
+[08-Jul-2020 22:51:15 America/Chicago] PHP Parse error:  syntax error, unexpected ')' in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php on line 32
+[08-Jul-2020 20:52:36 America/Vancouver] PHP Notice:  Trying to get property of non-object in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 327
+[08-Jul-2020 20:52:42 America/Vancouver] PHP Notice:  Trying to get property of non-object in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 327
+[08-Jul-2020 20:52:44 America/Vancouver] PHP Notice:  Trying to get property of non-object in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 327
+[08-Jul-2020 20:52:46 America/Vancouver] PHP Notice:  Trying to get property of non-object in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 327
+[08-Jul-2020 20:52:48 America/Vancouver] PHP Notice:  Trying to get property of non-object in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 327

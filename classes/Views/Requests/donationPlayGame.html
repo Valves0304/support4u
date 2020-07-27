@@ -5,9 +5,9 @@
         <h1>Request</h1>
     </div>
     <div class="main">
-    <form action="{s4uInsertRequest}" name="createRequest" id="createRequest" method="POST">
+    <form action="{s4uSearchRequest}" name="createRequest" id="createRequest" method="POST">
         <div>
-        <p>What is the best time to someone walk your dog?</p>
+        <p>What is the best time to play?</p>
         <input type="radio" id="MORNING" name="bestTime" value="1">
         <label for="MORNING">Morning</label><br>
         <input type="radio" id="AFTERNOON" name="bestTime" value="2">
@@ -16,21 +16,34 @@
         <label for="NIGHT">Night</label><br>
         <input type="radio" id="ANYTIME" name="bestTime" value="4" checked="checked">
         <label for="ANYTIME">Anytime</label><br>
+
+        <div class="{s4uField}">
+          <p> Which game do you want to play? </p>
         </div>
-        
-        <div class="ac_box">
-            <div class="ac_box_top">
         <div>
+            <label for="game" class="game">Plataform     :    </label>
+            <select class = "gameselect" name="gameId" >
+                <option value=0>Not informed</option>
+                {s4uListGames}
+            </select>
+        </div>
+
+        <div class="{s4uField}">
+            <label for="gameName">Game Name:</label>
+            <input type="text" id="gameName" name="gameName" placeholder="Game Name:" value="" />
+        </div>
+
+
+
         <p class="agree_box">
-          We are looking for someone to walk your dog.
+          We are looking for someone to play On-line.
           <BR>
-          You will be receive an email from us we find this person.
-          <BR>
-            Is it ok to show him your address?
+            When we find you a patterner to play,
+            we will send you an email and you must invite him to play.
+
         </p>
-        </div>
-        </div>
-        </div>
+            <div>
+            </div>
             <p class="submit">
                 <input type="submit" name="commit" value="It is ok to share my address. " />
             </p>

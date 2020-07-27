@@ -5,10 +5,12 @@
 // view Home Page
 class ViewPhoneCall
 {
+    private $controllerModel;   // model modified by controller
+
     // ViewPagesHome Construtor
-    public function __construct()
+    public function __construct($model)
     {
-//        echo "<BR>Construtor da ViewNewRequest";
+        $this->controllerModel=$model;
     }
 
     public function output()
@@ -21,11 +23,19 @@ class ViewPhoneCall
         $output = str_replace('{s4uInsertRequest}', Util::createLink("CtlRequests","insertRequest","2","1"), $output);
 
         $output = str_replace('{s4uListLangs}',
-                              Util::createSelect(MdlLanguages::listLangs(), 'getLangId', 'getLangName', NULL),
+                              Util::createSelect(MdlLanguages::listLanguages(), 'getLangId', 'getLangName',
+                                                 (!empty($this->controllerModel->errorField)) ? $this->controllerModel->request->getRequestItems()[0]->getLangId() : NULL),
                               $output);
 
+        $output = str_replace('{s4uPhone}', !empty($this->controllerModel->errorField) ? $this->controllerModel->request->getRequestItems()[0]->getPhone() : '', $output);
 
         $output = str_replace('{version}', getenv('VER'), $output);
+
+        // set error messages
+        if (!empty($this->controllerModel->errorField)) {
+            $output = str_replace('{s4uErrorField' . $this->controllerModel->errorField . '}', 'has-error', $output);
+        }
+        $output = str_replace('{s4uErrorMessage}', $this->controllerModel->errorMsg, $output);
 
         return $output;
     }

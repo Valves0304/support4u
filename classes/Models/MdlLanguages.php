@@ -52,7 +52,7 @@ class MdlLanguages
     }
 
     // *******************************************************************************************************
-    // *** updateGame
+    // *** updateLanguage
     // *******************************************************************************************************
     // ***
     // ***
@@ -68,8 +68,8 @@ class MdlLanguages
 
         // add values to the query
         $qryUpdate->bind_param('si',
-                                $game->getLangName(),
-                                $game->getLangId());
+                                $language->getLangName(),
+                                $language->getLangId());
 
 
         // it runs UPDATE query
@@ -84,13 +84,13 @@ class MdlLanguages
     }
 
     // *******************************************************************************************************
-    // *** ListLangs
+    // *** listLanguages
     // *******************************************************************************************************
     // ***
     // *** It gets a array of cities based on given criterias
     // *** it is possible to limit it in order to help display layout
     // ***
-    public static function listLangs($crit = null, $limit = null) {
+    public static function listLanguages($crit = null, $limit = null) {
         // get instance from DB
         $db = Db::getInstance();
 
@@ -132,7 +132,7 @@ class MdlLanguages
     // *** Return language based on language_id
     // ***
     public static function findLanguage($langId) {
-        return (MdlLanguages::listLangs('lang_id = ' . $langId)[0]);
+        return (MdlLanguages::listLanguages('lang_id = ' . $langId)[0]);
     }
 
 }

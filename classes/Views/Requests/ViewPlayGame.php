@@ -5,10 +5,11 @@
 // view Home Page
 class ViewPlayGame
 {
-    // ViewPlayGame Construtor
-    public function __construct()
+    private $controllerModel;   // model modified by controller
+
+    public function __construct($model)
     {
-//        echo "<BR>Construtor da ViewNewRequest";
+        $this->controllerModel=$model;
     }
 
     public function output()
@@ -22,11 +23,20 @@ class ViewPlayGame
 
         // tag <SELECT> for Games
         $output = str_replace('{s4uListGames}',
-                              Util::createSelect(MdlGames::listGames(), 'getGameId', 'getGameName', NULL),
+                              Util::createSelect(MdlGames::listGames(), 'getGameId', 'getGameName', 
+                              (!empty($this->controllerModel->errorField)) ? $this->controllerModel->request->getRequestItems()[0]->getGameId() : NULL),
                               $output);
+
+        $output = str_replace('{s4uGameName}', !empty($this->controllerModel->errorField) ? $this->controllerModel->request->getRequestItems()[0]->getGameName() : '', $output);
 
         $output = str_replace('{version}', getenv('VER'), $output);
 
+        // set error messages
+        if (!empty($this->controllerModel->errorField)) {
+            $output = str_replace('{s4uErrorField' . $this->controllerModel->errorField . '}', 'has-error', $output);
+        }
+        $output = str_replace('{s4uErrorMessage}', $this->controllerModel->errorMsg, $output);
+        
         return $output;
     }
 }

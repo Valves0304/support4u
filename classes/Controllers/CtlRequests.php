@@ -14,6 +14,7 @@ class CtlRequests
     public $view;   // controller chosen view
     private $model; // controller model
 
+
     // CtlPages Construtor
     public function __construct()
     {
@@ -90,38 +91,173 @@ class CtlRequests
         } else { // time request
             $this->model->requestItem = new RequestItem();
             $this->model->requestItem->setTypeTime($_GET['typeTime']);
-            $this->model->requestItem->setBestTime($_POST['bestTime']);
-            $this->model->requestItem->setGameId($_POST['gameId']);
-            $this->model->requestItem->setGameName($_POST['gameName']);
-            $this->model->requestItem->setLangId($_POST['langId']);
-            $this->model->requestItem->setPhone($_POST['phone']);
+            $this->model->requestItem->setBestTime(isset($_POST['bestTime']) ? $_POST['bestTime'] : 0);
+            $this->model->requestItem->setGameId(isset($_POST['gameId']) ? $_POST['gameId'] : 0);
+            $this->model->requestItem->setGameName(isset($_POST['gameName']) ? $_POST['gameName'] : 0);
+            $this->model->requestItem->setLangId(isset($_POST['langId']) ? $_POST['langId'] : 0);
+            $this->model->requestItem->setPhone(isset($_POST['phone']) ? $_POST['phone'] : 0);
 
             $this->model->request->addRequestItem($this->model->requestItem);
         }
 
+        // validates form input
+        if ($this->requestFormValidation($this->model->request)) {
+
+            // error found. Return to user form and display error message
+            // View depends on reqType and typeTime
+            if ($_GET['reqType'] == MdlRequests::GROCERY_REQUEST) {
+                $this->view = new ViewNewGroceryRequest($this->model);
+            } elseif ($_GET['typeTime'] == MdlRequests::TALK) {
+                $this->view = new ViewPhoneCall($this->model);
+            } elseif ($_GET['typeTime'] == MdlRequests::DOG) {
+                $this->view = new ViewWalkDog($this->model);
+            } elseif ($_GET['typeTime'] == MdlRequests::GAME) {
+                $this->view = new ViewPlayGame($this->model);
+            } else {
+                $this->view = new ViewPhoneCall($this->model);
+            }
+
+            return;
+        }
+
+        // validation was successful!
         MdlRequests::insertRequest($this->model->request);
 
         // define the view
         $this->view = new ViewSuccessReq();
     }
 
-        public function newPlayDonation()
-        {
-          $this->view = new ViewPlayGameDonation($this->model);
+
+    // *******************************************************************************************************
+    // *** requestFormValidation
+    // *******************************************************************************************************
+    // - PRIVATE method, should be called only within Class' scope
+    // - MUST receive valid request object
+    // - Sets Model's error field and message
+    // - Returns on the first error found
+    // - Returns 1 on error, 0 on success
+    private function requestFormValidation($request)
+    {
+        $this->model->errorField = null;
+        $this->model->errorMsg = null;
+
+        // Validation depends on request type
+        if ($request->getRequestType() == MdlRequests::GROCERY_REQUEST) {
+
+            if ($request->getRequestItems()[0]->getItem() == '' or $request->getRequestItems()[0]->getItem() === NULL) {
+                $this->model->errorField = 1;
+                $this->model->errorMsg = "Must inform at least 1 item description";
+                return 1;
+            }
+
+        } elseif ($request->getRequestItems()[0]->getTypeTime() == MdlRequests::TALK) {
+
+            if ($request->getRequestItems()[0]->getLangId() == 0 or $request->getRequestItems()[0]->getLangId() === NULL) {
+                $this->model->errorField = 1;
+                $this->model->errorMsg = "Please select one language";
+                return 1;
+            }
+
+            if ($request->getRequestItems()[0]->getPhone() == '' or $request->getRequestItems()[0]->getPhone() === NULL) {
+                $this->model->errorField = 2;
+                $this->model->errorMsg = "Must inform phone number";
+                return 1;
+            }
+
+        } elseif ($request->getRequestItems()[0]->getTypeTime() == MdlRequests::GAME) {  // to do
+
+            if ($request->getRequestItems()[0]->getGameId() == 0 or $request->getRequestItems()[0]->getGameId() === NULL) {
+                $this->model->errorField = 1;
+                $this->model->errorMsg = "Please select one platform";
+                return 1;
+            }
+
+            if ($request->getRequestItems()[0]->getGameName() == '' or $request->getRequestItems()[0]->getGameName() === NULL) {
+                $this->model->errorField = 2;
+                $this->model->errorMsg = "Must inform game name";
+                return 1;
+            }
+
         }
 
-        public function newDogDonation($bestTime)
-        {
-          if($bestTime===NULL)
-          {
-            $this->view = new ViewWalkDogDonation($this->model);
-          } else
-          {
-            $reqDogs = array();
-            $crit = 'request_id = ' . $requestId
-            $reqDogs = MdlRequests::listRequest($this->model->$crit);
-            $this->view = new ViewWalkDogDonation($this->model);
-            return $reqDods;
+        // No errors
+        return 0;
+    }
+
+    public function newPlayGameDonation()
+    {
+
+        $gameId = isset($_POST['gameId']) ? $_POST['gameId'] : 0;
+        $bestTime = isset($_POST['bestTime']) ? $_POST['bestTime'] : 0;
+
+        $criteria = ' 1 = 1 ';
+        $criteria .= $gameId > 0 ? ' AND game_id = ' . $gameId : '';
+
+        //If you can donate anytime so this time resticition is not necessary
+        if ($bestTime != 4){
+          $criteria .= ' AND best_time = ' . $bestTime;
+        }
+
+        $criteria .= ' AND status = ' . MdlRequests::ACTIVE_REQUEST;
+
+        $this->model->requestList = MdlRequests::listGameRequests($criteria);
+        $this->view = new ViewPlayGameDonation($this->model);
+
+    }
+    public function matchPlayGame()
+    {
+
+        $optionRequest = isset($_POST["optionRequest"]) ? $_POST['optionRequest'] : 0;
+
+          $criteria .= 'r.request_id = ' . $optionRequest . '';
+
+           $this->model->requestList = MdlRequests::listRequests($criteria);
+
+           $GLOBALS['RequestMatch']=$optionRequest;
+
+           $this->view = new ViewPlayGameMatch($this->model);
+      }
+      public function newPhoneCallDonation()
+      {
+
+          $languageId = isset($_POST['languageId']) ? $_POST['languageId'] : 1;
+          $bestTime = isset($_POST['bestTime']) ? $_POST['bestTime'] : 4;
+
+          $criteria = ' 1 = 1 ';
+
+          //If you can donate any language so this language resticition is not necessary
+          if ($languageId !=0 ){
+            $criteria .= ' AND lang_id = ' . $languageId . '';
           }
+
+          //If you can donate anytime so this time resticition is not necessary
+          if ($bestTime != 4){
+            $criteria .= ' AND best_time = ' . $bestTime;
+          }
+
+          $criteria .= ' AND status = ' . MdlRequests::ACTIVE_REQUEST;
+
+          $this->model->requestList = MdlRequests::listPhoneCallRequests($criteria);
+          $this->view = new ViewPhoneCallDonation($this->model);
+
+      }
+      public function matchPhoneCall()
+      {
+        $optionRequest = isset($_POST["optionRequest"]) ? $_POST['optionRequest'] : 0;
+
+          $criteria = ' r.request_id =' . $optionRequest . ' ';
+
+          $this->model->requestList = MdlRequests::listRequests($criteria);
+
+          $GLOBALS['RequestMatch']=$optionRequest;
+
+         $this->view = new ViewPhoneCallMatch($this->model);
+
+       }
+       public function matchDonation()
+       {
+         MdlRequests::confirmDonation($_GET["reqId"],$_SESSION['ID_USUARIO'],2);
+        $this->view = new ViewGetStarted($this->model);
+
         }
 }

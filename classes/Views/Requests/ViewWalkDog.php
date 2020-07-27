@@ -5,10 +5,11 @@
 // view Home Page
 class ViewWalkDog
 {
-    // ViewPagesHome Construtor
-    public function __construct()
+    private $controllerModel;   // model modified by controller
+
+    public function __construct($model)
     {
-//        echo "<BR>Construtor da ViewNewRequest";
+        $this->controllerModel=$model;
     }
 
     public function output()

@@ -1,26 +1,33 @@
 <link rel="stylesheet" type="text/css" href="../classes/Views/Style/styleRequest.css">
+<style media="screen">
+  .has-error, .msg-error { font-weight: bold; color: red; }
 
+  .has-error input { border-color: #ff0000; !important }
+</style>
 <body>
     <div class="header">
         <h1>Request</h1>
     </div>
     <div class="main">
     <form action="{s4uInsertRequest}" name="createRequest" id="createRequest" method="POST">
-        <div>
-        <p>What is the best time to play?</p>
-        <input type="radio" id="MORNING" name="bestTime" value="1">
-        <label for="MORNING">Morning</label><br>
-        <input type="radio" id="AFTERNOON" name="bestTime" value="2">
-        <label for="AFTERNOON">Afternoon</label><br>
-        <input type="radio" id="NIGHT" name="bestTime" value="3">
-        <label for="NIGHT">Night</label><br>
-        <input type="radio" id="ANYTIME" name="bestTime" value="4" checked="checked">
-        <label for="ANYTIME">Anytime</label><br>
+        <div class="msg-error">{s4uErrorMessage}</div>
 
-        <div class="{s4uField}">
+        <div>
+            <p>What is the best time to play?</p>
+            <input type="radio" id="MORNING" name="bestTime" value="1">
+            <label for="MORNING">Morning</label><br>
+            <input type="radio" id="AFTERNOON" name="bestTime" value="2">
+            <label for="AFTERNOON">Afternoon</label><br>
+            <input type="radio" id="NIGHT" name="bestTime" value="3">
+            <label for="NIGHT">Night</label><br>
+            <input type="radio" id="ANYTIME" name="bestTime" value="4" checked="checked">
+            <label for="ANYTIME">Anytime</label><br>
+        </div>
+        
+        <div>
           <p> Which game do you want to play? </p>
         </div>
-        <div>
+        <div class="{s4uErrorField1}">
             <label for="game" class="game">Plataform     :    </label>
             <select class = "gameselect" name="gameId" >
                 <option value=0>Not informed</option>
@@ -28,17 +35,15 @@
             </select>
         </div>
 
-        <div class="{s4uField}">
+        <div class="{s4uErrorField2}">
             <label for="gameName">Game Name:</label>
-            <input type="text" id="gameName" name="gameName" placeholder="Game Name:" value="" />
+            <input type="text" id="gameName" name="gameName" placeholder="Game Name:" value="{s4uGameName}" />
         </div>
-
-
 
         <p class="agree_box">
           We are looking for someone to play On-line.
           <BR>
-            When we find you a patterner to play,
+            When we find you a partner to play,
             we will send you an email and you must invite him to play.
 
         </p>

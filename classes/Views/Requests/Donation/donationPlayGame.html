@@ -1,37 +1,53 @@
 <link rel="stylesheet" type="text/css" href="../classes/Views/Style/styleRequest.css">
+<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css">
 <body>
    <div class="header">
       <h1>Donation</h1>
    </div>
    <div class="main">
-   <form action="{s4uFilterRequest}" name="searchRequest" id="searchRequest" method="POST">
-      <div>
-         <p>What is the best time to play?</p>
-         <input type="radio" id="MORNING" name="bestTime" value="1">
-         <label for="MORNING">Morning</label><br>
-         <input type="radio" id="AFTERNOON" name="bestTime" value="2">
-         <label for="AFTERNOON">Afternoon</label><br>
-         <input type="radio" id="NIGHT" name="bestTime" value="3">
-         <label for="NIGHT">Night</label><br>
-         <input type="radio" id="ANYTIME" name="bestTime" value="4" checked="checked">
-         <label for="ANYTIME">Anytime</label><br>
-         <div class="{s4uField}">
-            <p> Which game do you want to play? </p>
+      <div class="float: left; width: 500px;">
+         <div>
+            <form action="{s4uFilterRequest}" name="searchRequest" id="searchRequest" method="POST">
+               <table class="pure-table pure-table-horizontal ">
+                  <tr>
+                     <td>
+                        <div>
+                           <p>What is the best time to play?</p>
+                           <input type="radio" id="MORNING" name="bestTime" value="1">
+                           <label for="MORNING">Morning</label><br>
+                           <input type="radio" id="AFTERNOON" name="bestTime" value="2">
+                           <label for="AFTERNOON">Afternoon</label><br>
+                           <input type="radio" id="NIGHT" name="bestTime" value="3">
+                           <label for="NIGHT">Night</label><br>
+                           <input type="radio" id="ANYTIME" name="bestTime" value="4" checked="checked">
+                           <label for="ANYTIME">Anytime</label><br>
+                        </div>
+                     </td>
+                     <td>
+                        <div>
+                           <label for="game" class="game">Plataform     :    </label>
+                           <select class = "gameselect" name="gameId" style="width:150px;">
+                              <option value=0>Any</option>
+                              {s4uListGames}
+                           </select>
+                        </div>
+                        <p class="submit">
+                           <input type="submit" name="commit" value="Filter" />
+                        </p>
+                     </td>
+                  </tr>
+               </table>
+            </form>
          </div>
          <div>
-            <label for="game" class="game">Plataform     :    </label>
-            <select class = "gameselect" name="gameId" >
-               <option value=0>Not informed</option>
-               {s4uListGames}
-            </select>
+            <form action="{s4uRequestMatch}" name="searchRequest" id="searchRequest" method="POST">
+               <table class="pure-table pure-table-horizontal ">
+               {s4uTableRequests}
+               <p class="submit">
+                  <input type="submit" name="commit" value="Ok" />
+               </p>
+            </form>
          </div>
-
-         <div>
-         </div>
-         <p class="submit">
-            <input type="submit" name="commit" value="Filter" />
-         </p>
-         {s4uTableRequests}
-   </form>
+      </div>
    </div>
 </body>
