@@ -1,80 +1,52 @@
-<link rel="stylesheet" type="text/css" href="../classes/Views/Style/headerStyle.css">
-<link rel="stylesheet" type="text/css" href="../classes/Views/Style/RegisterStyle.css">
+<h1>My Register</h1>
 
-<style media="screen">
-  .logHidden { display:none; }
-
-  .logVisible { display:block;}
-
-  .has-error, .msg-error { font-weight: bold; color: red; }
-
-  .has-error input { border-color: #ff0000; !important }
-</style>
-
-<body>
-<div class="header">
-  <h1>My Register</h1>
-</div>
-
-  <div class="login">
-
-    <form action="{s4uRegisterLink}" name="doRegister" id="doRegister" method="POST">
+<div class="content">
+    <form action="{s4uRegisterLink}" name="doRegister" id="doRegister" method="POST" class="pure-form pure-form-stacked">
         <div class="msg-error">{s4uErrorMessage}</div>
-        <div class="row"></div>
-
-        <div class="{s4uVisible}">
-            <div class="{s4uErrorField6}">
-                <label for="login">Login:</label>
-                <input type="text" id="login" name="login" placeholder="Login:" value="{s4uLogin}">
+        <fieldset>
+            <div class="pure-g {s4uVisible}">
+                <div class="pure-u-1 pure-u-sm-2-5 {s4uErrorField6}">
+                    <label for="login">Login:</label>
+                    <input type="text" id="login" name="login" placeholder="Login:" value="{s4uLogin}" class="pure-u-1">
+                </div>
+                <div class="pure-u-1 pure-u-sm-2-5 {s4uErrorField7}">
+                    <label for="pass">Pass:</label>
+                    <input type="password" id="pass" name="pass" placeholder="Pass:" value="{s4uPass}" class="pure-u-1">
+                </div>
             </div>
-            <div class=" {s4uErrorField7}">
-                <label for="pass">Pass:</label>
-                <input type="password" id="pass" name="pass" placeholder="Pass:" value="{s4uPass}">
+            <div class="pure-g">
+                <div class="pure-u-1 pure-u-sm-2-5 {s4uErrorField1}">
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name.." value="{s4uFName}" class="pure-u-1">
+                </div>
+        
+                <div class="pure-u-1 pure-u-sm-2-5 {s4uErrorField2}">
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your Last name.." value="{s4uLName}" class="pure-u-1">
+                </div>
             </div>
-        </div>
-
-        <div class="{s4uErrorField1}">
-            <label for="fname">First Name:</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name.." value="{s4uFName}">
-        </div>
-
-        <div class="{s4uErrorField2}">
-            <label for="lname">Last Name:</label>
-            <input type="text" id="lname" name="lastname" placeholder="Your Last name.." value="{s4uLName}">
-        </div>
-
-        <div class="{s4uErrorField3}">
-            <label for="email">Email:</label>
-            <input type="text" id="email" name="email" placeholder="Your Email" value="{s4uEmail}">
-        </div>
-
-        <div class="{s4uErrorField4}">
-            <label for="address">Address:</label>
-            <input type="text" id="address" name="address" placeholder="Address:" value="{s4uAddress}">
-        </div>
-
-        <div class="{s4uErrorField5}">
-            <label for="city" class="{s4uErrorField1}">City:</label><BR>
-            <select name="cityId" style="   font-family: 'Lucida Grande', Tahoma, Verdana, sans-serif;
-                                                font-size: 14px;
-                                                margin: 5px;
-                                                padding: 0 10px;
-                                                width: 278px;
-                                                height: 34px;
-                                                color: #404040;
-                                                background: white;
-                                                border: 1px solid;
-                                                border-color: #c4c4c4 #d1d1d1 #d4d4d4;
-                                                border-radius: 2px;
-                                                outline: 5px solid #eff4f7;" >
-                <option value=0>Not informed</option>
-                {s4uListCities}
-            </select>
-        </div>
-
-        <p class="submit" >
-          <input type="submit" name="commit" value="{s4uButton}">
-        </p>
-      </form>
-  </div>
-</body>
+            <div class="pure-g">
+                <div class="pure-u-1 pure-u-sm-2-5 {s4uErrorField3}">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" placeholder="Your Email" value="{s4uEmail}" class="pure-u-1">
+                </div>
+        
+                <div class="pure-u-1 pure-u-sm-2-5 {s4uErrorField4}">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" placeholder="Address:" value="{s4uAddress}" class="pure-u-1">
+                </div>
+        
+                <div class="pure-u-1 pure-u-sm-1-5 {s4uErrorField5}">
+                    <label for="city" class="{s4uErrorField1}">City:</label>
+                    <select name="cityId" class="pure-u-1">
+                        <option value=0>Not informed</option>
+                        {s4uListCities}
+                    </select>
+                </div>
+            </div>
+            <p class="action-buttons" >
+              <input type="submit" name="commit" value="{s4uButton}">
+            </p>
+        </fieldset>
+    </form>
+</div>

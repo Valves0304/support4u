@@ -36,11 +36,11 @@
     color: #6D9093;
 }
 
-.card.card-donate-talk .card-header {
+.card .card-header {
     padding: 20px 20px 0 20px;
 }
 
-.card.card-donate-talk .card-header i:before {
+.card .card-header i:before {
     font-weight: 900;
     font-family: "Font Awesome 5 Free";
     content: "\f007";
@@ -52,7 +52,7 @@
     font-style: normal;
 }
 
-.card.card-donate-talk .card-header h3 {
+.card .card-header h3 {
     display: inline-block;
     padding: 15px 0 0 5px;
 }
@@ -63,14 +63,38 @@
     padding: 10px 20px 20px 20px;
 }
 
-.card.card-donate-talk .card-content div {
+.card .card-content div {
     display: inline-block;
     padding-right: 10px;
+    padding-bottom: 5px;
     font-size: 12px;
 }
 
-.card.card-donate-talk .card-content div span {
+.card .card-content div span {
     display: block;
     font-size: 9px;
     color: #7F9EA1;
+}
+
+.card.match::before {
+    content: "\f00c";
+    font-weight: 900;
+    color: #000;
+}
+
+/* .card.match .card-header i:before{
+    content: "\f4fc";
+} */
+
+.card.match .card-header {
+    padding: 20px 20px 10px 20px;
+}
+
+.card.match .card-header h3 {
+    font-size: 24px;
+}
+
+.card.match .card-content div {
+    font-size: 14px;
+    padding-right: 1em;
 }

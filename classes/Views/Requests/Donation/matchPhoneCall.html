@@ -1,18 +1,26 @@
 <h1>Phone Call Confirmation</h1>
+
 <div class="content">
     <form action="{s4uConfirmation}" name="confirmMatch" id="confirmMatch" method="POST">
-        <h4>OK, here is the phone Number.</h4>
-        
-        <p>We are going to send {s4uTalkerName} an email. He/She will be waiting for you call.</p>
-    
+        <h2> Great, here is the phone number.
+          <p>
+          We are going to send {s4uTalkerName} an email.
+          He/She will be waiting for you call.
+          </p>
+        </h2>
 
-        <table class="pure-table pure-table-striped">
-            <tr><td><strong>Beneficiary: </strong></td><td>{s4uBeneficiaryName}</TD></tr>
-            <tr><td><strong>Phone: </strong></td><td>{s4uBeneficiaryPhone}</TD></tr>
-            <tr><td><strong>Best time: </strong></td><td>{s4uBeneficiaryBestTime}</TD></tr>
-            <tr><td><strong>Language: </strong></td><td>{s4uBeneficiaryLanguage}</TD></tr>
-        </table>
-    
+        <article class="card match">
+            <div class="card-header">
+                <i></i>
+                <h3>{s4uBeneficiaryName}</h3>
+            </div>
+            <div class="card-content">
+                <div><span>Phone</span>{s4uBeneficiaryPhone}</div>
+                <div><span>Best time</span>{s4uBeneficiaryBestTime}</div>
+                <div><span>Language</span>{s4uBeneficiaryLanguage}</div>
+            </div>
+        </article>
+
         <p class="action-buttons">
             <input type="submit" name="commit" value="Ok. I will call" />
         </p>

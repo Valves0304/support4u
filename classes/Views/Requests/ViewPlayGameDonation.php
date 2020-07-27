@@ -1,8 +1,6 @@
 <?php
 // Support for you
-// ViewPagesHome.php: Home Page View Home definition from controller ctlPages
 // ---------------------------------------------------------------------------
-// view Home Page
 class ViewPlayGameDonation
 {
     private $controllerModel;   // model modified by controller

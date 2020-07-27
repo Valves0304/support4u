@@ -21,27 +21,22 @@ class ViewGroceryMatch
 
 
         // variables replacement
-        $output = str_replace('{s4uConfirmation}', Util::createLink("CtlRequests","matchDonation","","",$GLOBALS['RequestMatch']), $output);
+        $output = str_replace('{s4uConfirmation}', Util::createLink("CtlRequests","matchDonation","","",$this->controllerModel->request->getRequestId()), $output);
         $output = str_replace('{s4uCancel}',  Util::createLink("CtlRequests","newGroceryDonation"), $output);
 
-        // table with requests
-        $tableRequests = '<TABLE class="pure-table pure-table-bordered"><THEAD><TR><TD>Name</TD><TD>Email</TD><TD>Time</TD><TD>City</TD></TR></THEAD> ';
-        $tableRequests .= '<TBODY>';
-        if ($this->controllerModel->requestList[0] == NULL) {
-            $tableRequests .= '<TR><TD COLSPAN=5>There are no requests. Try changing your filter.</TD></TR> \r\n';
-        } else {
-            foreach ($this->controllerModel->requestList as $request) {
-              $tableRequests .= "\n<TR><TD>"  . $request->getUserNameReq(). "</TD>" .
-                                '      <TD>' . $request->getUserEmailReq(). '</TD>' .
-                               '      <TD>' . $request->getUserCityReq() . '</TD>' .
-                               '      <TD>' . $request->getRequestItems()[0]->getBestTime() . '</TD>' .
-                                 '  </TR>';
-            }
+        // table with Grocery Items
+        $groceryItems = '<TABLE class="pure-table pure-table-bordered"><THEAD><TR><TD>Item</TD><TD>Unit</TD><TD>Quantity</TD></TR></THEAD> ';
+        $groceryItems .= '<TBODY>';
+        foreach ($this->controllerModel->request->getRequestItems() as $requestItem) {
+            $groceryItems .= "  <TR><TD>"  . $requestItem->getItem(). "</TD>" .
+                             '      <TD>' . MdlUnits::findUnit($requestItem->getUnitId())->getUnitName() . '</TD>' .
+                             '      <TD>' . $requestItem->getQuantity() . '</TD>' .
+                             '  </TR>';
         }
-        $tableRequests .= '</TBODY>';
-        $tableRequests .= "\n</TABLE>";
+        $groceryItems .= '</TBODY>';
+        $groceryItems .= "\n</TABLE>";
 
-        $output = str_replace('{s4uTableRequests}', $tableRequests, $output);
+        $output = str_replace('{s4uGroceryItems}', $groceryItems, $output);
 
         $output = str_replace('{version}', getenv('VER'), $output);
 

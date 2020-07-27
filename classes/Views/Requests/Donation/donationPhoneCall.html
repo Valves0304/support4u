@@ -1,37 +1,27 @@
-<h1>Let's donate a phone to anyone who needs it</h1>
+<h1>Let's donate a phone call</h1>
 
 <div class="content">
     <form action="{s4uFilterRequest}" name="searchRequest" id="searchRequest" method="POST" class="pure-form pure-form-stacked">
        <fieldset>
             <div class="pure-g">
-                <div class="pure-u-1 pure-u-sm-1-3">
+                <div class="pure-u-1 pure-u-sm-2-5">
                     <label>What is the best time to call?</label>
-                   <label for="MORNING">
-                       <input type="radio" id="MORNING" name="bestTime" value="1">
-                        Morning
-                    </label>
-                   <label for="AFTERNOON">
-                        <input type="radio" id="AFTERNOON" name="bestTime" value="2">
-                        Afternoon
-                    </label>
-                   <label for="NIGHT">
-                       <input type="radio" id="NIGHT" name="bestTime" value="3">
-                       Night
-                   </label>
-                   <label for="ANYTIME">
-                       <input type="radio" id="ANYTIME" name="bestTime" value="4" checked="checked">
-                       Anytime
-                   </label>
+                    <select class="pure-u-1" name="bestTime">
+                      <option value="1">Morning</option>
+                      <option value="2">Afternoon</option>
+                      <option value="3">Night</option>
+                      <option value="4" selected>Anytime</option>
+                   </select>
                </div>
-               <div class="pure-u-1 pure-u-sm-1-3">
-                   <label for="language" class="language">Language     :    </label>
+               <div class="pure-u-1 pure-u-sm-2-5">
+                   <label for="language">Language:</label>
                    <select class = "pure-u-1" name="languageId">
-                      <option value=0>Any</option>
                       {s4uListLanguages}
                    </select>
-                   <p class="action-buttons">
-                       <input type="submit" name="commit" value="Filter" />
-                    </p>
+               </div>
+               <div class="pure-u-1 pure-u-sm-1-5">
+                   <label></label>
+                   <input type="submit" name="commit" value="Filter" />
                </div>
            </div>
        </fieldset>

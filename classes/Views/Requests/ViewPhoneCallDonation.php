@@ -1,8 +1,7 @@
 <?php
 // Support for you
-// ViewPagesHome.php: Home Page View Home definition from controller ctlPages
 // ---------------------------------------------------------------------------
-// view Home Page
+
 class ViewPhoneCallDonation
 {
     private $controllerModel;   // model modified by controller
@@ -25,7 +24,7 @@ class ViewPhoneCallDonation
         // tag <SELECT> for Languages
       $output = str_replace('{s4uListLanguages}',
                             Util::createSelect(MdlLanguages::listLanguages(), 'getLangId', 'getLangName',
-                            (!empty($this->controllerModel->errorField)) ? $this->controllerModel->request->getRequestItems()[0]->getLangId() : NULL),
+                                               (!empty($this->controllerModel->errorField)) ? $this->controllerModel->request->getRequestItems()[0]->getLangId() : NULL),
                              $output);
 
 
@@ -37,7 +36,7 @@ class ViewPhoneCallDonation
             foreach ($this->controllerModel->requestList as $request) {
                 $tableRequests .=   '<label class="card-radio">'.
                                     '<input type="radio" name="optionRequest" value="' . $request->getRequestId(). '"> '.
-                                    '<article class="card card-donate-talk">'.
+                                    '<article class="card">'.
                                         '<div class="card-header"><i></i><h3>' . MdlUsers::findUser($request->getUserIdReq())->getFirstName() . '</h3></div>'.
                                         '<div class="card-content">'.
                                             '<div><span>Time</span>' . $request->getRequestItems()[0]->getBestTime() . '</div>'.

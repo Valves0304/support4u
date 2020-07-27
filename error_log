@@ -4484,3 +4484,173 @@ Stack trace:
 [17-Jul-2020 17:42:00 America/Vancouver] PHP Notice:  Undefined variable: tableRequests in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallMatch.php on line 34
 [17-Jul-2020 17:44:37 America/Vancouver] PHP Notice:  Undefined variable: tableRequests in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallMatch.php on line 34
 [17-Jul-2020 17:45:00 America/Vancouver] PHP Notice:  Undefined variable: tableRequests in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallMatch.php on line 34
+[17-Jul-2020 21:25:56 America/Vancouver] PHP Fatal error:  Call to a member function getRequestId() on a non-object in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallMatch.php on line 23
+[17-Jul-2020 21:26:23 America/Vancouver] PHP Fatal error:  Call to a member function getRequestId() on a non-object in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallMatch.php on line 23
+[17-Jul-2020 21:31:41 America/Vancouver] PHP Notice:  Undefined offset: 0 in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 34
+[17-Jul-2020 21:31:51 America/Vancouver] PHP Notice:  Undefined offset: 0 in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 34
+[17-Jul-2020 21:31:58 America/Vancouver] PHP Notice:  Undefined offset: 0 in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 34
+[17-Jul-2020 21:38:32 America/Vancouver] PHP Notice:  Undefined offset: 0 in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 34
+[17-Jul-2020 21:39:02 America/Vancouver] PHP Notice:  Undefined offset: 0 in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 34
+[17-Jul-2020 21:46:23 America/Vancouver] PHP Notice:  Undefined offset: 0 in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 34
+[17-Jul-2020 21:47:13 America/Vancouver] PHP Notice:  Undefined offset: 0 in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 34
+[17-Jul-2020 21:47:13 America/Vancouver] PHP Notice:  Use of undefined constant requestList - assumed 'requestList' in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 35
+[17-Jul-2020 21:47:17 America/Vancouver] PHP Notice:  Undefined offset: 0 in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 34
+[17-Jul-2020 21:47:17 America/Vancouver] PHP Notice:  Use of undefined constant requestList - assumed 'requestList' in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 35
+[17-Jul-2020 21:47:38 America/Vancouver] PHP Notice:  Undefined offset: 0 in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 34
+[17-Jul-2020 21:47:38 America/Vancouver] PHP Notice:  Use of undefined constant requestList - assumed 'requestList' in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 35
+[17-Jul-2020 21:48:00 America/Vancouver] PHP Notice:  Use of undefined constant requestList - assumed 'requestList' in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 33
+[17-Jul-2020 21:48:02 America/Vancouver] PHP Notice:  Use of undefined constant requestList - assumed 'requestList' in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 33
+[17-Jul-2020 21:48:02 America/Vancouver] PHP Notice:  Undefined offset: 0 in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 34
+[17-Jul-2020 21:48:29 America/Vancouver] PHP Notice:  Array to string conversion in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 47
+[17-Jul-2020 21:48:32 America/Vancouver] PHP Notice:  Undefined offset: 0 in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 34
+[17-Jul-2020 21:48:32 America/Vancouver] PHP Notice:  Array to string conversion in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 35
+[17-Jul-2020 21:48:45 America/Vancouver] PHP Notice:  Undefined offset: 0 in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 34
+[17-Jul-2020 23:51:21 America/Chicago] PHP Parse error:  syntax error, unexpected '$request' (T_VARIABLE), expecting ',' or ';' in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 250
+[17-Jul-2020 21:51:40 America/Vancouver] PHP Notice:  Undefined offset: 0 in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 34
+[17-Jul-2020 21:52:39 America/Vancouver] PHP Notice:  Undefined offset: 0 in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 34
+[17-Jul-2020 21:53:13 America/Vancouver] PHP Notice:  Undefined offset: 0 in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 34
+[17-Jul-2020 21:53:18 America/Vancouver] PHP Notice:  Undefined offset: 0 in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 34
+[17-Jul-2020 21:53:45 America/Vancouver] PHP Notice:  Undefined offset: 0 in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 34
+[17-Jul-2020 21:54:30 America/Vancouver] PHP Notice:  Undefined offset: 0 in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 34
+[17-Jul-2020 21:55:51 America/Vancouver] PHP Notice:  Undefined offset: 0 in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 34
+[17-Jul-2020 21:57:11 America/Vancouver] PHP Notice:  Undefined variable: result in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 330
+[17-Jul-2020 21:57:11 America/Vancouver] PHP Notice:  Trying to get property of non-object in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 330
+[17-Jul-2020 21:57:34 America/Vancouver] PHP Notice:  Undefined offset: 0 in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 34
+[17-Jul-2020 22:06:13 America/Vancouver] PHP Fatal error:  Call to undefined method Request::getUserNameReq() in /home1/s4u/public_html/classes/Views/Requests/ViewGroceryDonation.php on line 39
+[17-Jul-2020 22:10:30 America/Vancouver] PHP Fatal error:  Call to undefined method Request::getUserNameReq() in /home1/s4u/public_html/classes/Views/Requests/ViewGroceryDonation.php on line 39
+[17-Jul-2020 22:10:36 America/Vancouver] PHP Fatal error:  Call to undefined method Request::getUserNameReq() in /home1/s4u/public_html/classes/Views/Requests/ViewGroceryDonation.php on line 39
+[17-Jul-2020 22:15:33 America/Vancouver] PHP Notice:  Undefined offset: 0 in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 34
+[17-Jul-2020 22:17:32 America/Vancouver] PHP Notice:  Undefined offset: 0 in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 34
+[17-Jul-2020 22:19:49 America/Vancouver] PHP Notice:  Undefined offset: 0 in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 34
+[17-Jul-2020 22:31:03 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[17-Jul-2020 22:31:03 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[17-Jul-2020 22:31:03 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[17-Jul-2020 22:31:03 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[17-Jul-2020 22:31:03 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[17-Jul-2020 22:31:03 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[17-Jul-2020 22:31:03 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[17-Jul-2020 22:31:03 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[17-Jul-2020 22:31:03 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[17-Jul-2020 22:31:03 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[17-Jul-2020 22:31:03 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[17-Jul-2020 22:31:03 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[17-Jul-2020 22:31:03 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[17-Jul-2020 22:31:03 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[17-Jul-2020 22:31:03 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[17-Jul-2020 22:31:03 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[17-Jul-2020 22:31:03 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[17-Jul-2020 22:47:45 America/Vancouver] PHP Fatal error:  Call to undefined function checkUserSession() in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 230
+[17-Jul-2020 22:49:01 America/Vancouver] PHP Notice:  Undefined index: ID_USUARIO in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 223
+[17-Jul-2020 22:49:01 America/Vancouver] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/s4u/public_html/classes/Controllers/CtlRequests.php:223) in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 224
+[17-Jul-2020 22:50:57 America/Vancouver] PHP Notice:  Undefined index: ID_USUARIO in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 223
+[17-Jul-2020 22:55:33 America/Vancouver] PHP Fatal error:  Cannot access private property CtlRequests::$model in /home1/s4u/public_html/classes/Controllers/CtlUsers.php on line 34
+[17-Jul-2020 23:08:15 America/Vancouver] PHP Fatal error:  Using $this when not in object context in /home1/s4u/public_html/classes/Controllers/CtlUsers.php on line 352
+[17-Jul-2020 23:26:05 America/Vancouver] PHP Notice:  Undefined offset: 0 in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php on line 33
+[18-Jul-2020 17:46:28 America/Vancouver] PHP Notice:  Undefined offset: 0 in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 34
+[18-Jul-2020 17:56:21 America/Vancouver] PHP Notice:  Undefined offset: 0 in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 34
+[18-Jul-2020 18:20:57 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[18-Jul-2020 18:20:57 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[18-Jul-2020 18:20:57 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[18-Jul-2020 18:20:57 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[18-Jul-2020 18:20:57 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[18-Jul-2020 18:20:57 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[18-Jul-2020 18:20:57 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[18-Jul-2020 18:20:57 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[18-Jul-2020 18:20:57 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[18-Jul-2020 18:20:57 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[18-Jul-2020 18:20:57 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[18-Jul-2020 18:20:57 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[18-Jul-2020 18:20:57 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[18-Jul-2020 18:20:57 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[18-Jul-2020 18:20:57 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[18-Jul-2020 18:20:57 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[18-Jul-2020 18:20:57 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[18-Jul-2020 18:21:38 America/Vancouver] PHP Notice:  Undefined offset: 0 in /home1/s4u/public_html/classes/Views/Requests/ViewWalkDogDonation.php on line 34
+[18-Jul-2020 18:21:41 America/Vancouver] PHP Notice:  Undefined offset: 0 in /home1/s4u/public_html/classes/Views/Requests/ViewWalkDogDonation.php on line 34
+[18-Jul-2020 18:21:46 America/Vancouver] PHP Notice:  Undefined offset: 0 in /home1/s4u/public_html/classes/Views/Requests/ViewWalkDogDonation.php on line 34
+[18-Jul-2020 18:42:37 America/Vancouver] PHP Notice:  Undefined offset: 0 in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php on line 33
+[18-Jul-2020 18:43:05 America/Vancouver] PHP Notice:  Undefined variable: request in /home1/s4u/public_html/classes/Views/Requests/ViewFindRequest.php on line 24
+[18-Jul-2020 18:43:05 America/Vancouver] PHP Fatal error:  Call to a member function getRequestType() on a non-object in /home1/s4u/public_html/classes/Views/Requests/ViewFindRequest.php on line 24
+[18-Jul-2020 18:47:28 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[18-Jul-2020 18:47:28 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[18-Jul-2020 18:47:28 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[18-Jul-2020 18:47:28 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[18-Jul-2020 18:47:28 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[18-Jul-2020 18:47:28 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[18-Jul-2020 18:47:28 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[18-Jul-2020 18:47:28 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[18-Jul-2020 18:47:28 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[18-Jul-2020 18:47:28 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[18-Jul-2020 18:47:28 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[18-Jul-2020 18:47:28 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[18-Jul-2020 18:47:28 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[18-Jul-2020 18:47:28 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[18-Jul-2020 18:47:28 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[18-Jul-2020 18:47:28 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[18-Jul-2020 18:47:28 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[18-Jul-2020 18:47:46 America/Vancouver] PHP Fatal error:  Call to undefined method Request::getUserNameReq() in /home1/s4u/public_html/classes/Views/Requests/ViewGroceryDonation.php on line 39
+[18-Jul-2020 18:51:13 America/Vancouver] PHP Notice:  Undefined offset: 0 in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 34
+[18-Jul-2020 18:59:43 America/Vancouver] PHP Notice:  Undefined offset: 0 in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 34
+[19-Jul-2020 17:57:27 America/Vancouver] PHP Fatal error:  Call to undefined method Request::getUserNameReq() in /home1/s4u/public_html/classes/Views/Requests/ViewGroceryDonation.php on line 39
+[19-Jul-2020 18:01:44 America/Vancouver] PHP Fatal error:  Call to undefined method Request::getUserCityReq() in /home1/s4u/public_html/classes/Views/Requests/ViewGroceryDonation.php on line 40
+[19-Jul-2020 18:05:00 America/Vancouver] PHP Notice:  Trying to get property of non-object in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 340
+[19-Jul-2020 18:11:09 America/Vancouver] PHP Notice:  Trying to get property of non-object in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 340
+[19-Jul-2020 18:11:25 America/Vancouver] PHP Fatal error:  Call to undefined method MdlRequests::findRequests() in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 326
+[19-Jul-2020 18:11:40 America/Vancouver] PHP Notice:  Undefined index: RequestMatch in /home1/s4u/public_html/classes/Views/Requests/ViewGroceryMatch.php on line 24
+[19-Jul-2020 18:11:40 America/Vancouver] PHP Notice:  Undefined offset: 0 in /home1/s4u/public_html/classes/Views/Requests/ViewGroceryMatch.php on line 30
+[19-Jul-2020 20:27:53 America/Chicago] PHP Parse error:  syntax error, unexpected '$groceryItems' (T_VARIABLE), expecting function (T_FUNCTION) in /home1/s4u/public_html/classes/Views/Requests/ViewGroceryMatch.php on line 37
+[19-Jul-2020 18:29:09 America/Vancouver] PHP Notice:  Trying to get property of non-object in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 340
+[19-Jul-2020 18:31:47 America/Vancouver] PHP Notice:  Trying to get property of non-object in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 340
+[19-Jul-2020 18:33:14 America/Vancouver] PHP Notice:  Trying to get property of non-object in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 340
+[19-Jul-2020 18:34:43 America/Vancouver] PHP Notice:  Trying to get property of non-object in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 340
+[19-Jul-2020 18:37:32 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:37:32 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:37:32 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:37:32 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:37:32 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:37:32 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:37:32 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:37:32 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:37:32 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:37:32 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:37:32 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:37:32 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:37:32 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:37:32 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:37:32 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:37:32 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:37:32 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:37:50 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:37:50 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:37:50 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:37:50 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:37:50 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:37:50 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:37:50 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:37:50 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:37:50 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:37:50 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:37:50 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:37:50 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:37:50 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:37:50 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:37:50 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:37:50 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:37:50 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:38:04 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:38:04 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:38:04 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:38:04 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:38:04 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:38:04 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:38:04 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:38:04 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:38:04 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:38:04 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:38:04 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:38:04 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:38:04 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:38:04 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:38:04 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:38:04 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 376
+[19-Jul-2020 18:48:54 America/Vancouver] PHP Fatal error:  Cannot access private property Request::$requestItems in /home1/s4u/public_html/classes/Views/Requests/ViewGroceryMatch.php on line 30

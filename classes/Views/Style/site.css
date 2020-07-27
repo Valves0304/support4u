@@ -237,6 +237,23 @@ footer .version p {
     text-align: right;
 }
 
+.logHidden {
+    display: none;
+}
+
+.logVisible {
+    display: block;
+}
+
+.has-error, .msg-error {
+    font-weight: bold;
+    color: red;
+}
+
+.has-error input {
+    border-color: #ff0000 !important;
+}
+
 @media only screen and (min-width: 568px) {
     header {
         position: initial;

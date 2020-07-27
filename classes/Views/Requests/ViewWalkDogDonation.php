@@ -1,8 +1,7 @@
 <?php
 // Support for you
-// ViewPagesHome.php: Home Page View Home definition from controller ctlPages
 // ---------------------------------------------------------------------------
-// view Home Page
+
 class ViewWalkDogDonation
 {
     private $controllerModel;   // model modified by controller
@@ -22,32 +21,34 @@ class ViewWalkDogDonation
         $output = str_replace('{s4uFilterRequest}', Util::createLink("CtlRequests","newWalkDogDonation"), $output);
         $output = str_replace('{s4uRequestMatch}', Util::createLink("CtlRequests","matchWalkDog"), $output);
 
-        // tag <SELECT> for Games
-
+        // tag <SELECT> for Cities
         $output = str_replace('{s4uListCities}',
                               Util::createSelect(MdlCities::listCities(), 'getCityId', 'getCityName',
                               isset($_POST['cityId']) ? $_POST['cityId'] : NULL),
                               $output);
 
         // table with requests
-        $tableRequests = '<THEAD><TR><TD>Select</TD><TD>Name</TD><TD>City</TD><TD>Time</TD></TR></THEAD> ';
+        $tableRequests = '';
         if ($this->controllerModel->requestList[0] == NULL) {
-            $tableRequests .= '<TR><TD COLSPAN=5>There are no requests. Try changing your filter.</TD></TR>';
+            $tableRequests .= '<h3>There are no requests. Try changing your filter.</h3>';
         } else {
             foreach ($this->controllerModel->requestList as $request) {
-                $user = MdlUsers::findUser($request->getUserIdReq());
-                $tableRequests .= "\n<TR><TD>"  . '<input type="radio" name="optionRequest" value=" ' . $request->getRequestId() . ' "> ' .  "</TD>" .
-                              '      <TD>' . $user->getFirstName() . '</TD>' .
-                              '      <TD>' . MdlCities::findCity($user->getCityId())->getCityName() . '</TD>' .
-                              '      <TD>' . $request->getRequestItems()[0]->getBestTime() . '</TD>' .
-
-                              '  </TR>';
+                              $user = MdlUsers::findUser($request->getUserIdReq());
+                $tableRequests .=   '<label class="card-radio">'.
+                                    '<input type="radio" name="optionRequest" value="' . $request->getRequestId(). '"> '.
+                                    '<article class="card">'.
+                                        '<div class="card-header"><i></i><h3>' . MdlUsers::findUser($request->getUserIdReq())->getFirstName() . '</h3></div>'.
+                                        '<div class="card-content">'.
+                                            '<div><span>Time</span>' . $request->getRequestItems()[0]->getBestTime() . '</div>'.
+                                            '<div><span>City</span>' . MdlCities::findCity($user->getCityId())->getCityName() . '</div>'.
+                                        '</div>'.
+                                    '</article>'.
+                                '</label>';
             }
         }
-        $tableRequests .= '</TBODY>';
-        $tableRequests .= "\n</TABLE>";
 
         $output = str_replace('{s4uTableRequests}', $tableRequests, $output);
+
 
         $output = str_replace('{version}', getenv('VER'), $output);
 

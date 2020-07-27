@@ -319,7 +319,7 @@ class MdlRequests
                  '  from request r, request_items ri ' .
                  ' where ri.request_id = r.request_id ' . (is_null($crit) ? '' : 'and ' . $crit);
 
-        $query .= ' group by r.request_id, r.req_type, r.req_date, r.user_id_req, r.user_id_donor, r.status ';
+        $query .= ' group by r.request_id, r.req_type, r.req_date, r.user_id_req, r.user_id_donor, r.price, r.status ';
 
         if (!is_null($limit))
         {

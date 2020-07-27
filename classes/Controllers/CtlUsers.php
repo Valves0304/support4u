@@ -346,4 +346,12 @@ class CtlUsers
 
         return TRUE;
     }
+    
+    public static function checkUserSession(){
+        if(isset($_SESSION['ID_USUARIO']) == 0){
+            return new ViewPagesLogin(new MdlPages());
+        }
+        
+        return null;
+    }
 }

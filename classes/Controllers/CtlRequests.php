@@ -213,15 +213,22 @@ class CtlRequests
         if($request != 0){
           $this->model->request = MdlRequests::findRequest($request);
           $this->view = new ViewPlayGameMatch($this->model);
-        }
+        } else{
 
         $this->view = new ViewPlayGameDonation($this->model);
+            
+        }
 
     }
-
+    
     public function newPhoneCallDonation()
     {
-
+        $loginView = CtlUSers::checkUserSession();
+        if(isset($loginView)){
+            $this->view = $loginView;
+            return;
+        }
+            
           $languageId = isset($_POST['languageId']) ? $_POST['languageId'] : 1;
           $bestTime = isset($_POST['bestTime']) ? $_POST['bestTime'] : 4;
 
@@ -248,11 +255,11 @@ class CtlRequests
     {
         $request = isset($_POST["optionRequest"]) ? $_POST['optionRequest'] : 0;
         if($request != 0){
-          $this->model->request = MdlRequests::findRequest($request);
-          $this->view = new ViewPhoneCallMatch($this->model);
+            $this->model->request = MdlRequests::findRequest($request);
+            $this->view = new ViewPhoneCallMatch($this->model);
+        }else{
+            $this->view = new ViewPhoneCallDonation($this->model);    
         }
-
-        $this->view = new ViewPhoneCallDonation($this->model);
     }
 
        public function matchDonation()
@@ -285,11 +292,12 @@ class CtlRequests
         public function matchWalkDog()
         {
           $request = isset($_POST["optionRequest"]) ? $_POST['optionRequest'] : 0;
-          if($request != 0){
+          if ($request != 0){
             $this->model->request = MdlRequests::findRequest($request);
             $this->view = new ViewWalkDogMatch($this->model);
+          } else{
+            $this->view = new ViewWalkDogDonation($this->model);
           }
-          $this->view = new ViewWalkDogDonation($this->model);
         }
 
           public function newGroceryDonation()
@@ -301,26 +309,26 @@ class CtlRequests
 
               $criteria = ' 1 = 1 ';
               $criteria .= $cityId > 0 ? ' AND c.city_id = ' . $cityId : '';
-
+                
+            if ($price <> '') {
               $criteria .= ' AND r.price <= ' . $price;
-
+            }
+            
               $criteria .= ' AND status = ' . MdlRequests::ACTIVE_REQUEST;
 
               $this->model->requestList = MdlRequests::listGroceryRequests($criteria);
               $this->view = new ViewGroceryDonation($this->model);
 
           }
-          public function matchGrocery()
-          {
-
-              $optionRequest = isset($_POST["optionRequest"]) ? $_POST['optionRequest'] : 0;
-              if($optionRequest !=0){
-                 $criteria = 'r.request_id = ' . $optionRequest . '';
-                 $this->model->requestList = MdlRequests::listRequests($criteria);
-                 $GLOBALS['RequestMatch']=$optionRequest;
-                 $this->view = new ViewGroceryMatch($this->model);
-               }
-                 $this->view = new ViewGroceryDonation($this->model);
-
-               }
+        public function matchGrocery()
+        {
+            $request = isset($_POST["optionRequest"]) ? $_POST['optionRequest'] : 0;
+        
+            if ($request !=0){
+                $this->model->request = MdlRequests::findRequest($request);
+                $this->view = new ViewGroceryMatch($this->model);
+            } else {
+                $this->view = new ViewGroceryDonation($this->model);
+            }
+        }
 }
