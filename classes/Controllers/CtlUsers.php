@@ -186,7 +186,9 @@ class CtlUsers
       //  $_SESSION['USUARIO']);
       if (isset($_SESSION['USUARIO'])){
         $this->model->user = MdlUsers::findUserLogin($_SESSION['USUARIO']);
-      }else{
+      }
+      else
+      {
         $this->model->user = new User();
       }
         // exibe informações para atualização/inclusão

@@ -23,7 +23,7 @@ class ViewPagesErro {
                         <div class="col-sm-8 texto-erro">
                           <h4>OOPS! Algo de errado aconteceu:</h4>';
         $output .= '      <i>' . $this->controllerModel->codErro . ' - ' . $this->controllerModel->msgErro . '</i>';
-        $output .= '      <div class="red-boiler"><BR><a href=boiler.php?c=CtlPages&action=home>Voltar para home</a></div>';
+        $output .= '      <div class="red-s4u"><BR><a href=s4u.php?c=CtlPages&action=home>Back to HomePage</a></div>';
         $output .= '</div></div></div>';
         $output .= file_get_contents('classes/Views/Pages/footer.html');
 

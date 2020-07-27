@@ -28,10 +28,6 @@ class CtlPages
             //default function, the view is already defined by constructor
     }
 
-  //  public function manutencao()
-  //  {
-  //      $this->view = new ViewPagesManutencao();
-  //  }
 
     public function about()
     {
@@ -41,10 +37,7 @@ class CtlPages
     public function login($campoErro, $msgErro = null)
     {
 
-        // esse cookie serve pra guardar o último usuário que logon, e já aparecer com ele preenchido (o "Lembrar-me"). 
-        // Sinceramente, acho que dá pra tirar isso, mas funciona legal
-        
-        // verifica se há um cookie
+        // check cookie
         if(isset($_COOKIE['boilerchannel'])) {
 
             $ctl = new CtlUsuarios();
@@ -53,7 +46,8 @@ class CtlPages
 
         } else {
 
-            // aqui ele coloca a mensagem de erro e campo que ele recebeu, porque ele pode estar chamando esta ação pela segunda vez, em caso de erro, 
+            // aqui ele coloca a mensagem de erro e campo que ele recebeu,
+            // porque ele pode estar chamando esta ação pela segunda vez, em caso de erro,
             // e quer exibir a mensagem na tela
             $this->model->msgErro = $msgErro;
             $this->model->campoErro = $campoErro;

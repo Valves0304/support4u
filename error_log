@@ -1,0 +1,24 @@
+.
+[28-Jun-2020 17:48:29 America/Chicago] PHP Parse error:  syntax error, unexpected '$request' (T_VARIABLE), expecting ',' or ')' in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 110
+[28-Jun-2020 17:49:26 America/Chicago] PHP Parse error:  syntax error, unexpected ';', expecting ',' or ')' in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 161
+[28-Jun-2020 17:49:59 America/Chicago] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC), expecting end of file in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 195
+[28-Jun-2020 17:51:16 America/Chicago] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC), expecting end of file in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 195
+[28-Jun-2020 17:52:22 America/Chicago] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC), expecting end of file in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 195
+[28-Jun-2020 17:52:31 America/Chicago] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC), expecting end of file in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 195
+[28-Jun-2020 17:52:48 America/Chicago] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC), expecting end of file in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 195
+[28-Jun-2020 17:53:04 America/Chicago] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 200
+[28-Jun-2020 17:53:23 America/Chicago] PHP Parse error:  syntax error, unexpected '$', expecting function (T_FUNCTION) or const (T_CONST) in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 285
+[28-Jun-2020 17:53:41 America/Chicago] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC), expecting end of file in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 195
+[28-Jun-2020 17:54:06 America/Chicago] PHP Parse error:  syntax error, unexpected ';' in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 196
+[28-Jun-2020 17:55:41 America/Chicago] PHP Parse error:  syntax error, unexpected ';' in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 196
+[28-Jun-2020 17:57:11 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 197
+[28-Jun-2020 17:57:25 America/Chicago] PHP Parse error:  syntax error, unexpected ';' in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 196
+[28-Jun-2020 17:59:15 America/Chicago] PHP Parse error:  syntax error, unexpected '$', expecting function (T_FUNCTION) or const (T_CONST) in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 287
+[29-Jun-2020 19:59:07 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'MdlRequests' not found in /home1/s4u/public_html/request.php:6
+Stack trace:
+#0 {main}
+  thrown in /home1/s4u/public_html/request.php on line 6
+[29-Jun-2020 20:00:15 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'MdlRequests' not found in /home1/s4u/public_html/request.php:6
+Stack trace:
+#0 {main}
+  thrown in /home1/s4u/public_html/request.php on line 6
