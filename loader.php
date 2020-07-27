@@ -44,6 +44,8 @@
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Requests/ViewSuccessReq.php';
 
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Requests/ViewWalkDog.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Requests/ViewWalkDogDonation.php';
+//    include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Requests/ViewWalkDogMatch .php';
 
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Users/ViewUserRegister.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Users/ViewUsersEmailList.php';

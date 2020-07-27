@@ -315,10 +315,10 @@ class MdlRequests
         $requestList = array();
 
         $query = 'select r.request_id, r.req_type, r.req_date, r.user_id_req, r.user_id_donor, r.status ' .
-                 '  from request r, request_items ri ' .
-                 ' where ri.request_id = r.request_id ' . (is_null($crit) ? '' : 'and ' . $crit);
+                 '  from request r, request_items ri, city c, user_s4u u' .
+                 ' where ri.request_id = r.request_id and r.user_id_req = u.user_id and c.city_id = u.city_id ' . (is_null($crit) ? '' : 'and ' . $crit);
 
-        $query .= ' group by r.request_id, r.req_type, r.req_date, r.user_id_req, r.user_id_donor, r.status ';
+        $query .= ' group by r.request_id, r.req_type, r.req_date, r.user_id_req, r.user_id_donor, r.status, ri.best_time, u.city_id ';
 
         if (!is_null($limit))
         {
@@ -354,6 +354,10 @@ class MdlRequests
               $userReq = MdlUsers::findUser($request['user_id_req']);
               $nameReq = $userReq->getFirstName();
               $emailReq = $userReq->getEmail();
+
+              $userCity = new City();
+              $userCity = MdlCities::findCity($userReq->getCityId());
+              $cityReq = $userCity-> getCityName();
             }
 
             if($request['user_id_donor'] != NULL){
@@ -369,6 +373,7 @@ class MdlRequests
             $requestData->setUserNameReq($nameReq);
             $requestData->setUserNameDonor($nameDonor);
             $requestData->setUserEmailReq($emailReq);
+            $requestData->setUserCityReq($cityReq);
             $requestData->setUserIdDonor($request['user_id_donor']);
             $requestData->setStatusRequest($request['status']);
 
@@ -418,7 +423,10 @@ class MdlRequests
     {
         return (MdlRequests::listRequests('type_time = ' . MdlRequests::TALK . ' AND ' . $criteria));
     }
-
+    public static function listWalkDogRequests($criteria)
+    {
+        return (MdlRequests::listRequests('type_time = ' . MdlRequests::DOG . ' AND ' . $criteria));
+    }
     // *******************************************************************************************************
     // *** find User requests
     // *******************************************************************************************************
@@ -638,6 +646,7 @@ class Request
     private $userIdReq;
     private $userNameReq;
     private $userEmailReq;
+    private $userCityReq;
     private $userIdDonor;
     private $userNameDonor;
     private $status;
@@ -737,6 +746,14 @@ class Request
     public function setUserNameDonor($userNameDonor)
     {
         $this->userNameDonor = $userNameDonor;
+    }
+    public function getUserCityReq()
+    {
+        return $this->userCityReq;
+    }
+    public function setUserCityReq($userCityReq)
+    {
+        $this->userCityReq = $userCityReq;
     }
     public function addRequestItem(RequestItem $requestItem)
     {

@@ -91,7 +91,7 @@ class CtlRequests
         } else { // time request
             $this->model->requestItem = new RequestItem();
             $this->model->requestItem->setTypeTime($_GET['typeTime']);
-            $this->model->requestItem->setBestTime(isset($_POST['bestTime']) ? $_POST['bestTime'] : 0);
+            $this->model->requestItem->setBestTime(isset($_POST['bestTime']) ? $_POST['bestTime'] : 4);
             $this->model->requestItem->setGameId(isset($_POST['gameId']) ? $_POST['gameId'] : 0);
             $this->model->requestItem->setGameName(isset($_POST['gameName']) ? $_POST['gameName'] : 0);
             $this->model->requestItem->setLangId(isset($_POST['langId']) ? $_POST['langId'] : 0);
@@ -188,14 +188,14 @@ class CtlRequests
     {
 
         $gameId = isset($_POST['gameId']) ? $_POST['gameId'] : 0;
-        $bestTime = isset($_POST['bestTime']) ? $_POST['bestTime'] : 0;
+        $bestTime = isset($_POST['bestTime']) ? $_POST['bestTime'] : 4;
 
         $criteria = ' 1 = 1 ';
         $criteria .= $gameId > 0 ? ' AND game_id = ' . $gameId : '';
 
         //If you can donate anytime so this time resticition is not necessary
         if ($bestTime != 4){
-          $criteria .= ' AND best_time = ' . $bestTime;
+          $criteria .= ' AND ( best_time = 4 or best_time = ' . $bestTime . ' )';
         }
 
         $criteria .= ' AND status = ' . MdlRequests::ACTIVE_REQUEST;
@@ -232,7 +232,7 @@ class CtlRequests
 
           //If you can donate anytime so this time resticition is not necessary
           if ($bestTime != 4){
-            $criteria .= ' AND best_time = ' . $bestTime;
+            $criteria .= ' AND ( best_time = 4 or best_time = ' . $bestTime . ' )';
           }
 
           $criteria .= ' AND status = ' . MdlRequests::ACTIVE_REQUEST;
@@ -260,4 +260,40 @@ class CtlRequests
         $this->view = new ViewGetStarted($this->model);
 
         }
+        public function newWalkDogDonation()
+        {
+
+            $cityId = isset($_POST['cityId']) ? $_POST['cityId'] : 0;
+            $bestTime = isset($_POST['bestTime']) ? $_POST['bestTime'] : 4;
+
+            $criteria = ' 1 = 1 ';
+            $criteria .= $cityId > 0 ? ' AND c.city_id = ' . $cityId : '';
+
+            //If you can donate anytime so this time resticition is not necessary
+            if ($bestTime != 4){
+              $criteria .= ' AND ( best_time = 4 or best_time = ' . $bestTime . ' )';
+            }
+
+            $criteria .= ' AND status = ' . MdlRequests::ACTIVE_REQUEST;
+
+            $this->model->requestList = MdlRequests::listWalkDogRequests($criteria);
+            $this->view = new ViewWalkDogDonation($this->model);
+
+        }
+        public function matchWalkDog()
+        {
+
+            $optionRequest = isset($_POST["optionRequest"]) ? $_POST['optionRequest'] : 0;
+
+              $criteria .= 'r.request_id = ' . $optionRequest . '';
+
+               $this->model->requestList = MdlRequests::listRequests($criteria);
+
+               $GLOBALS['RequestMatch']=$optionRequest;
+
+               $this->view = new ViewPlayGameMatch($this->model);
+          }
+
+
+
 }

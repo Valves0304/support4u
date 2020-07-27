@@ -19,31 +19,32 @@ class ViewWalkDogDonation
         $output .= file_get_contents('classes/Views/Pages/footer.html');
 
         // variables replacement
-        $output = str_replace('{s4uFilterRequest}', Util::createLink("CtlRequests","newPhoneCallDonation"), $output);
-        $output = str_replace('{s4uRequestMatch}',  Util::createLink("CtlRequests","matchPhoneCall"), $output);
+        $output = str_replace('{s4uFilterRequest}', Util::createLink("CtlRequests","newWalkDogDonation"), $output);
+      //  $output = str_replace('{s4uRequestMatch}', Util::createLink("CtlRequests","matchPlayGame"), $output);
 
-        // tag <SELECT> for Languages
-      $output = str_replace('{s4uListLanguages}',
-                            Util::createSelect(MdlLanguages::listLanguages(), 'getLangId', 'getLangName',
-                                               (!empty($this->controllerModel->errorField)) ? $this->controllerModel->request->getRequestItems()[0]->getLangId() : NULL),
-                             $output);
+        // tag <SELECT> for Games
 
+        $output = str_replace('{s4uListCities}',
+                              Util::createSelect(MdlCities::listCities(), 'getCityId', 'getCityName',
+                              isset($_POST['cityId']) ? $_POST['cityId'] : NULL),
+                              $output);
 
         // table with requests
-        $tableRequests = '<TABLE class="pure-table pure-table-bordered"><THEAD><TD>Select</TD><TD>Name</TD><TD>Time</TD><TD>Language</TD></THEAD> ';
+        $tableRequests = '<TABLE class="pure-table pure-table-bordered"><THEAD><TD>Select</TD><TD>Name</TD><TD>City</TD><TD>Time</TD></THEAD> ';
         if ($this->controllerModel->requestList[0] == NULL) {
             $tableRequests .= '<TR><TD COLSPAN=5>There are no requests. Try changing your filter.</TD></TR>';
         } else {
             foreach ($this->controllerModel->requestList as $request) {
-
-                $tableRequests .= "\n<TR><TD>"  . '<input type="radio" name="optionRequest" value="' . $request->getRequestId(). '"> ' .  "</TD>" .
+                $tableRequests .= "\n<TR><TD>"  . '<input type="radio" name="optionRequest" value=" ' . $request->getRequestId() . ' "> ' .  "</TD>" .
                               '      <TD>' . $request->getUserNameReq() . '</TD>' .
+                              '      <TD>' . $request->getUserCityReq() . '</TD>' .
                               '      <TD>' . $request->getRequestItems()[0]->getBestTime() . '</TD>' .
-                              '      <TD>' . $request->getRequestItems()[0]->getLangName() . '</TD>' .
+
 
                               '  </TR>';
             }
         }
+        $tableRequests .= "\n</TABLE>";
 
         $output = str_replace('{s4uTableRequests}', $tableRequests, $output);
 

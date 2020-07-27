@@ -24,9 +24,13 @@
                         </div>
                      </td>
                      <td>
-
-                       //Acho qu eh importante a city
-                       
+                        <div>
+                           <label for="city" class="city">City     :    </label>
+                           <select class = "cityselect" name="cityId" style="width:150px;">
+                              <option value=0>Any</option>
+                              {s4uListCities}
+                           </select>
+                        </div>
                         <p class="submit">
                            <input type="submit" name="commit" value="Filter" />
                         </p>
