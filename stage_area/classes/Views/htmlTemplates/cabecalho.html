@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:website="http://ogp.me/ns/website" lang="en-US" itemscope itemtype="http://schema.org/WebPage" >
+<head>
+  <title>Support for you</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="imagens/boiler.ico"/>
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="/scripts/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/css/cabecalho.css">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-87909029-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</head>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+						<div class="logo-cab">
+							<!--<img src="/imagens/boiler.png"></img>-->
+						</div>
+					</a>
+        </div>
+        <div>
+		  	<div class="msg-usuario-cab">
+			   	{msg-usuario}
+			  </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+	  				<li><a href=/>Home</a></li>
+	  				<li><a href=boiler.php?c=CtlProdutos&action=sniper&idEvento=3>Sniper</a></li>
+            <li class="dropdown {boilerMenuWST}">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">WOD Sunset<span class="caret"></span></a>
+              <ul class="dropdown-menu ">
+							  <li><a href=boiler.php?c=CtlAdmin&action=resumoInscricoes&idEvento=3>Resumo Inscrições</a></li>
+							  <li><a href=boiler.php?c=CtlAdmin&action=resumoIngressos&idEvento=3>Resumo Ingressos</a></li>
+							  <li><a href=boiler.php?c=CtlTransacoes&action=listaTransacoes&idEvento=3&lista=1>Transações</a></li>
+							  <li><a href=boiler.php?c=CtlAdmin&action=listaInscricoes&idEvento=3>Inscritos (Ind.)</a></li>
+							  <li><a href=boiler.php?c=CtlAdmin&action=listaInscricoes&idEvento=3&Eq>Inscritos (Eq.)</a></li>
+							  <li><a href=boiler.php?c=CtlAdmin&action=totalCamisas&idEvento=3>Camisas</a></li>
+							  <li class="nav-divider {boilerMenuAdmin}">Administradores</li>
+							  <li class="{boilerMenuAdmin}"><a href=boiler.php?c=CtlResultados&action=informaResultados&idEvento=3>Informa Resultados</a></li>
+							  <li class="{boilerMenuAdmin}"><a href=boiler.php?c=CtlResultados&action=painelControle&idEvento=3>Controle de Publicação</a></li>
+							  <li class="{boilerMenuAdmin}"><a href=boiler.php?c=CtlAdmin&action=atualizaFotos&idEvento=3>Atualiza Fotos</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </nav>
+
+<BR>
+<BR>
+<BR>
+<BR>

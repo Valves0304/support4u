@@ -1,0 +1,106 @@
+.
+[08-Jun-2020 11:25:03 America/Chicago] PHP Recoverable fatal error:  Object of class User could not be converted to string in /home1/s4u/public_html/classes/Controllers/CtlUsers.php on line 41
+[08-Jun-2020 11:26:23 America/Chicago] PHP Recoverable fatal error:  Object of class User could not be converted to string in /home1/s4u/public_html/classes/Controllers/CtlUsers.php on line 41
+[08-Jun-2020 11:27:39 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined method User::getIdUsuario() in /home1/s4u/public_html/classes/Controllers/CtlUsers.php:65
+Stack trace:
+#0 /home1/s4u/public_html/s4u.php(74): CtlUsers->login('Noah')
+#1 {main}
+  thrown in /home1/s4u/public_html/classes/Controllers/CtlUsers.php on line 65
+[08-Jun-2020 11:31:06 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'MdlAtletas' not found in /home1/s4u/public_html/classes/Controllers/CtlUsers.php:122
+Stack trace:
+#0 /home1/s4u/public_html/s4u.php(74): CtlUsers->login('Noah')
+#1 {main}
+  thrown in /home1/s4u/public_html/classes/Controllers/CtlUsers.php on line 122
+[08-Jun-2020 11:33:06 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'MdlAtletas' not found in /home1/s4u/public_html/classes/Controllers/CtlUsers.php:124
+Stack trace:
+#0 /home1/s4u/public_html/s4u.php(74): CtlUsers->login('Noah')
+#1 {main}
+  thrown in /home1/s4u/public_html/classes/Controllers/CtlUsers.php on line 124
+[08-Jun-2020 12:29:43 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined method MdlUsers::setUserPass() in /home1/s4u/public_html/criasenha.php:6
+Stack trace:
+#0 {main}
+  thrown in /home1/s4u/public_html/criasenha.php on line 6
+[08-Jun-2020 12:30:20 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined method MdlUsers::setUserPass() in /home1/s4u/public_html/criasenha.php:6
+Stack trace:
+#0 {main}
+  thrown in /home1/s4u/public_html/criasenha.php on line 6
+[08-Jun-2020 12:30:26 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined method MdlUsers::setUserPass() in /home1/s4u/public_html/criasenha.php:6
+Stack trace:
+#0 {main}
+  thrown in /home1/s4u/public_html/criasenha.php on line 6
+[08-Jun-2020 12:33:34 America/Chicago] PHP Parse error:  syntax error, unexpected '$usuario' (T_VARIABLE) in /home1/s4u/public_html/criasenha.php on line 7
+[08-Jun-2020 12:37:21 America/Chicago] PHP Parse error:  syntax error, unexpected '$usuario' (T_VARIABLE) in /home1/s4u/public_html/criasenha.php on line 7
+[08-Jun-2020 12:39:30 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'CtlUsers' not found in /home1/s4u/public_html/criasenha.php:7
+Stack trace:
+#0 {main}
+  thrown in /home1/s4u/public_html/criasenha.php on line 7
+[08-Jun-2020 12:41:42 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined method MdlUsers::setUserPass() in /home1/s4u/public_html/criasenha.php:8
+Stack trace:
+#0 {main}
+  thrown in /home1/s4u/public_html/criasenha.php on line 8
+[08-Jun-2020 13:21:51 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined method MdlUsers::setUserPass() in /home1/s4u/public_html/criasenha.php:8
+Stack trace:
+#0 {main}
+  thrown in /home1/s4u/public_html/criasenha.php on line 8
+[08-Jun-2020 13:37:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined method MdlUsers::setUserPass() in /home1/s4u/public_html/criasenha.php:8
+Stack trace:
+#0 {main}
+  thrown in /home1/s4u/public_html/criasenha.php on line 8
+[08-Jun-2020 13:38:15 America/Chicago] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 357
+[08-Jun-2020 13:38:50 America/Chicago] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 357
+[08-Jun-2020 13:39:05 America/Chicago] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 357
+[08-Jun-2020 13:40:34 America/Chicago] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 357
+[08-Jun-2020 13:40:34 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'Util' not found in /home1/s4u/public_html/classes/Models/MdlUsers.php:335
+Stack trace:
+#0 /home1/s4u/public_html/criasenha.php(18): User->checkUserPass('qualquer coisa')
+#1 {main}
+  thrown in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 335
+[08-Jun-2020 13:41:02 America/Chicago] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 357
+[08-Jun-2020 13:41:42 America/Chicago] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 357
+[08-Jun-2020 13:41:42 America/Chicago] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 357
+[08-Jun-2020 13:42:26 America/Chicago] PHP Parse error:  syntax error, unexpected '$usr' (T_VARIABLE), expecting ',' or ';' in /home1/s4u/public_html/criasenha.php on line 13
+[08-Jun-2020 13:42:48 America/Chicago] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in /home1/s4u/public_html/criasenha.php on line 18
+[08-Jun-2020 13:43:24 America/Chicago] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 357
+[08-Jun-2020 13:58:53 America/Chicago] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home1/s4u/public_html/criasenha.php on line 29
+[08-Jun-2020 13:59:06 America/Chicago] PHP Parse error:  syntax error, unexpected '{', expecting '(' in /home1/s4u/public_html/criasenha.php on line 30
+[08-Jun-2020 13:59:53 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on boolean in /home1/s4u/public_html/classes/Models/MdlUsers.php:94
+Stack trace:
+#0 /home1/s4u/public_html/criasenha.php(28): MdlUsers::updateUser(Object(User))
+#1 {main}
+  thrown in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 94
+[08-Jun-2020 14:01:35 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on boolean in /home1/s4u/public_html/classes/Models/MdlUsers.php:94
+Stack trace:
+#0 /home1/s4u/public_html/criasenha.php(28): MdlUsers::updateUser(Object(User))
+#1 {main}
+  thrown in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 94
+[08-Jun-2020 14:06:34 America/Chicago] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 95
+[08-Jun-2020 14:06:34 America/Chicago] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 96
+[08-Jun-2020 14:06:34 America/Chicago] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 97
+[08-Jun-2020 14:06:34 America/Chicago] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 98
+[08-Jun-2020 14:06:34 America/Chicago] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 99
+[08-Jun-2020 14:06:34 America/Chicago] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 100
+[08-Jun-2020 14:06:34 America/Chicago] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 101
+[08-Jun-2020 14:06:34 America/Chicago] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 102
+[08-Jun-2020 14:06:34 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined method User::getUser_id() in /home1/s4u/public_html/classes/Models/MdlUsers.php:103
+Stack trace:
+#0 /home1/s4u/public_html/criasenha.php(28): MdlUsers::updateUser(Object(User))
+#1 {main}
+  thrown in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 103
+[08-Jun-2020 14:08:52 America/Chicago] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 95
+[08-Jun-2020 14:08:52 America/Chicago] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 96
+[08-Jun-2020 14:08:52 America/Chicago] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 97
+[08-Jun-2020 14:08:52 America/Chicago] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 98
+[08-Jun-2020 14:08:52 America/Chicago] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 99
+[08-Jun-2020 14:08:52 America/Chicago] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 100
+[08-Jun-2020 14:08:52 America/Chicago] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 101
+[08-Jun-2020 14:08:52 America/Chicago] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 102
+[08-Jun-2020 14:08:52 America/Chicago] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 103
+[08-Jun-2020 14:13:15 America/Chicago] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 95
+[08-Jun-2020 14:13:15 America/Chicago] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 96
+[08-Jun-2020 14:13:15 America/Chicago] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 97
+[08-Jun-2020 14:13:15 America/Chicago] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 98
+[08-Jun-2020 14:13:15 America/Chicago] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 99
+[08-Jun-2020 14:13:15 America/Chicago] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 100
+[08-Jun-2020 14:13:15 America/Chicago] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 101
+[08-Jun-2020 14:13:15 America/Chicago] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 102
+[08-Jun-2020 14:13:15 America/Chicago] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 103

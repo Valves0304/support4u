@@ -1,0 +1,23 @@
+
+
+<body>
+  <link rel="stylesheet" type="text/css" href="../classes/Views/Style/loginStyle.css">
+
+<div class="login">
+  <h1>Login to SupportForYou</h1>
+    <form action="s4u.php?c=CtlUsers&action=login" name="realizaLogin" id="realizaLogin" method="POST">
+    <div class="msg-erro">{mensagem_erro}</div>
+    <div class="row">
+      <div class="col-sm-12 form-group {estilo_erro}">
+        <p><input type="text" name="login" value="" placeholder="Login"></p>
+        <p><input type="password" name="password" value="" placeholder="Password"></p>
+
+    <p class="submit" ><input type="submit" name="commit" value="Login"></p>
+    <div>
+      <a href="s4u.php?c=CtlUsers&action=register"><p>Need to Register?</p> </a>
+    </div>
+  </form>
+</div>
+
+
+</body>
