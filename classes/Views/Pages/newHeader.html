@@ -2,30 +2,38 @@
 <head>
     <title>Support for you</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../classes/Views/Style/headerStyle.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css">
+    <link rel="stylesheet" href="../classes/Views/Style/site.css">
+    <link rel="stylesheet" type="text/css" href="../classes/Views/Style/menu.css">
     {s4uCustomHeaders}
 </head>
 <body>
-
-    <!-- the header -->
-    <header id="header">
-
-        <!-- our main logo -->
-        <a id="logo" href="{s4uHomeLink}">
-            <img src="../../classes/Views/Pages/Images/s4u.png" alt="Logo">
-        <!--    <span>Support for you</span>-->
-        </a>
-
-        <!-- main navigation links -->
-        <div class="xxx">
-        <nav >
-            <ul class="list-auto">
-                <li>{s4uUserGreeting}</li>
-                <li><a href="{s4uHomeLink}">Main</a></li>
+    <header>
+        <h1>
+            <a id="logo" href="{s4uHomeLink}">
+                <span></span>
+                <label>Support For You</label>
+            </a>
+        </h1>
+        <ul>
+            <li class="nav-button">
+                <a href="#">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </a>
+            </li>
+        </ul>
+    </header>
+    <nav>
+        <ul class="menu-list">
+            <li class="user">{s4uUserGreeting}</li>
+            <li><a href="{s4uHomeLink}">Main</a></li>
                 <li><a href="{s4uLoginLogoutLink}">{s4uLoginLogout}</a></li>
                 <li><a href="{s4uUserRegisterLink}">{s4uSignUp}</a></li>
                 <li><a href="{s4uGetStartedLink}">{s4uGetStarted}</a></li>
-            </ul>
-        </nav>
-</div>
-    </header>
+        </ul>
+    </nav>
+    <div class="clear-overlay"></div>
+    <main>

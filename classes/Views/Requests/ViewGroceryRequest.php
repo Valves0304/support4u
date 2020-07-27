@@ -3,7 +3,7 @@
 // ViewPagesHome.php: Home Page View Home definition from controller ctlPages
 // ---------------------------------------------------------------------------
 // view Home Page
-class ViewNewGroceryRequest
+class ViewGroceryRequest
 {
     private $model;
 

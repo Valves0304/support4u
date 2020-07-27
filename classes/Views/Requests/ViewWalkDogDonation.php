@@ -20,7 +20,7 @@ class ViewWalkDogDonation
 
         // variables replacement
         $output = str_replace('{s4uFilterRequest}', Util::createLink("CtlRequests","newWalkDogDonation"), $output);
-      //  $output = str_replace('{s4uRequestMatch}', Util::createLink("CtlRequests","matchPlayGame"), $output);
+        $output = str_replace('{s4uRequestMatch}', Util::createLink("CtlRequests","matchWalkDog"), $output);
 
         // tag <SELECT> for Games
 
@@ -30,7 +30,7 @@ class ViewWalkDogDonation
                               $output);
 
         // table with requests
-        $tableRequests = '<TABLE class="pure-table pure-table-bordered"><THEAD><TD>Select</TD><TD>Name</TD><TD>City</TD><TD>Time</TD></THEAD> ';
+        $tableRequests = '<THEAD><TR><TD>Select</TD><TD>Name</TD><TD>City</TD><TD>Time</TD></TR></THEAD> ';
         if ($this->controllerModel->requestList[0] == NULL) {
             $tableRequests .= '<TR><TD COLSPAN=5>There are no requests. Try changing your filter.</TD></TR>';
         } else {
@@ -40,10 +40,10 @@ class ViewWalkDogDonation
                               '      <TD>' . $request->getUserCityReq() . '</TD>' .
                               '      <TD>' . $request->getRequestItems()[0]->getBestTime() . '</TD>' .
 
-
                               '  </TR>';
             }
         }
+        $tableRequests .= '</TBODY>';
         $tableRequests .= "\n</TABLE>";
 
         $output = str_replace('{s4uTableRequests}', $tableRequests, $output);

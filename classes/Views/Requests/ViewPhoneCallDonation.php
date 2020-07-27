@@ -30,9 +30,10 @@ class ViewPhoneCallDonation
 
 
         // table with requests
-        $tableRequests = '<TABLE class="pure-table pure-table-bordered"><THEAD><TD>Select</TD><TD>Name</TD><TD>Time</TD><TD>Language</TD></THEAD> ';
+        $tableRequests = '<THEAD><TR><TD>Select</TD><TD>Name</TD><TD>Time</TD><TD>Language</TD></TR></THEAD> ';
+        $tableRequests .= '<TBODY>';
         if ($this->controllerModel->requestList[0] == NULL) {
-            $tableRequests .= '<TR><TD COLSPAN=5>There are no requests. Try changing your filter.</TD></TR>';
+            $tableRequests .= '<TR><TD COLSPAN=5>There are no requests. Try changing your filter.</TD></TR> \r\n';
         } else {
             foreach ($this->controllerModel->requestList as $request) {
 
@@ -40,11 +41,10 @@ class ViewPhoneCallDonation
                               '      <TD>' . $request->getUserNameReq() . '</TD>' .
                               '      <TD>' . $request->getRequestItems()[0]->getBestTime() . '</TD>' .
                               '      <TD>' . $request->getRequestItems()[0]->getLangName() . '</TD>' .
-
                               '  </TR>';
             }
         }
-
+        $tableRequests .= '</TBODY>';
         $output = str_replace('{s4uTableRequests}', $tableRequests, $output);
 
         $output = str_replace('{version}', getenv('VER'), $output);

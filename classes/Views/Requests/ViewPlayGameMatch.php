@@ -28,6 +28,7 @@ class ViewPlayGameMatch
 
 
             $tableRequests = '<TABLE class="pure-table pure-table-bordered"><THEAD><TD>Name</TD><TD>Phone</TD><TD>Time</TD><TD>Language</TD></THEAD> ';
+            $tableRequests .= '<TBODY>';
         if ($this->controllerModel->requestList[0] == NULL) {
             $tableRequests .= '<TR><TD COLSPAN=5>There are no requests. Try changing your filter.</TD></TR>';
         } else {
@@ -40,7 +41,10 @@ class ViewPlayGameMatch
                             '  </TR>';
             }
         }
+        $tableRequests .= '</TBODY>';
         $tableRequests .= "\n</TABLE>";
+
+
 
         $output = str_replace('{s4uPlayerName}', $name , $output);
 

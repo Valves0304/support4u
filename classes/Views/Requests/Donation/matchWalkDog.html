@@ -1,14 +1,14 @@
 
    <div class="header">
-      <h1>Play a game Confirmation</h1>
+      <h1>Walk dog confirmation</h1>
    </div>
    <div class="main">
    <div class="float: left; width: 500px;">
    	  	<form action="{s4uConfirmation}" name="confirmMatch" id="confirmMatch" method="POST">
    	  		<h2>
-   	  			OK Lets Play GAME<BR></BR>
-                We are going to send {s4uPlayerName} your email address.
-                He / She will invite you to play soon.<BR></BR>
+   	  			OK Lets walk this dog<BR></BR>
+                We are going to send your email address to this person and he/she will contact you so you both can arrange the
+              details of this walk with the dog.<BR></BR>
           </h2>
     	    {s4uTableRequests}
             <p class="submit">
@@ -17,9 +17,8 @@
         	</form>
            	<form action="{s4uCancel}" name="cancelMatch" id="cancelMatch" method="POST">
            		<p class="submit">
-                    <input type="submit" name="cancel" value="No. Don't send my email" />
+                    <input type="submit" name="cancel" value="No. I change my mind" />
                 </p>
             </form>
       </div>
    </div>
-</body>

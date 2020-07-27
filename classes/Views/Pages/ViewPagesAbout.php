@@ -9,7 +9,7 @@ class ViewPagesAbout
     {
         $output  = ViewPagesHTMLHeader::output();
         $output .= file_get_contents('classes/Views/Pages/about.html');
-        $output .= '<div><BR><a href="' . Util::createLink("CtlPages","home") . '>Back HomePage</a></div>';
+        $output .= '<div><BR><a href="' . Util::createLink("CtlPages","home") . '">Back HomePage</a></div>';
         $output .= file_get_contents('classes/Views/Pages/footer.html');
         $output = str_replace('{version}', getenv('VER'), $output);
         return $output;

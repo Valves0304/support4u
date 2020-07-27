@@ -50,7 +50,7 @@ class CtlRequests
     // create view to add a new request
     public function newGroceryRequest()
     {
-      $this->view = new ViewNewGroceryRequest($this->model);
+      $this->view = new ViewGroceryRequest($this->model);
     }
 
     public function newDogRequest()
@@ -74,6 +74,8 @@ class CtlRequests
         $this->model->request->setRequestType($_GET['reqType']);
         $this->model->request->setRequestDate(date("Y/m/d"));
         $this->model->request->setUserIdReq($_SESSION['ID_USUARIO']);
+        $price = isset($_POST["price"]) ? $_POST['price'] : 0;
+        $this->model->request->setPrice($price);
         $this->model->request->setStatusRequest('1'); // we are creating the request so Status is always 1
 
         // sets the Request Item(s), depending on reqType
@@ -106,7 +108,7 @@ class CtlRequests
             // error found. Return to user form and display error message
             // View depends on reqType and typeTime
             if ($_GET['reqType'] == MdlRequests::GROCERY_REQUEST) {
-                $this->view = new ViewNewGroceryRequest($this->model);
+                $this->view = new ViewGroceryRequest($this->model);
             } elseif ($_GET['typeTime'] == MdlRequests::TALK) {
                 $this->view = new ViewPhoneCall($this->model);
             } elseif ($_GET['typeTime'] == MdlRequests::DOG) {
@@ -257,7 +259,7 @@ class CtlRequests
        public function matchDonation()
        {
          MdlRequests::confirmDonation($_GET["reqId"],$_SESSION['ID_USUARIO'],2);
-        $this->view = new ViewGetStarted($this->model);
+        $this->view = new ViewPagesHome($this->model);
 
         }
         public function newWalkDogDonation()
@@ -285,15 +287,44 @@ class CtlRequests
 
             $optionRequest = isset($_POST["optionRequest"]) ? $_POST['optionRequest'] : 0;
 
-              $criteria .= 'r.request_id = ' . $optionRequest . '';
+              $criteria = 'r.request_id = ' . $optionRequest . '';
 
                $this->model->requestList = MdlRequests::listRequests($criteria);
 
                $GLOBALS['RequestMatch']=$optionRequest;
 
-               $this->view = new ViewPlayGameMatch($this->model);
+               $this->view = new ViewWalkDogMatch($this->model);
           }
 
+          public function newGroceryDonation()
+          {
+
+              $cityId = isset($_POST['cityId']) ? $_POST['cityId'] : 0;
+              $price = isset($_POST['price']) ? $_POST['price'] : 1000;
 
 
+              $criteria = ' 1 = 1 ';
+              $criteria .= $cityId > 0 ? ' AND c.city_id = ' . $cityId : '';
+
+              $criteria .= ' AND r.price <= ' . $price;
+
+              $criteria .= ' AND status = ' . MdlRequests::ACTIVE_REQUEST;
+
+              $this->model->requestList = MdlRequests::listGroceryRequests($criteria);
+              $this->view = new ViewGroceryDonation($this->model);
+
+          }
+          public function matchGrocery()
+          {
+
+              $optionRequest = isset($_POST["optionRequest"]) ? $_POST['optionRequest'] : 0;
+
+                $criteria = 'r.request_id = ' . $optionRequest . '';
+
+                 $this->model->requestList = MdlRequests::listRequests($criteria);
+
+                 $GLOBALS['RequestMatch']=$optionRequest;
+
+                 $this->view = new ViewGroceryMatch($this->model);
+               }
 }

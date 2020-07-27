@@ -31,7 +31,9 @@
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Requests/ViewFindRequest.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Requests/ViewGetStarted.php';
 
-    include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Requests/ViewNewGroceryRequest.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Requests/ViewGroceryRequest.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Requests/ViewGroceryDonation.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Requests/ViewGroceryMatch.php';
 
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Requests/ViewPhoneCall.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Requests/ViewPhoneCallDonation.php';
@@ -45,7 +47,7 @@
 
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Requests/ViewWalkDog.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Requests/ViewWalkDogDonation.php';
-//    include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Requests/ViewWalkDogMatch .php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Requests/ViewWalkDogMatch.php';
 
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Users/ViewUserRegister.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Users/ViewUsersEmailList.php';

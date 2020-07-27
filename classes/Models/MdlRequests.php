@@ -226,10 +226,11 @@ class MdlRequests
                                     req_date,
                                     user_id_req,
                                     user_id_donor,
-                                    status)' . ' VALUES (?,?,?,?,?,?)');
+                                    price,
+                                    status)' . ' VALUES (?,?,?,?,?,?,?)');
         // add values to the query
         error_reporting(E_ALL & ~E_NOTICE);
-        $qryInsert->bind_param('iisiii', $request->getRequestId() , $request->getRequestType() , $request->getRequestDate() , $request->getUserIdReq() , $request->getUserIdDonor() , $request->getStatusRequest());
+        $qryInsert->bind_param('iisiisi', $request->getRequestId() , $request->getRequestType() , $request->getRequestDate() , $request->getUserIdReq() , $request->getUserIdDonor() , $request->getPrice() , $request->getStatusRequest());
         error_reporting(E_ALL);
 
         // it runs insert query
@@ -314,7 +315,7 @@ class MdlRequests
         // request array creation
         $requestList = array();
 
-        $query = 'select r.request_id, r.req_type, r.req_date, r.user_id_req, r.user_id_donor, r.status ' .
+        $query = 'select r.request_id, r.req_type, r.req_date, r.user_id_req, r.user_id_donor, r.price, r.status ' .
                  '  from request r, request_items ri, city c, user_s4u u' .
                  ' where ri.request_id = r.request_id and r.user_id_req = u.user_id and c.city_id = u.city_id ' . (is_null($crit) ? '' : 'and ' . $crit);
 
@@ -370,6 +371,7 @@ class MdlRequests
             $requestData->setRequestType($request['req_type']);
             $requestData->setRequestDate($request['req_date']);
             $requestData->setUserIdReq($request['user_id_req']);
+            $requestData->setPrice($request['price']);
             $requestData->setUserNameReq($nameReq);
             $requestData->setUserNameDonor($nameDonor);
             $requestData->setUserEmailReq($emailReq);
@@ -426,6 +428,10 @@ class MdlRequests
     public static function listWalkDogRequests($criteria)
     {
         return (MdlRequests::listRequests('type_time = ' . MdlRequests::DOG . ' AND ' . $criteria));
+    }
+    public static function listGroceryRequests($criteria)
+    {
+        return (MdlRequests::listRequests('req_type = ' . MdlRequests::GROCERY_REQUEST . ' AND ' . $criteria));
     }
     // *******************************************************************************************************
     // *** find User requests
@@ -648,6 +654,7 @@ class Request
     private $userEmailReq;
     private $userCityReq;
     private $userIdDonor;
+    private $price;
     private $userNameDonor;
     private $status;
     private $requestItems = array();
@@ -755,6 +762,17 @@ class Request
     {
         $this->userCityReq = $userCityReq;
     }
+    //Request price
+    public function getPrice()
+    {
+        return $this->price;
+    }
+    public function setPrice($price)
+    {
+        $this->price = $price;
+    }
+
+    //Request Itens
     public function addRequestItem(RequestItem $requestItem)
     {
         $requestItem->setRequestId($this->requestId); // para garantir que os objetos estejam associados

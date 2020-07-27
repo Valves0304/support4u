@@ -1,33 +1,27 @@
-
-
+<link rel="stylesheet" type="text/css" href="../classes/Views/Style/styleRequest.css">
    <div class="header">
-      <h1>Let's donate a phone to anyone who needs it</h1>
+      <h1>Let's walk the dog for whoever needs it</h1>
    </div>
    <div class="main">
       <div class="float: left; width: 500px;">
          <div>
             <form action="{s4uFilterRequest}" name="searchRequest" id="searchRequest" method="POST">
                <table class="pure-table pure-table-horizontal ">
+                 <thead></thead>
+                 <tbody>
                   <tr>
                      <td>
                         <div>
-                           <p>What is the best time to play?</p>
-                           <input type="radio" id="MORNING" name="bestTime" value="1">
-                           <label for="MORNING">Morning</label><br>
-                           <input type="radio" id="AFTERNOON" name="bestTime" value="2">
-                           <label for="AFTERNOON">Afternoon</label><br>
-                           <input type="radio" id="NIGHT" name="bestTime" value="3">
-                           <label for="NIGHT">Night</label><br>
-                           <input type="radio" id="ANYTIME" name="bestTime" value="4" checked="checked">
-                           <label for="ANYTIME">Anytime</label><br>
+                           <p>How much you plan to donate?</p>
+                           <input type="text" name="price" value="" placeholder="C$" />
                         </div>
                      </td>
                      <td>
                         <div>
-                           <label for="language" class="language">Language     :    </label>
-                           <select class = "languagelect" name="languageId" style="width:150px;">
+                           <label for="city" class="city">City     :    </label>
+                           <select class = "cityselect" name="cityId" style="width:150px;">
                               <option value=0>Any</option>
-                              {s4uListLanguages}
+                              {s4uListCities}
                            </select>
                         </div>
                         <p class="submit">
@@ -35,6 +29,7 @@
                         </p>
                      </td>
                   </tr>
+                  </tbody>
                </table>
             </form>
          </div>

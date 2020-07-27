@@ -1,0 +1,122 @@
+nav {
+    position: fixed;
+    width: 240px;
+    top: 110px;
+    bottom: 0;
+    right: -240px;
+    padding-bottom: 50px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 1000;
+    transition: right 0.3s ease-in-out;
+    background-color: #92ACAE;
+}
+
+    nav.open {
+        right: 0px;
+        -webkit-box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.14);
+        box-shadow: 0px 10px 5px 5px rgba(0, 0, 0, 0.14);
+    }
+
+        nav.open .menu-bottom {
+            right: 0;
+        }
+
+        nav.open + .clear-overlay {
+            display: block;
+        }
+
+    nav .menu-list {
+        padding-left: 0px;
+    }
+
+    nav li {
+    }
+
+        nav li.user {
+            padding: 15px 30px;
+            font-weight: bold;
+            border-bottom: solid 1px #6D9093;
+            text-align: center;
+        }
+
+        nav li a {
+            padding: 10px 30px;
+            color: #FFF;
+            display: block;
+            text-decoration: none;
+            border-bottom: solid 1px transparent;
+            font-weight: normal;
+            font-size: 1em;
+            text-transform: uppercase;
+            border-bottom: solid 1px #6D9093;
+        }
+
+            nav li a:hover {
+                color: #fff;
+                background-color: #6D9093;
+            }
+
+.clear-overlay {
+    opacity: 0.45;
+    background: #fff;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (min-width: 568px) {
+    nav {
+        top: 0;
+        right: 0;
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+        padding-bottom: 0;
+        transition: none;
+    }
+        nav.open {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+
+        nav.open + .clear-overlay,
+        .clear-overlay {
+            display: none;
+        }
+
+        nav li {
+            display: inline-block;
+        }
+
+            nav li.user {
+                padding: 10px 20px;
+                border-bottom: none;
+            }
+
+            nav li a {
+                padding: 10px 15px;
+                border-bottom: none;
+            }
+}
+
+@media only screen and (min-width: 768px) {
+    nav li.user {
+        padding: 10px 30px 10px 20px;
+    }
+
+    nav li a {
+        padding: 10px 30px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    nav {
+        width: 1024px;
+        margin: auto;
+    }
+}
