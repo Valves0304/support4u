@@ -3779,3 +3779,708 @@ Stack trace:
 #3 /home1/s4u/public_html/s4u.php(73): CtlRequests->newWalkDogDonation(NULL)
 #4 {main}
   thrown in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 186
+[16-Jul-2020 17:05:16 America/Vancouver] PHP Fatal error:  Uncaught Error: Call to a member function getLangName() on null in /home1/s4u/public_html/classes/Models/MdlRequests.php:186
+Stack trace:
+#0 /home1/s4u/public_html/classes/Models/MdlRequests.php(381): MdlRequests::listRequestItems(' request_id = 9...')
+#1 /home1/s4u/public_html/classes/Models/MdlRequests.php(428): MdlRequests::listRequests('type_time = 3 A...')
+#2 /home1/s4u/public_html/classes/Controllers/CtlRequests.php(279): MdlRequests::listWalkDogRequests(' 1 = 1  AND sta...')
+#3 /home1/s4u/public_html/s4u.php(73): CtlRequests->newWalkDogDonation(NULL)
+#4 {main}
+  thrown in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 186
+[16-Jul-2020 17:26:38 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 17:26:38 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 17:26:38 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 17:26:38 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 17:26:38 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 17:26:38 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 17:26:38 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 17:26:38 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 17:26:38 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 17:26:38 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 17:26:38 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 17:26:38 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 17:26:38 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 17:26:38 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 17:26:38 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 17:26:38 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 17:27:49 America/Vancouver] PHP Notice:  Undefined variable: criteria in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 212
+[16-Jul-2020 17:33:36 America/Vancouver] PHP Notice:  Undefined variable: criteria in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 212
+[16-Jul-2020 17:37:18 America/Vancouver] PHP Notice:  Undefined variable: criteria in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 212
+[16-Jul-2020 17:37:28 America/Vancouver] PHP Notice:  Undefined variable: criteria in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 212
+[16-Jul-2020 17:45:55 America/Vancouver] PHP Notice:  Undefined variable: criteria in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 212
+[16-Jul-2020 17:48:06 America/Vancouver] PHP Notice:  Undefined variable: criteria in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 212
+[16-Jul-2020 17:48:06 America/Vancouver] PHP Notice:  Undefined variable: request in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameMatch.php on line 45
+[16-Jul-2020 17:48:06 America/Vancouver] PHP Fatal error:  Call to a member function getUserNameReq() on a non-object in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameMatch.php on line 45
+[16-Jul-2020 17:48:50 America/Vancouver] PHP Notice:  Undefined variable: criteria in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 212
+[16-Jul-2020 17:49:15 America/Vancouver] PHP Notice:  Undefined variable: criteria in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 212
+[16-Jul-2020 17:49:34 America/Vancouver] PHP Notice:  Undefined variable: criteria in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 212
+[16-Jul-2020 17:49:48 America/Vancouver] PHP Notice:  Undefined variable: criteria in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 212
+[16-Jul-2020 19:33:29 America/Vancouver] PHP Notice:  Undefined variable: criteria in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 288
+[16-Jul-2020 19:33:29 America/Vancouver] PHP Fatal error:  Class 'ViewWalkDogMatch' not found in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 294
+[16-Jul-2020 19:35:00 America/Vancouver] PHP Fatal error:  Class 'ViewWalkDogMatch' not found in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 294
+[16-Jul-2020 19:35:10 America/Vancouver] PHP Fatal error:  Class 'ViewWalkDogMatch' not found in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 294
+[16-Jul-2020 21:35:44 America/Chicago] PHP Warning:  include(/home1/s4u/public_html/classes/Views/Requests/ViewWalkDogMatch .php): failed to open stream: No such file or directory in /home1/s4u/public_html/loader.php on line 48
+[16-Jul-2020 21:35:44 America/Chicago] PHP Warning:  include(): Failed opening '/home1/s4u/public_html/classes/Views/Requests/ViewWalkDogMatch .php' for inclusion (include_path='.:/opt/php54/lib/php') in /home1/s4u/public_html/loader.php on line 48
+[16-Jul-2020 21:35:44 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home1/s4u/public_html/loader.php:48) in /home1/s4u/public_html/var.php on line 5
+[16-Jul-2020 21:35:46 America/Chicago] PHP Warning:  include(/home1/s4u/public_html/classes/Views/Requests/ViewWalkDogMatch .php): failed to open stream: No such file or directory in /home1/s4u/public_html/loader.php on line 48
+[16-Jul-2020 21:35:46 America/Chicago] PHP Warning:  include(): Failed opening '/home1/s4u/public_html/classes/Views/Requests/ViewWalkDogMatch .php' for inclusion (include_path='.:/opt/php54/lib/php') in /home1/s4u/public_html/loader.php on line 48
+[16-Jul-2020 21:35:46 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home1/s4u/public_html/loader.php:48) in /home1/s4u/public_html/var.php on line 5
+[16-Jul-2020 21:35:48 America/Chicago] PHP Warning:  include(/home1/s4u/public_html/classes/Views/Requests/ViewWalkDogMatch .php): failed to open stream: No such file or directory in /home1/s4u/public_html/loader.php on line 48
+[16-Jul-2020 21:35:48 America/Chicago] PHP Warning:  include(): Failed opening '/home1/s4u/public_html/classes/Views/Requests/ViewWalkDogMatch .php' for inclusion (include_path='.:/opt/php54/lib/php') in /home1/s4u/public_html/loader.php on line 48
+[16-Jul-2020 21:35:48 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home1/s4u/public_html/loader.php:48) in /home1/s4u/public_html/var.php on line 5
+[16-Jul-2020 21:35:50 America/Chicago] PHP Warning:  include(/home1/s4u/public_html/classes/Views/Requests/ViewWalkDogMatch .php): failed to open stream: No such file or directory in /home1/s4u/public_html/loader.php on line 48
+[16-Jul-2020 21:35:50 America/Chicago] PHP Warning:  include(): Failed opening '/home1/s4u/public_html/classes/Views/Requests/ViewWalkDogMatch .php' for inclusion (include_path='.:/opt/php54/lib/php') in /home1/s4u/public_html/loader.php on line 48
+[16-Jul-2020 21:35:50 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home1/s4u/public_html/loader.php:48) in /home1/s4u/public_html/var.php on line 5
+[16-Jul-2020 21:35:54 America/Chicago] PHP Warning:  include(/home1/s4u/public_html/classes/Views/Requests/ViewWalkDogMatch .php): failed to open stream: No such file or directory in /home1/s4u/public_html/loader.php on line 48
+[16-Jul-2020 21:35:54 America/Chicago] PHP Warning:  include(): Failed opening '/home1/s4u/public_html/classes/Views/Requests/ViewWalkDogMatch .php' for inclusion (include_path='.:/opt/php54/lib/php') in /home1/s4u/public_html/loader.php on line 48
+[16-Jul-2020 21:35:54 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home1/s4u/public_html/loader.php:48) in /home1/s4u/public_html/var.php on line 5
+[16-Jul-2020 19:35:54 America/Vancouver] PHP Fatal error:  Class 'ViewWalkDogMatch' not found in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 294
+[16-Jul-2020 20:12:16 America/Vancouver] PHP Notice:  Undefined variable: criteria in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 212
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:15:41 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:16:09 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:16:09 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:16:09 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:16:09 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:16:09 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:16:09 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:16:09 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:16:09 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:16:09 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:16:09 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:16:09 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:16:09 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:16:09 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:16:09 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:16:09 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:16:09 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:16:26 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:16:26 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:16:26 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:16:26 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:16:26 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:16:26 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:16:26 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:16:26 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:16:26 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:16:26 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:16:26 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:16:26 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:16:26 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:16:26 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:16:26 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:16:26 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:16:51 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:16:51 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:16:51 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:16:51 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:16:51 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:16:51 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:16:51 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:16:51 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:16:51 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:16:51 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:16:51 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:16:51 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:16:51 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:16:51 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:16:51 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:16:51 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:08 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:34 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:18:34 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:18:34 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:18:34 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:18:34 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:18:34 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:18:34 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:34 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:34 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:34 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:34 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:34 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:34 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:34 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:34 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:34 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:45 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:18:45 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:18:45 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:18:45 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:18:45 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:18:45 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:18:45 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:45 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:45 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:45 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:45 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:45 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:45 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:45 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:45 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:45 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:58 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:18:58 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:18:58 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:18:58 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:18:58 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:18:58 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:18:58 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:58 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:58 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:58 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:58 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:58 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:58 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:58 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:58 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:18:58 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:19:21 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:19:21 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:19:21 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:19:21 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:19:21 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:19:21 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:19:21 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:19:21 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:19:21 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:19:21 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:19:21 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:19:21 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:19:21 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:19:21 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:19:21 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:19:21 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:19:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:19:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:19:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:19:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:19:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:19:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:19:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:19:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:19:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:19:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:19:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:19:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:19:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:19:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:19:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:19:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:43 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:21:43 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:21:43 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:21:43 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:21:43 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:21:43 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:21:43 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:43 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:43 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:43 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:43 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:43 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:43 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:43 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:43 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:43 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:21:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:21:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:21:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:21:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:21:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:21:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:21:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:22:13 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:22:13 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:22:13 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:22:13 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:22:13 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:22:13 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:22:13 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:22:13 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:22:13 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:22:13 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:22:13 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:22:13 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:22:13 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:22:13 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:22:13 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:22:13 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:22:34 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:22:34 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:22:34 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:22:34 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:22:34 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:22:34 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:22:34 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:22:34 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:22:34 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:22:34 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:22:34 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:22:34 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:22:34 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:22:34 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:22:34 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:22:34 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:36:17 America/Chicago] PHP Warning:  include(/home1/s4u/public_html/classes/Views/Requests/ViewGroceryRequest.php): failed to open stream: No such file or directory in /home1/s4u/public_html/loader.php on line 34
+[16-Jul-2020 22:36:17 America/Chicago] PHP Warning:  include(): Failed opening '/home1/s4u/public_html/classes/Views/Requests/ViewGroceryRequest.php' for inclusion (include_path='.:/opt/php54/lib/php') in /home1/s4u/public_html/loader.php on line 34
+[16-Jul-2020 22:36:17 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home1/s4u/public_html/loader.php:34) in /home1/s4u/public_html/var.php on line 5
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:37:39 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 20:43:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 23:12:09 America/Chicago] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 330
+[16-Jul-2020 21:13:08 America/Vancouver] PHP Notice:  Undefined variable: price in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 306
+[16-Jul-2020 21:13:08 America/Vancouver] PHP Notice:  Trying to get property of non-object in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 337
+[16-Jul-2020 21:22:18 America/Vancouver] PHP Notice:  Trying to get property of non-object in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 337
+[16-Jul-2020 21:22:48 America/Vancouver] PHP Notice:  Trying to get property of non-object in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 337
+[16-Jul-2020 21:26:42 America/Vancouver] PHP Fatal error:  Class 'ViewGroceryDonation' not found in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 312
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:44:55 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:50:44 America/Vancouver] PHP Notice:  Undefined index: price in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 77
+[16-Jul-2020 21:50:44 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 21:50:44 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 21:50:44 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 21:50:44 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 21:50:44 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 21:50:44 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 21:50:44 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:50:44 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:50:44 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:50:44 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:50:44 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:50:44 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:50:44 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:50:44 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:50:44 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:50:44 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:54:24 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 21:54:24 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 21:54:24 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 21:54:24 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 21:54:24 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 21:54:24 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 21:54:24 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:54:24 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:54:24 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:54:24 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:54:24 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:54:24 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:54:24 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:54:24 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:54:24 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:54:24 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:58:22 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 21:58:22 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 21:58:22 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 21:58:22 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 21:58:22 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 21:58:22 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[16-Jul-2020 21:58:22 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:58:22 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:58:22 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:58:22 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:58:22 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:58:22 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:58:22 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:58:22 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:58:22 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 21:58:22 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:02:13 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[16-Jul-2020 22:02:13 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[16-Jul-2020 22:02:13 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[16-Jul-2020 22:02:13 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[16-Jul-2020 22:02:13 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[16-Jul-2020 22:02:13 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[16-Jul-2020 22:02:13 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[16-Jul-2020 22:02:13 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:02:13 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:02:13 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:02:13 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:02:13 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:02:13 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:02:13 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:02:13 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:02:13 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:02:13 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:09:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[16-Jul-2020 22:09:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[16-Jul-2020 22:09:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[16-Jul-2020 22:09:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[16-Jul-2020 22:09:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[16-Jul-2020 22:09:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[16-Jul-2020 22:09:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[16-Jul-2020 22:09:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:09:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:09:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:09:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:09:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:09:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:09:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:09:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:09:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:09:23 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:11:57 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[16-Jul-2020 22:11:57 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[16-Jul-2020 22:11:57 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[16-Jul-2020 22:11:57 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[16-Jul-2020 22:11:57 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[16-Jul-2020 22:11:57 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[16-Jul-2020 22:11:57 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[16-Jul-2020 22:11:57 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:11:57 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:11:57 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:11:57 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:11:57 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:11:57 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:11:57 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:11:57 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:11:57 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:11:57 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[17-Jul-2020 00:29:23 America/Chicago] PHP Fatal error:  Cannot redeclare class ViewWalkDogMatch in /home1/s4u/public_html/classes/Views/Requests/ViewWalkDogMatch.php on line 7
+[17-Jul-2020 00:29:37 America/Chicago] PHP Fatal error:  Cannot redeclare class ViewWalkDogMatch in /home1/s4u/public_html/classes/Views/Requests/ViewWalkDogMatch.php on line 7
+[17-Jul-2020 00:29:43 America/Chicago] PHP Fatal error:  Cannot redeclare class ViewWalkDogMatch in /home1/s4u/public_html/classes/Views/Requests/ViewWalkDogMatch.php on line 7
+[17-Jul-2020 00:29:44 America/Chicago] PHP Fatal error:  Cannot redeclare class ViewWalkDogMatch in /home1/s4u/public_html/classes/Views/Requests/ViewWalkDogMatch.php on line 7
+[17-Jul-2020 00:29:46 America/Chicago] PHP Fatal error:  Cannot redeclare class ViewWalkDogMatch in /home1/s4u/public_html/classes/Views/Requests/ViewWalkDogMatch.php on line 7
+[17-Jul-2020 00:29:53 America/Chicago] PHP Fatal error:  Cannot redeclare class ViewWalkDogMatch in /home1/s4u/public_html/classes/Views/Requests/ViewWalkDogMatch.php on line 7
+[17-Jul-2020 00:30:18 America/Chicago] PHP Fatal error:  Cannot redeclare class ViewWalkDogMatch in /home1/s4u/public_html/classes/Views/Requests/ViewWalkDogMatch.php on line 7
+[17-Jul-2020 00:30:41 America/Chicago] PHP Fatal error:  Cannot redeclare class ViewWalkDogMatch in /home1/s4u/public_html/classes/Views/Requests/ViewWalkDogMatch.php on line 7
+[17-Jul-2020 00:31:09 America/Chicago] PHP Fatal error:  Cannot redeclare class ViewWalkDogMatch in /home1/s4u/public_html/classes/Views/Requests/ViewWalkDogMatch.php on line 7
+[17-Jul-2020 00:31:10 America/Chicago] PHP Fatal error:  Cannot redeclare class ViewWalkDogMatch in /home1/s4u/public_html/classes/Views/Requests/ViewWalkDogMatch.php on line 7
+[17-Jul-2020 00:31:29 America/Chicago] PHP Fatal error:  Cannot redeclare class ViewWalkDogMatch in /home1/s4u/public_html/classes/Views/Requests/ViewWalkDogMatch.php on line 7
+[17-Jul-2020 00:31:33 America/Chicago] PHP Fatal error:  Cannot redeclare class ViewWalkDogMatch in /home1/s4u/public_html/classes/Views/Requests/ViewWalkDogMatch.php on line 7
+[17-Jul-2020 00:31:35 America/Chicago] PHP Fatal error:  Cannot redeclare class ViewWalkDogMatch in /home1/s4u/public_html/classes/Views/Requests/ViewWalkDogMatch.php on line 7
+[17-Jul-2020 00:31:36 America/Chicago] PHP Fatal error:  Cannot redeclare class ViewWalkDogMatch in /home1/s4u/public_html/classes/Views/Requests/ViewWalkDogMatch.php on line 7
+[17-Jul-2020 00:31:37 America/Chicago] PHP Fatal error:  Cannot redeclare class ViewWalkDogMatch in /home1/s4u/public_html/classes/Views/Requests/ViewWalkDogMatch.php on line 7
+[17-Jul-2020 00:31:38 America/Chicago] PHP Fatal error:  Cannot redeclare class ViewWalkDogMatch in /home1/s4u/public_html/classes/Views/Requests/ViewWalkDogMatch.php on line 7
+[17-Jul-2020 00:31:38 America/Chicago] PHP Fatal error:  Cannot redeclare class ViewWalkDogMatch in /home1/s4u/public_html/classes/Views/Requests/ViewWalkDogMatch.php on line 7
+[17-Jul-2020 00:31:39 America/Chicago] PHP Fatal error:  Cannot redeclare class ViewWalkDogMatch in /home1/s4u/public_html/classes/Views/Requests/ViewWalkDogMatch.php on line 7
+[16-Jul-2020 22:36:21 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[16-Jul-2020 22:36:21 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[16-Jul-2020 22:36:21 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[16-Jul-2020 22:36:21 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[16-Jul-2020 22:36:21 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[16-Jul-2020 22:36:21 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[16-Jul-2020 22:36:21 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[16-Jul-2020 22:36:21 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:36:21 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:36:21 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:36:21 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:36:21 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:36:21 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:36:21 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:36:21 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:36:21 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:36:21 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:49:52 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[16-Jul-2020 22:49:52 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[16-Jul-2020 22:49:52 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[16-Jul-2020 22:49:52 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[16-Jul-2020 22:49:52 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[16-Jul-2020 22:49:52 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[16-Jul-2020 22:49:52 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[16-Jul-2020 22:49:52 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:49:52 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:49:52 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:49:52 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:49:52 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:49:52 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:49:52 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:49:52 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:49:52 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[16-Jul-2020 22:49:52 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[17-Jul-2020 05:45:21 America/Vancouver] PHP Notice:  Trying to get property of non-object in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 338
+[17-Jul-2020 05:45:21 America/Vancouver] PHP Notice:  Undefined index: RequestMatch in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameMatch.php on line 23
+[17-Jul-2020 05:45:21 America/Vancouver] PHP Fatal error:  Call to a member function getUserNameReq() on a non-object in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameMatch.php on line 26
+[17-Jul-2020 05:46:34 America/Vancouver] PHP Notice:  Trying to get property of non-object in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 338
+[17-Jul-2020 05:46:34 America/Vancouver] PHP Fatal error:  Call to a member function getId() on a non-object in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameMatch.php on line 23
+[17-Jul-2020 05:46:59 America/Vancouver] PHP Notice:  Trying to get property of non-object in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 338
+[17-Jul-2020 05:46:59 America/Vancouver] PHP Fatal error:  Call to a member function getReqId() on a non-object in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameMatch.php on line 23
+[17-Jul-2020 05:47:43 America/Vancouver] PHP Notice:  Trying to get property of non-object in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 338
+[17-Jul-2020 05:47:43 America/Vancouver] PHP Fatal error:  Call to a member function getRequestId() on a non-object in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameMatch.php on line 23
+[17-Jul-2020 05:48:26 America/Vancouver] PHP Notice:  Trying to get property of non-object in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 338
+[17-Jul-2020 05:48:26 America/Vancouver] PHP Fatal error:  Call to a member function getRequestId() on a non-object in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameMatch.php on line 23
+[17-Jul-2020 05:51:24 America/Vancouver] PHP Notice:  Trying to get property of non-object in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 338
+[17-Jul-2020 05:51:24 America/Vancouver] PHP Fatal error:  Call to a member function getRequestId() on a non-object in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 215
+[17-Jul-2020 06:10:31 America/Vancouver] PHP Notice:  Trying to get property of non-object in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 340
+[17-Jul-2020 06:10:31 America/Vancouver] PHP Fatal error:  Call to a member function getRequestId() on a non-object in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 215
+[17-Jul-2020 06:11:46 America/Vancouver] PHP Fatal error:  Call to undefined method Request::getUserNameReq() in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameMatch.php on line 26
+[17-Jul-2020 06:15:47 America/Vancouver] PHP Fatal error:  Class 'MdlUser' not found in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameMatch.php on line 26
+[17-Jul-2020 06:15:59 America/Vancouver] PHP Fatal error:  Call to undefined method Request::getUserReqId() in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameMatch.php on line 26
+[17-Jul-2020 06:31:29 America/Vancouver] PHP Fatal error:  Call to undefined method Request::getUserNameReq() in /home1/s4u/public_html/classes/Views/Requests/ViewWalkDogDonation.php on line 39
+[17-Jul-2020 06:32:19 America/Vancouver] PHP Fatal error:  Call to undefined method Request::getUserNameReq() in /home1/s4u/public_html/classes/Views/Requests/ViewWalkDogDonation.php on line 39
+[17-Jul-2020 06:32:56 America/Vancouver] PHP Fatal error:  Call to undefined method Request::getUserNameReq() in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php on line 38
+[17-Jul-2020 06:35:02 America/Vancouver] PHP Fatal error:  Call to undefined method User::getUserName() in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php on line 38
+[17-Jul-2020 06:35:17 America/Vancouver] PHP Fatal error:  Call to undefined method User::getName() in /home1/s4u/public_html/classes/Views/Requests/ViewPlayGameDonation.php on line 38
+[17-Jul-2020 06:38:31 America/Vancouver] PHP Fatal error:  Call to undefined method Request::getUserIdCity() in /home1/s4u/public_html/classes/Views/Requests/ViewWalkDogDonation.php on line 40
+[17-Jul-2020 06:38:57 America/Vancouver] PHP Fatal error:  Call to undefined method Request::getCityId() in /home1/s4u/public_html/classes/Views/Requests/ViewWalkDogDonation.php on line 40
+[17-Jul-2020 06:40:27 America/Vancouver] PHP Notice:  Trying to get property of non-object in /home1/s4u/public_html/classes/Models/MdlUsers.php on line 187
+[17-Jul-2020 06:40:27 America/Vancouver] PHP Fatal error:  Call to a member function getFirstName() on a non-object in /home1/s4u/public_html/classes/Views/Requests/ViewWalkDogMatch.php on line 28
+[17-Jul-2020 06:52:34 America/Vancouver] PHP Notice:  Undefined variable: tableRequests in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallMatch.php on line 34
+[17-Jul-2020 11:45:37 America/Vancouver] PHP Fatal error:  Call to undefined method Request::getUserNameReq() in /home1/s4u/public_html/classes/Views/Requests/ViewGroceryDonation.php on line 39
+[17-Jul-2020 13:37:02 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[17-Jul-2020 13:37:02 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[17-Jul-2020 13:37:02 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[17-Jul-2020 13:37:02 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[17-Jul-2020 13:37:02 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[17-Jul-2020 13:37:02 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[17-Jul-2020 13:37:02 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 233
+[17-Jul-2020 13:37:02 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[17-Jul-2020 13:37:02 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[17-Jul-2020 13:37:02 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[17-Jul-2020 13:37:02 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[17-Jul-2020 13:37:02 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[17-Jul-2020 13:37:02 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[17-Jul-2020 13:37:02 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[17-Jul-2020 13:37:02 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[17-Jul-2020 13:37:02 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[17-Jul-2020 13:37:02 America/Vancouver] PHP Strict Standards:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 66
+[17-Jul-2020 14:36:54 America/Vancouver] PHP Fatal error:  Call to undefined method Request::getUserNameReq() in /home1/s4u/public_html/classes/Views/Requests/ViewGroceryDonation.php on line 39
+[17-Jul-2020 18:49:46 America/Chicago] PHP Parse error:  syntax error, unexpected ''<input type="radio" name="opt' (T_CONSTANT_ENCAPSED_STRING) in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 40
+[17-Jul-2020 16:53:03 America/Vancouver] PHP Notice:  Undefined variable: tableRequests in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 50
+[17-Jul-2020 18:53:27 America/Chicago] PHP Parse error:  syntax error, unexpected '>' in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallDonation.php on line 34
+[17-Jul-2020 16:54:27 America/Vancouver] PHP Notice:  Undefined variable: tableRequests in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallMatch.php on line 34
+[17-Jul-2020 16:56:49 America/Vancouver] PHP Notice:  Undefined variable: tableRequests in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallMatch.php on line 34
+[17-Jul-2020 17:15:59 America/Vancouver] PHP Notice:  Undefined variable: tableRequests in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallMatch.php on line 34
+[17-Jul-2020 17:18:01 America/Vancouver] PHP Fatal error:  Call to undefined method Request::getUserNameReq() in /home1/s4u/public_html/classes/Views/Requests/ViewGroceryDonation.php on line 39
+[17-Jul-2020 17:18:05 America/Vancouver] PHP Fatal error:  Call to undefined method Request::getUserNameReq() in /home1/s4u/public_html/classes/Views/Requests/ViewGroceryDonation.php on line 39
+[17-Jul-2020 17:39:01 America/Vancouver] PHP Notice:  Undefined variable: tableRequests in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallMatch.php on line 34
+[17-Jul-2020 17:42:00 America/Vancouver] PHP Notice:  Undefined variable: tableRequests in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallMatch.php on line 34
+[17-Jul-2020 17:44:37 America/Vancouver] PHP Notice:  Undefined variable: tableRequests in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallMatch.php on line 34
+[17-Jul-2020 17:45:00 America/Vancouver] PHP Notice:  Undefined variable: tableRequests in /home1/s4u/public_html/classes/Views/Requests/ViewPhoneCallMatch.php on line 34

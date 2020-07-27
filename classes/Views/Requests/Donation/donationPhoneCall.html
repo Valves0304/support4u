@@ -1,52 +1,45 @@
+<h1>Let's donate a phone to anyone who needs it</h1>
 
-
-   <div class="header">
-      <h1>Let's donate a phone to anyone who needs it</h1>
-   </div>
-   <div class="main">
-      <div class="float: left; width: 500px;">
-         <div>
-            <form action="{s4uFilterRequest}" name="searchRequest" id="searchRequest" method="POST">
-               <table class="pure-table pure-table-horizontal ">
-                  <tr>
-                     <td>
-                        <div>
-                           <p>What is the best time to play?</p>
-                           <input type="radio" id="MORNING" name="bestTime" value="1">
-                           <label for="MORNING">Morning</label><br>
-                           <input type="radio" id="AFTERNOON" name="bestTime" value="2">
-                           <label for="AFTERNOON">Afternoon</label><br>
-                           <input type="radio" id="NIGHT" name="bestTime" value="3">
-                           <label for="NIGHT">Night</label><br>
-                           <input type="radio" id="ANYTIME" name="bestTime" value="4" checked="checked">
-                           <label for="ANYTIME">Anytime</label><br>
-                        </div>
-                     </td>
-                     <td>
-                        <div>
-                           <label for="language" class="language">Language     :    </label>
-                           <select class = "languagelect" name="languageId" style="width:150px;">
-                              <option value=0>Any</option>
-                              {s4uListLanguages}
-                           </select>
-                        </div>
-                        <p class="submit">
-                           <input type="submit" name="commit" value="Filter" />
-                        </p>
-                     </td>
-                  </tr>
-               </table>
-            </form>
-         </div>
-         <div>
-            <form action="{s4uRequestMatch}" name="searchRequest" id="searchRequest" method="POST">
-               <table class="pure-table pure-table-horizontal ">
-               {s4uTableRequests}
-               </table>
-               <p class="submit">
-                  <input type="submit" name="commit" value="Ok" />
-               </p>
-            </form>
-         </div>
-      </div>
-   </div>
+<div class="content">
+    <form action="{s4uFilterRequest}" name="searchRequest" id="searchRequest" method="POST" class="pure-form pure-form-stacked">
+       <fieldset>
+            <div class="pure-g">
+                <div class="pure-u-1 pure-u-sm-1-3">
+                    <label>What is the best time to call?</label>
+                   <label for="MORNING">
+                       <input type="radio" id="MORNING" name="bestTime" value="1">
+                        Morning
+                    </label>
+                   <label for="AFTERNOON">
+                        <input type="radio" id="AFTERNOON" name="bestTime" value="2">
+                        Afternoon
+                    </label>
+                   <label for="NIGHT">
+                       <input type="radio" id="NIGHT" name="bestTime" value="3">
+                       Night
+                   </label>
+                   <label for="ANYTIME">
+                       <input type="radio" id="ANYTIME" name="bestTime" value="4" checked="checked">
+                       Anytime
+                   </label>
+               </div>
+               <div class="pure-u-1 pure-u-sm-1-3">
+                   <label for="language" class="language">Language     :    </label>
+                   <select class = "pure-u-1" name="languageId">
+                      <option value=0>Any</option>
+                      {s4uListLanguages}
+                   </select>
+                   <p class="action-buttons">
+                       <input type="submit" name="commit" value="Filter" />
+                    </p>
+               </div>
+           </div>
+       </fieldset>
+    </form>
+    <form action="{s4uRequestMatch}" name="searchRequest" id="searchRequest" method="POST" class="pure-form pure-form-stacked">
+       {s4uTableRequests}
+       <p class="action-buttons">
+          <input type="submit" name="commit" value="Ok" />
+       </p>
+    </form>
+</div>

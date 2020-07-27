@@ -35,7 +35,7 @@ class ViewPlayGameDonation
         } else {
             foreach ($this->controllerModel->requestList as $request) {
                 $tableRequests .= "\n<TR><TD>"  . '<input type="radio" name="optionRequest" value=" ' . $request->getRequestId() . ' "> ' .  "</TD>" .
-                              '      <TD>' . $request->getUserNameReq() . '</TD>' .
+                              '      <TD>' . MdlUsers::findUser($request->getUserIdReq())->getFirstName() . '</TD>' .
                               '      <TD>' . MdlGames::findGame($request->getRequestItems()[0]->getGameId())->getGameName() . '</TD>' .
                               '      <TD>' . $request->getRequestItems()[0]->getGameName() . '</TD>' .
                               '      <TD>' . $request->getRequestItems()[0]->getBestTime() . '</TD>' .

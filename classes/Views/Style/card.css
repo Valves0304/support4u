@@ -1,0 +1,76 @@
+.card {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 1em;
+    background-color: #EDF1F2;
+}
+
+.card-radio {
+    cursor: pointer;
+}
+
+.card-radio input[type=radio] {
+    display: none;
+}
+
+.card-radio .card:hover {
+    background-color: #DAE3E4;
+}
+
+.card-radio input[type=radio]:checked+.card {
+    background-color: #C8D5D7;
+}
+
+.card:before {
+    color: lightgray;
+    font-weight: 400;
+    font-family: "Font Awesome 5 Free";
+    content: "\f058";
+    font-size: 2em;
+    float: right;
+    text-align: right;
+    padding: 20px 20px 0 0;
+}
+
+.card-radio input[type=radio]:checked+.card::before {
+    font-weight: 900;
+    color: #6D9093;
+}
+
+.card.card-donate-talk .card-header {
+    padding: 20px 20px 0 20px;
+}
+
+.card.card-donate-talk .card-header i:before {
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    content: "\f007";
+    font-size: 3em;
+    display: inline-block;
+    padding-right: 10px;
+    vertical-align: top;
+    padding-top: 5px;
+    font-style: normal;
+}
+
+.card.card-donate-talk .card-header h3 {
+    display: inline-block;
+    padding: 15px 0 0 5px;
+}
+
+.card .card-content {
+    display: inline-block;
+    width: 80%;
+    padding: 10px 20px 20px 20px;
+}
+
+.card.card-donate-talk .card-content div {
+    display: inline-block;
+    padding-right: 10px;
+    font-size: 12px;
+}
+
+.card.card-donate-talk .card-content div span {
+    display: block;
+    font-size: 9px;
+    color: #7F9EA1;
+}

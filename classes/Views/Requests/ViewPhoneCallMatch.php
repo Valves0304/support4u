@@ -19,34 +19,19 @@ class ViewPhoneCallMatch
         $output .= file_get_contents('classes/Views/Requests/Donation/matchPhoneCall.html');
         $output .= file_get_contents('classes/Views/Pages/footer.html');
 
-        $name = "";
-
         // variables replacement
-        $output = str_replace('{s4uConfirmation}', Util::createLink("CtlRequests","matchDonation","","",$GLOBALS['RequestMatch']), $output);
+        $output = str_replace('{s4uConfirmation}', Util::createLink("CtlRequests","matchDonation","","",$this->controllerModel->request->getRequestId()), $output);
         $output = str_replace('{s4uCancel}',  Util::createLink("CtlRequests","newPhoneCallDonation"), $output);
 
-        // table with requests
-        $tableRequests = '<TABLE class="pure-table pure-table-bordered"><THEAD><TD>Name</TD><TD>Phone</TD><TD>Time</TD><TD>Language</TD></THEAD> ';
-        $tableRequests .= '<TBODY>';
-        if ($this->controllerModel->requestList[0] == NULL) {
-            $tableRequests .= '<TR><TD COLSPAN=5>There are no requests. Try changing your filter.</TD></TR>';
-        } else {
-          foreach ($this->controllerModel->requestList as $request) {
+        $user = MdlUsers::findUser($this->controllerModel->request->getUserIdReq());
 
-              $tableRequests .= "\n<TR><TD>"  . $request->getUserNameReq(). "</TD>" .
-                            '      <TD>' . $request->getRequestItems()[0]->getPhone() . '</TD>' .
-                            '      <TD>' . $request->getRequestItems()[0]->getBestTime() . '</TD>' .
-                            '      <TD>' . $request->getRequestItems()[0]->getLangName() . '</TD>' .
+        $output = str_replace('{s4uTalkerName}', $user->getFirstName(), $output);
+        $output = str_replace('{s4uBeneficiaryName}', $user->getLastName() . ',' . $user->getFirstName(), $output);
+        $output = str_replace('{s4uBeneficiaryPhone}', $this->controllerModel->request->getRequestItems()[0]->getPhone(), $output);
+        $output = str_replace('{s4uBeneficiaryBestTime}', $this->controllerModel->request->getRequestItems()[0]->getBestTime(), $output);
+        $output = str_replace('{s4uBeneficiaryLanguage}', $this->controllerModel->request->getRequestItems()[0]->getLangName(), $output);
 
-
-                            '  </TR>';
-          }
-        }
-        $tableRequests .= '</TBODY>';
-        $tableRequests .= "\n</TABLE>";
-
-        $output = str_replace('{s4uTableRequests}', $tableRequests, $output);
-
+        //$output = str_replace('{s4uTableRequests}', $tableRequests, $output);
 
         $output = str_replace('{version}', getenv('VER'), $output);
 

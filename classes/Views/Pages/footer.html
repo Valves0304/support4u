@@ -1,6 +1,6 @@
     </main>
     <footer>
-        <div class="footer">
+        <div class="version">
             <p> Version {version} | Copyright 2020 s4u</p>
         </div>
     </footer>
@@ -12,7 +12,13 @@
             $('.nav-button a i').toggleClass("visible");
             $('nav').toggleClass('open');
         });
+        
+        if($('.user').text().length == 0){
+            $('.user').hide();
+        }else{
+            $('.user').show();
+        }
     </script>
-
+    </div>
 </body>
 </html>

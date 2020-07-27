@@ -35,9 +35,10 @@ class ViewWalkDogDonation
             $tableRequests .= '<TR><TD COLSPAN=5>There are no requests. Try changing your filter.</TD></TR>';
         } else {
             foreach ($this->controllerModel->requestList as $request) {
+                $user = MdlUsers::findUser($request->getUserIdReq());
                 $tableRequests .= "\n<TR><TD>"  . '<input type="radio" name="optionRequest" value=" ' . $request->getRequestId() . ' "> ' .  "</TD>" .
-                              '      <TD>' . $request->getUserNameReq() . '</TD>' .
-                              '      <TD>' . $request->getUserCityReq() . '</TD>' .
+                              '      <TD>' . $user->getFirstName() . '</TD>' .
+                              '      <TD>' . MdlCities::findCity($user->getCityId())->getCityName() . '</TD>' .
                               '      <TD>' . $request->getRequestItems()[0]->getBestTime() . '</TD>' .
 
                               '  </TR>';

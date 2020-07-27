@@ -19,29 +19,17 @@ class ViewWalkDogMatch
         $output .= file_get_contents('classes/Views/Requests/Donation/matchWalkDog.html');
         $output .= file_get_contents('classes/Views/Pages/footer.html');
 
-
         // variables replacement
-        $output = str_replace('{s4uConfirmation}', Util::createLink("CtlRequests","matchDonation","","",$GLOBALS['RequestMatch']), $output);
+        $output = str_replace('{s4uConfirmation}', Util::createLink("CtlRequests","matchDonation","","",$this->controllerModel->request->getRequestId()), $output);
         $output = str_replace('{s4uCancel}',  Util::createLink("CtlRequests","newWalkDogDonation"), $output);
 
-        // table with requests
-        $tableRequests = '<TABLE class="pure-table pure-table-bordered"><THEAD><TR><TD>Name</TD><TD>Email</TD><TD>Time</TD><TD>City</TD></TR></THEAD> ';
-        $tableRequests .= '<TBODY>';
-        if ($this->controllerModel->requestList[0] == NULL) {
-            $tableRequests .= '<TR><TD COLSPAN=5>There are no requests. Try changing your filter.</TD></TR> \r\n';
-        } else {
-            foreach ($this->controllerModel->requestList as $request) {
-              $tableRequests .= "\n<TR><TD>"  . $request->getUserNameReq(). "</TD>" .
-                                '      <TD>' . $request->getUserEmailReq(). '</TD>' .
-                               '      <TD>' . $request->getUserCityReq() . '</TD>' .
-                               '      <TD>' . $request->getRequestItems()[0]->getBestTime() . '</TD>' .
-                                 '  </TR>';
-            }
-        }
-        $tableRequests .= '</TBODY>';
-        $tableRequests .= "\n</TABLE>";
+        $user = MdlUsers::findUser($this->controllerModel->request->getUserIdReq());
 
-        $output = str_replace('{s4uTableRequests}', $tableRequests, $output);
+        $output = str_replace('{s4uDogOwnerName}', $user->getFirstName(), $output);
+        $output = str_replace('{s4uBeneficiaryName}', $user->getLastName() . ',' . $user->getFirstName(), $output);
+        $output = str_replace('{s4uBeneficiaryEmail}', $user->getEmail(), $output);
+        $output = str_replace('{s4uBeneficiaryBestTime}', $this->controllerModel->request->getRequestItems()[0]->getBestTime(), $output);
+        $output = str_replace('{s4uBeneficiaryCity}', MdlCities::findCity($user->getCityId())->getCityName(), $output);
 
         $output = str_replace('{version}', getenv('VER'), $output);
 

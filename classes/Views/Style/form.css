@@ -1,0 +1,17 @@
+button, input[type=submit] {
+    padding: .5em .6em;
+    background-color: #92ACAE;
+    border: solid 1px #92ACAE;
+    border-radius: 4px;
+    color: #FFF;
+    min-width: 100px;
+    ;
+}
+
+button:hover, input[type=submit]:hover {
+    background-color: #6D9093;
+}
+
+.action-buttons {
+    text-align: right;
+}

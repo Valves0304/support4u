@@ -1,24 +1,25 @@
+<h1>Phone Call Confirmation</h1>
+<div class="content">
+    <form action="{s4uConfirmation}" name="confirmMatch" id="confirmMatch" method="POST">
+        <h4>OK, here is the phone Number.</h4>
+        
+        <p>We are going to send {s4uTalkerName} an email. He/She will be waiting for you call.</p>
+    
 
-   <div class="header">
-      <h1>Phone Call Confirmation</h1>
-   </div>
-   <div class="main">
-   <div class="float: left; width: 500px;">
-   	  	<form action="{s4uConfirmation}" name="confirmMatch" id="confirmMatch" method="POST">
-   	  		<h2>
-   	  			OK Here is the phone Numeber<BR></BR>
-                We are going to send an email to this person.
-                He / She will be waiting for you call.<BR></BR>
-            </h2>
-    	    {s4uTableRequests}
-            <p class="submit">
-    	    	<input type="submit" name="commit" value="Ok. I will call" />
-        	 </p>
-        	</form>
-           	<form action="{s4uCancel}" name="cancelMatch" id="cancelMatch" method="POST">
-           		<p class="submit">
-                    <input type="submit" name="cancel" value="No. Change my mind" />
-                </p>
-            </form>
-      </div>
-   </div>
+        <table class="pure-table pure-table-striped">
+            <tr><td><strong>Beneficiary: </strong></td><td>{s4uBeneficiaryName}</TD></tr>
+            <tr><td><strong>Phone: </strong></td><td>{s4uBeneficiaryPhone}</TD></tr>
+            <tr><td><strong>Best time: </strong></td><td>{s4uBeneficiaryBestTime}</TD></tr>
+            <tr><td><strong>Language: </strong></td><td>{s4uBeneficiaryLanguage}</TD></tr>
+        </table>
+    
+        <p class="action-buttons">
+            <input type="submit" name="commit" value="Ok. I will call" />
+        </p>
+    </form>
+    <form action="{s4uCancel}" name="cancelMatch" id="cancelMatch" method="POST">
+        <p class="action-buttons">
+            <input type="submit" name="cancel" value="No. Change my mind" />
+        </p>
+    </form>
+</div>

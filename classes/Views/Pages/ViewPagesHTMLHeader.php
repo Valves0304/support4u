@@ -34,11 +34,13 @@ class ViewPagesHTMLHeader
         // checks if user is logged in
         if (isset($_SESSION['USUARIO'])) {
             $output = str_replace('{s4uUserGreeting}','Hello, ' . $_SESSION['NOME_USUARIO'] . '!', $output);
-            $output = str_replace('{s4uLoginLogoutLink}',Util::createLink("CtlUsers","logout"), $output);
-            $output = str_replace('{s4uLoginLogout}','Logout', $output);
+            
             $output = str_replace('{s4uSignUp}','My Register ', $output);
             $output = str_replace('{s4uGetStartedLink}',Util::createLink("CtlRequests","getStarted"), $output);
             $output = str_replace('{s4uGetStarted}','Get Started', $output);
+            
+            $output = str_replace('{s4uLoginLogoutLink}',Util::createLink("CtlUsers","logout"), $output);
+            $output = str_replace('{s4uLoginLogout}','Logout', $output);
 
         } else {
             $output = str_replace('{s4uUserGreeting}','', $output);

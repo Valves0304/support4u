@@ -6,20 +6,27 @@
    <div class="float: left; width: 500px;">
    	  	<form action="{s4uConfirmation}" name="confirmMatch" id="confirmMatch" method="POST">
    	  		<h2>
-   	  			OK Lets Play GAME<BR></BR>
+   	  			OK, let's play a GAME!<BR><BR>
                 We are going to send {s4uPlayerName} your email address.
-                He / She will invite you to play soon.<BR></BR>
-          </h2>
-    	    {s4uTableRequests}
+                He / She will invite you to play soon.<BR>
+            </h2>
+            <BR><BR>
+                <table class="pure-table pure-table-striped">
+            	    <tr><td><strong>Beneficiary: </strong></td><td>{s4uBeneficiaryName}</TD></tr>
+    	            <tr><td><strong>Email: </strong></td><td>{s4uBeneficiaryEmail}</TD></tr>
+            	    <tr><td><strong>Best time: </strong></td><td>{s4uBeneficiaryBestTime}</TD></tr>
+    	            <tr><td><strong>Language: </strong></td><td>{s4uBeneficiaryLanguage}</TD></tr>
+                </table>
+
             <p class="submit">
     	    	<input type="submit" name="commit" value="Ok. Send this email" />
-        	 </p>
-        	</form>
-           	<form action="{s4uCancel}" name="cancelMatch" id="cancelMatch" method="POST">
-           		<p class="submit">
-                    <input type="submit" name="cancel" value="No. Don't send my email" />
-                </p>
-            </form>
+        	</p>
+        </form>
+        <form action="{s4uCancel}" name="cancelMatch" id="cancelMatch" method="POST">
+            <p class="submit">
+                <input type="submit" name="cancel" value="No. Don't send my email" />
+            </p>
+        </form>
       </div>
    </div>
 </body>

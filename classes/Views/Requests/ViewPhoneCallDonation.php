@@ -25,26 +25,29 @@ class ViewPhoneCallDonation
         // tag <SELECT> for Languages
       $output = str_replace('{s4uListLanguages}',
                             Util::createSelect(MdlLanguages::listLanguages(), 'getLangId', 'getLangName',
-                                               (!empty($this->controllerModel->errorField)) ? $this->controllerModel->request->getRequestItems()[0]->getLangId() : NULL),
+                            (!empty($this->controllerModel->errorField)) ? $this->controllerModel->request->getRequestItems()[0]->getLangId() : NULL),
                              $output);
 
 
         // table with requests
-        $tableRequests = '<THEAD><TR><TD>Select</TD><TD>Name</TD><TD>Time</TD><TD>Language</TD></TR></THEAD> ';
-        $tableRequests .= '<TBODY>';
+        $tableRequests = '';
         if ($this->controllerModel->requestList[0] == NULL) {
-            $tableRequests .= '<TR><TD COLSPAN=5>There are no requests. Try changing your filter.</TD></TR> \r\n';
+            $tableRequests .= '<h3>There are no requests. Try changing your filter.</h3>';
         } else {
             foreach ($this->controllerModel->requestList as $request) {
-
-                $tableRequests .= "\n<TR><TD>"  . '<input type="radio" name="optionRequest" value="' . $request->getRequestId(). '"> ' .  "</TD>" .
-                              '      <TD>' . $request->getUserNameReq() . '</TD>' .
-                              '      <TD>' . $request->getRequestItems()[0]->getBestTime() . '</TD>' .
-                              '      <TD>' . $request->getRequestItems()[0]->getLangName() . '</TD>' .
-                              '  </TR>';
+                $tableRequests .=   '<label class="card-radio">'.
+                                    '<input type="radio" name="optionRequest" value="' . $request->getRequestId(). '"> '.
+                                    '<article class="card card-donate-talk">'.
+                                        '<div class="card-header"><i></i><h3>' . MdlUsers::findUser($request->getUserIdReq())->getFirstName() . '</h3></div>'.
+                                        '<div class="card-content">'.
+                                            '<div><span>Time</span>' . $request->getRequestItems()[0]->getBestTime() . '</div>'.
+                                            '<div><span>Language</span>' . $request->getRequestItems()[0]->getLangName() . '</div>'.
+                                        '</div>'.
+                                    '</article>'.
+                                '</label>';
             }
         }
-        $tableRequests .= '</TBODY>';
+
         $output = str_replace('{s4uTableRequests}', $tableRequests, $output);
 
         $output = str_replace('{version}', getenv('VER'), $output);

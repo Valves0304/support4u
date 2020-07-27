@@ -316,16 +316,18 @@ class MdlRequests
         $requestList = array();
 
         $query = 'select r.request_id, r.req_type, r.req_date, r.user_id_req, r.user_id_donor, r.price, r.status ' .
-                 '  from request r, request_items ri, city c, user_s4u u' .
-                 ' where ri.request_id = r.request_id and r.user_id_req = u.user_id and c.city_id = u.city_id ' . (is_null($crit) ? '' : 'and ' . $crit);
+                 '  from request r, request_items ri ' .
+                 ' where ri.request_id = r.request_id ' . (is_null($crit) ? '' : 'and ' . $crit);
 
-        $query .= ' group by r.request_id, r.req_type, r.req_date, r.user_id_req, r.user_id_donor, r.status, ri.best_time, u.city_id ';
+        $query .= ' group by r.request_id, r.req_type, r.req_date, r.user_id_req, r.user_id_donor, r.status ';
 
         if (!is_null($limit))
         {
             $query .= ' LIMIT ' . $limit;
         }
-        echo $query;
+
+#        echo $query;
+
         try
         {
             $result = $db->query($query);
@@ -345,38 +347,38 @@ class MdlRequests
         // return array with values
         while ($request = $result->fetch_assoc())
         {
-           $nameReq   = "";
-           $nameDonor = "";
+#           $nameReq   = "";
+#           $nameDonor = "";
 
            $requestData = new Request();
 
-            if($request['user_id_req'] != NULL){
-              $userReq = new User();
-              $userReq = MdlUsers::findUser($request['user_id_req']);
-              $nameReq = $userReq->getFirstName();
-              $emailReq = $userReq->getEmail();
+#            if($request['user_id_req'] != NULL){
+#              $userReq = new User();
+#              $userReq = MdlUsers::findUser($request['user_id_req']);
+#              $nameReq = $userReq->getFirstName();
+#              $emailReq = $userReq->getEmail();
 
-              $userCity = new City();
-              $userCity = MdlCities::findCity($userReq->getCityId());
-              $cityReq = $userCity-> getCityName();
-            }
+#              $userCity = new City();
+#              $userCity = MdlCities::findCity($userReq->getCityId());
+#              $cityReq = $userCity-> getCityName();
+#            }
 
-            if($request['user_id_donor'] != NULL){
-              $userDonor = new User();
-              $userDonor = MdlUsers::findUser($request['user_id_donor']);
-              $nameDonor = $userDonor->getFirstName();
-            }
+#           if($request['user_id_donor'] != NULL){
+#             $userDonor = new User();
+#             $userDonor = MdlUsers::findUser($request['user_id_donor']);
+#             $nameDonor = $userDonor->getFirstName();
+#           }
 
             $requestData->setRequestId($request['request_id']);
             $requestData->setRequestType($request['req_type']);
             $requestData->setRequestDate($request['req_date']);
             $requestData->setUserIdReq($request['user_id_req']);
             $requestData->setPrice($request['price']);
-            $requestData->setUserNameReq($nameReq);
-            $requestData->setUserNameDonor($nameDonor);
-            $requestData->setUserEmailReq($emailReq);
-            $requestData->setUserCityReq($cityReq);
-            $requestData->setUserIdDonor($request['user_id_donor']);
+#            $requestData->setUserNameReq($nameReq);
+#            $requestData->setUserNameDonor($nameDonor);
+#            $requestData->setUserEmailReq($emailReq);
+#            $requestData->setUserCityReq($cityReq);
+#            $requestData->setUserIdDonor($request['user_id_donor']);
             $requestData->setStatusRequest($request['status']);
 
             // retrieve requestItem
@@ -403,8 +405,9 @@ class MdlRequests
     // ***
     public static function findRequest($requestId)
     {
-        return (MdlRequests::listRequests('request_id = ' . $requestId) [0]);
+        return (MdlRequests::listRequests('r.request_id = ' . $requestId) [0]);
     }
+    
     // *******************************************************************************************************
     // *** find requests
     // *******************************************************************************************************
@@ -433,6 +436,7 @@ class MdlRequests
     {
         return (MdlRequests::listRequests('req_type = ' . MdlRequests::GROCERY_REQUEST . ' AND ' . $criteria));
     }
+    
     // *******************************************************************************************************
     // *** find User requests
     // *******************************************************************************************************
@@ -450,19 +454,19 @@ class MdlRequests
 // ***
 // *** Return array of request based on $userIdReq
 // ***
-  public static function translateBestTime($bestTime)
-{
-    $bestTimeDescription = ' Anytime '; // default color
-    switch ($bestTime) {
-        case MdlRequests::MORNING : $bestTimeDescription = ' Morning';
-            break;
-        case MdlRequests::AFTERNOON : $bestTimeDescription = ' Afternoon';
+    public static function translateBestTime($bestTime)
+    {
+        $bestTimeDescription = ' Anytime '; // default color
+        switch ($bestTime) {
+            case MdlRequests::MORNING : $bestTimeDescription = ' Morning';
                 break;
-        case MdlRequests::NIGHT : $bestTimeDescription = ' Night';
+            case MdlRequests::AFTERNOON : $bestTimeDescription = ' Afternoon';
                 break;
+            case MdlRequests::NIGHT : $bestTimeDescription = ' Night';
+                break;
+        }
+        return $bestTimeDescription;
     }
-    return $bestTimeDescription;
-  }
 
   public static function confirmDonation($requestId, $userIdDonor, $status)
   { echo 'request ID ' . $requestId . '</BR>' ;
@@ -492,8 +496,6 @@ class MdlRequests
   }
 
 }
-
-
 
 
 // *******************************************************************************************************
@@ -650,12 +652,12 @@ class Request
     private $reqType;
     private $reqDate;
     private $userIdReq;
-    private $userNameReq;
-    private $userEmailReq;
-    private $userCityReq;
+#    private $userNameReq;
+#    private $userEmailReq;
+#    private $userCityReq;
     private $userIdDonor;
     private $price;
-    private $userNameDonor;
+#    private $userNameDonor;
     private $status;
     private $requestItems = array();
 
@@ -727,41 +729,41 @@ class Request
     {
         $this->requestItems = $requestItems;
     }
-    // First User that is requiring Help
-    public function getUserNameReq()
-    {
-        return $this->userNameReq;
-    }
-    public function setUserNameReq($userNameReq)
-    {
-        $this->userNameReq = $userNameReq;
-    }
-    // Email User that is requiring Help
-    public function getUserEmailReq()
-    {
-        return $this->userEmailReq;
-    }
-    public function setUserEmailReq($userEmailReq)
-    {
-        $this->userEmailReq = $userEmailReq;
-    }
-    // Name Donor
-    public function getUserNameDonor()
-    {
-        return $this->userNameDonor;
-    }
-    public function setUserNameDonor($userNameDonor)
-    {
-        $this->userNameDonor = $userNameDonor;
-    }
-    public function getUserCityReq()
-    {
-        return $this->userCityReq;
-    }
-    public function setUserCityReq($userCityReq)
-    {
-        $this->userCityReq = $userCityReq;
-    }
+#    // First User that is requiring Help
+#    public function getUserNameReq()
+#    {
+#        return $this->userNameReq;
+#    }
+#    public function setUserNameReq($userNameReq)
+#    {
+#        $this->userNameReq = $userNameReq;
+#    }
+#    // Email User that is requiring Help
+#    public function getUserEmailReq()
+#    {
+#        return $this->userEmailReq;
+#    }
+#    public function setUserEmailReq($userEmailReq)
+#    {
+#        $this->userEmailReq = $userEmailReq;
+#    }
+#    // Name Donor
+#    public function getUserNameDonor()
+#    {
+#        return $this->userNameDonor;
+#    }
+#    public function setUserNameDonor($userNameDonor)
+#    {
+#        $this->userNameDonor = $userNameDonor;
+#    }
+#    public function getUserCityReq()
+#    {
+#        return $this->userCityReq;
+#    }
+#    public function setUserCityReq($userCityReq)
+#    {
+#        $this->userCityReq = $userCityReq;
+#    }
     //Request price
     public function getPrice()
     {

@@ -6,11 +6,18 @@
    <div class="float: left; width: 500px;">
    	  	<form action="{s4uConfirmation}" name="confirmMatch" id="confirmMatch" method="POST">
    	  		<h2>
-   	  			OK Lets walk this dog<BR></BR>
-                We are going to send your email address to this person and he/she will contact you so you both can arrange the
-              details of this walk with the dog.<BR></BR>
-          </h2>
-    	    {s4uTableRequests}
+   	  			OK, let's walk this dog!<BR><BR>
+                We are going to send {s4uDogOwnerName} your email address and he/she will contact you so you both can arrange the
+              details of this walk with the dog.<BR>
+            </h2>
+            <BR><BR>
+                <table class="pure-table pure-table-striped">
+            	    <tr><td><strong>Beneficiary: </strong></td><td>{s4uBeneficiaryName}</TD></tr>
+    	            <tr><td><strong>Email: </strong></td><td>{s4uBeneficiaryEmail}</TD></tr>
+            	    <tr><td><strong>Best time: </strong></td><td>{s4uBeneficiaryBestTime}</TD></tr>
+    	            <tr><td><strong>City: </strong></td><td>{s4uBeneficiaryCity}</TD></tr>
+                </table>
+
             <p class="submit">
     	    	<input type="submit" name="commit" value="Ok. Send this email" />
         	 </p>

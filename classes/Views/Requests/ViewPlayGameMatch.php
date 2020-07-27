@@ -1,6 +1,6 @@
 <?php
 // Support for you
-// ViewPagesHome.php: Home Page View Home definition from controller ctlPages
+// ViewPlayGameMatch.php: Home Page View Home definition from controller ctlPages
 // ---------------------------------------------------------------------------
 // view Home Page
 class ViewPlayGameMatch
@@ -19,36 +19,17 @@ class ViewPlayGameMatch
         $output .= file_get_contents('classes/Views/Requests/Donation/matchPlayGame.html');
         $output .= file_get_contents('classes/Views/Pages/footer.html');
 
-        $name = "";
-
         // variables replacement
-        $output = str_replace('{s4uConfirmation}', Util::createLink("CtlRequests","matchDonation","","",$GLOBALS['RequestMatch']), $output);
+        $output = str_replace('{s4uConfirmation}', Util::createLink("CtlRequests","matchDonation","","",$this->controllerModel->request->getRequestId()), $output);
         $output = str_replace('{s4uCancel}',  Util::createLink("CtlRequests","newPlayDonation"), $output);
 
+        $user = MdlUsers::findUser($this->controllerModel->request->getUserIdReq());
 
-
-            $tableRequests = '<TABLE class="pure-table pure-table-bordered"><THEAD><TD>Name</TD><TD>Phone</TD><TD>Time</TD><TD>Language</TD></THEAD> ';
-            $tableRequests .= '<TBODY>';
-        if ($this->controllerModel->requestList[0] == NULL) {
-            $tableRequests .= '<TR><TD COLSPAN=5>There are no requests. Try changing your filter.</TD></TR>';
-        } else {
-            foreach ($this->controllerModel->requestList as $request) {
-              $tableRequests .= "\n<TR><TD>"  . $request->getUserNameReq(). "</TD>" .
-                            '      <TD>' . $request->getUserEmailReq(). '</TD>' .
-                            '      <TD>' . $request->getRequestItems()[0]->getBestTime() . '</TD>' .
-                            '      <TD>' . $request->getRequestItems()[0]->getLangName() . '</TD>' .
-
-                            '  </TR>';
-            }
-        }
-        $tableRequests .= '</TBODY>';
-        $tableRequests .= "\n</TABLE>";
-
-
-
-        $output = str_replace('{s4uPlayerName}', $name , $output);
-
-        $output = str_replace('{s4uTableRequests}', $tableRequests, $output);
+        $output = str_replace('{s4uPlayerName}', $user->getFirstName(), $output);
+        $output = str_replace('{s4uBeneficiaryName}', $user->getLastName() . ',' . $user->getFirstName(), $output);
+        $output = str_replace('{s4uBeneficiaryEmail}', $user->getEmail(), $output);
+        $output = str_replace('{s4uBeneficiaryBestTime}', $this->controllerModel->request->getRequestItems()[0]->getBestTime(), $output);
+        $output = str_replace('{s4uBeneficiaryLanguage}', $this->controllerModel->request->getRequestItems()[0]->getLangName(), $output);
 
         $output = str_replace('{version}', getenv('VER'), $output);
 
