@@ -83,11 +83,12 @@ class CtlRequests
         $this->model->requestItem->setLangId($_POST['langId']);
         $this->model->requestItem->setPhone($_POST['phone']);
         $this->model->requestItem->setQuantity($_POST['quantity']);
-        $this->model->requestItem->setRequestId($_POST['$requestId']);
+//        $this->model->requestItem->setRequestId($_POST['$requestId']); // requestId é gerado pelo banco no insert
         $this->model->requestItem->setTypeTime($_POST['typeTime']);
         $this->model->requestItem->setUnitId($_POST['unitId']);
 
-        MdlRequests::insertRequestItem($this->model->requestItem);
+//        MdlRequests::insertRequestItem($this->model->requestItem); // quem insere o Item é o insertRequest. A gente insere o item dentro do request
+        $this->model->request->addRequestItem($this->model->requestItem);
         MdlRequests::insertRequest($this->model->request);
 
             // define the view

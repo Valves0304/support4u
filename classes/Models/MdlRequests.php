@@ -89,12 +89,12 @@ class MdlRequests
         } else {
             // log error
             error_log(date('DATE_ATOM') . ' - Insert request Error ', 3, getenv('LOG_FILE'));
-            error_log('                         - erro: ' . $qryInsert->error_list, 3, getenv('LOG_FILE'));
+            error_log('                         - erro: ' . var_dump($qryInsert->error_list), 3, getenv('LOG_FILE'));
 
             throw new exception ('Data Base Fails. Insert not perfomed. ');
         }
 
-        return $request;
+        return $requestItem;
     }
 
     // *******************************************************************************************************
@@ -246,6 +246,7 @@ class MdlRequests
         // insert request_items
         if (count($request->getRequestItems()) > 0) {
             foreach ($request->getRequestItems() as $requestItem) {
+                $requestItem->setRequestId($request->getRequestId()); // associa o item ao request rec«±m criado
                 MdlRequests::insertRequestItem($requestItem);
             }
         }
@@ -290,6 +291,7 @@ class MdlRequests
         MdlRequests::deleteRequestItemByRequestId($request->getRequestId());
         if (count($request->getRequestItems()) > 0) {
             foreach ($request->getRequestItems() as $requestItem) {
+                $requestItem->setRequestId($request->getRequestId()); // associa o item ao request 
                 MdlRequests::insertRequestItem($requestItem);
             }
         }
@@ -603,6 +605,7 @@ class Request
   }
   public function addRequestItem(RequestItem $requestItem)
   {
+    $requestItem->setRequestId($this->requestId); // para garantir que os objetos estejam associados
     array_push($this->requestItems, $requestItem);
   }
 

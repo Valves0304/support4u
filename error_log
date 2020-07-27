@@ -22,3 +22,341 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home1/s4u/public_html/request.php on line 6
+[30-Jun-2020 10:17:38 America/Vancouver] PHP Fatal error:  Uncaught Error: Class 'ViewTimeRequest' not found in /home1/s4u/public_html/classes/Controllers/CtlRequests.php:53
+Stack trace:
+#0 /home1/s4u/public_html/s4u.php(73): CtlRequests->newGroceryRequest(NULL)
+#1 {main}
+  thrown in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 53
+[30-Jun-2020 12:27:45 America/Chicago] PHP Warning:  include(/home1/s4u/public_html/classes/Views/Requests/ViewNewGroceryRequest.php): failed to open stream: No such file or directory in /home1/s4u/public_html/loader.php on line 30
+[30-Jun-2020 12:27:45 America/Chicago] PHP Warning:  include(/home1/s4u/public_html/classes/Views/Requests/ViewNewGroceryRequest.php): failed to open stream: No such file or directory in /home1/s4u/public_html/loader.php on line 30
+[30-Jun-2020 12:27:45 America/Chicago] PHP Warning:  include(): Failed opening '/home1/s4u/public_html/classes/Views/Requests/ViewNewGroceryRequest.php' for inclusion (include_path='.:/opt/php71/lib/php') in /home1/s4u/public_html/loader.php on line 30
+[30-Jun-2020 12:27:45 America/Chicago] PHP Fatal error:  Cannot declare class ViewNewRequest, because the name is already in use in /home1/s4u/public_html/classes/Views/Requests/ViewNewTimeRequest.php on line 6
+[30-Jun-2020 13:20:12 America/Chicago] PHP Fatal error:  Cannot declare class ViewNewRequest, because the name is already in use in /home1/s4u/public_html/classes/Views/Requests/ViewNewGroceryRequest.php on line 6
+[30-Jun-2020 13:21:13 America/Chicago] PHP Fatal error:  Cannot declare class ViewNewRequest, because the name is already in use in /home1/s4u/public_html/classes/Views/Requests/ViewNewGroceryRequest.php on line 6
+[30-Jun-2020 18:52:20 America/Chicago] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 85
+[30-Jun-2020 19:12:17 America/Chicago] PHP Warning:  include(/home1/s4u/public_html/classes/Views/Requests/ViewNewRequest.php): failed to open stream: No such file or directory in /home1/s4u/public_html/loader.php on line 29
+[30-Jun-2020 19:12:17 America/Chicago] PHP Warning:  include(/home1/s4u/public_html/classes/Views/Requests/ViewNewRequest.php): failed to open stream: No such file or directory in /home1/s4u/public_html/loader.php on line 29
+[30-Jun-2020 19:12:17 America/Chicago] PHP Warning:  include(): Failed opening '/home1/s4u/public_html/classes/Views/Requests/ViewNewRequest.php' for inclusion (include_path='.:/opt/php71/lib/php') in /home1/s4u/public_html/loader.php on line 29
+[30-Jun-2020 19:12:17 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home1/s4u/public_html/loader.php:29) in /home1/s4u/public_html/var.php on line 5
+[01-Jul-2020 16:09:15 America/Vancouver] PHP Notice:  Undefined property: MdlRequests::$requestItem in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 65
+[01-Jul-2020 16:09:15 America/Vancouver] PHP Fatal error:  Uncaught Error: Call to a member function setBestTime() on null in /home1/s4u/public_html/classes/Controllers/CtlRequests.php:65
+Stack trace:
+#0 /home1/s4u/public_html/s4u.php(73): CtlRequests->insertRequest(NULL)
+#1 {main}
+  thrown in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 65
+[01-Jul-2020 16:09:44 America/Vancouver] PHP Notice:  Undefined property: MdlRequests::$requestItem in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 65
+[01-Jul-2020 16:09:44 America/Vancouver] PHP Fatal error:  Uncaught Error: Call to a member function setBestTime() on null in /home1/s4u/public_html/classes/Controllers/CtlRequests.php:65
+Stack trace:
+#0 /home1/s4u/public_html/s4u.php(73): CtlRequests->insertRequest(NULL)
+#1 {main}
+  thrown in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 65
+[01-Jul-2020 16:11:48 America/Vancouver] PHP Notice:  Undefined property: MdlRequests::$requestItem in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 65
+[01-Jul-2020 16:11:48 America/Vancouver] PHP Fatal error:  Uncaught Error: Call to a member function setBestTime() on null in /home1/s4u/public_html/classes/Controllers/CtlRequests.php:65
+Stack trace:
+#0 /home1/s4u/public_html/s4u.php(73): CtlRequests->insertRequest(NULL)
+#1 {main}
+  thrown in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 65
+[01-Jul-2020 16:13:06 America/Vancouver] PHP Notice:  Undefined property: MdlRequests::$requestItem in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 77
+[01-Jul-2020 16:13:06 America/Vancouver] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to MdlRequests::insertRequest() must be an instance of Request, null given, called in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 77 and defined in /home1/s4u/public_html/classes/Models/MdlRequests.php:211
+Stack trace:
+#0 /home1/s4u/public_html/classes/Controllers/CtlRequests.php(77): MdlRequests::insertRequest(NULL)
+#1 /home1/s4u/public_html/s4u.php(73): CtlRequests->insertRequest(NULL)
+#2 {main}
+  thrown in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 211
+[01-Jul-2020 16:17:27 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 227
+[01-Jul-2020 16:17:27 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 228
+[01-Jul-2020 16:17:27 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 229
+[01-Jul-2020 16:17:27 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 230
+[01-Jul-2020 16:17:27 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 231
+[01-Jul-2020 16:17:27 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[01-Jul-2020 16:17:27 America/Vancouver] PHP Fatal error:  Uncaught Error: Class 'ViewNewRequest' not found in /home1/s4u/public_html/classes/Controllers/CtlRequests.php:83
+Stack trace:
+#0 /home1/s4u/public_html/s4u.php(73): CtlRequests->insertRequest(NULL)
+#1 {main}
+  thrown in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 83
+[01-Jul-2020 16:23:05 America/Vancouver] PHP Notice:  Undefined index: $requestId in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 75
+[01-Jul-2020 16:23:05 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 74
+[01-Jul-2020 16:23:05 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 75
+[01-Jul-2020 16:23:05 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 76
+[01-Jul-2020 16:23:05 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 77
+[01-Jul-2020 16:23:05 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 78
+[01-Jul-2020 16:23:05 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 79
+[01-Jul-2020 16:23:05 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 80
+[01-Jul-2020 16:23:05 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 81
+[01-Jul-2020 16:23:05 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 82
+[01-Jul-2020 16:23:05 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 83
+[01-Jul-2020 16:23:05 America/Vancouver] PHP Notice:  Array to string conversion in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 92
+[01-Jul-2020 17:17:20 America/Vancouver] PHP Notice:  Undefined index: $requestId in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 75
+[01-Jul-2020 17:17:20 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 74
+[01-Jul-2020 17:17:20 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 75
+[01-Jul-2020 17:17:20 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 76
+[01-Jul-2020 17:17:20 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 77
+[01-Jul-2020 17:17:20 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 78
+[01-Jul-2020 17:17:20 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 79
+[01-Jul-2020 17:17:20 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 80
+[01-Jul-2020 17:17:20 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 81
+[01-Jul-2020 17:17:20 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 82
+[01-Jul-2020 17:17:20 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 83
+[01-Jul-2020 17:17:20 America/Vancouver] PHP Notice:  Array to string conversion in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 92
+[01-Jul-2020 17:26:44 America/Vancouver] PHP Notice:  Undefined index: $requestId in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 75
+[01-Jul-2020 17:26:44 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 74
+[01-Jul-2020 17:26:44 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 75
+[01-Jul-2020 17:26:44 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 76
+[01-Jul-2020 17:26:44 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 77
+[01-Jul-2020 17:26:44 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 78
+[01-Jul-2020 17:26:44 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 79
+[01-Jul-2020 17:26:44 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 80
+[01-Jul-2020 17:26:44 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 81
+[01-Jul-2020 17:26:44 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 82
+[01-Jul-2020 17:26:44 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 83
+[01-Jul-2020 17:26:44 America/Vancouver] PHP Notice:  Array to string conversion in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 92
+[01-Jul-2020 20:11:05 America/Chicago] PHP Fatal error:  Cannot declare class ViewNewGroceryRequest, because the name is already in use in /home1/s4u/public_html/classes/Views/Requests/ViewFindRequest.php on line 6
+[02-Jul-2020 19:38:59 America/Chicago] PHP Parse error:  syntax error, unexpected '$output' (T_VARIABLE) in /home1/s4u/public_html/classes/Views/Requests/ViewChooseRequest.php on line 28
+[02-Jul-2020 19:43:38 America/Chicago] PHP Fatal error:  Cannot declare class ViewGetStarted, because the name is already in use in /home1/s4u/public_html/classes/Views/Requests/ViewChooseRequest.php on line 6
+[02-Jul-2020 17:46:06 America/Vancouver] PHP Fatal error:  Uncaught Error: Class 'ViewChooseRequet' not found in /home1/s4u/public_html/classes/Controllers/CtlRequests.php:38
+Stack trace:
+#0 /home1/s4u/public_html/s4u.php(73): CtlRequests->chooseRequest(NULL)
+#1 {main}
+  thrown in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 38
+[02-Jul-2020 17:46:37 America/Vancouver] PHP Fatal error:  Uncaught Error: Class 'ViewChooseRequet' not found in /home1/s4u/public_html/classes/Controllers/CtlRequests.php:38
+Stack trace:
+#0 /home1/s4u/public_html/s4u.php(73): CtlRequests->chooseRequest(NULL)
+#1 {main}
+  thrown in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 38
+[02-Jul-2020 17:57:27 America/Vancouver] PHP Fatal error:  Uncaught Error: Class 'ViewChooseRequet' not found in /home1/s4u/public_html/classes/Controllers/CtlRequests.php:38
+Stack trace:
+#0 /home1/s4u/public_html/s4u.php(73): CtlRequests->chooseRequest(NULL)
+#1 {main}
+  thrown in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 38
+[02-Jul-2020 20:08:24 America/Vancouver] PHP Notice:  Undefined index: $requestId in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 86
+[02-Jul-2020 20:08:24 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 74
+[02-Jul-2020 20:08:24 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 75
+[02-Jul-2020 20:08:24 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 76
+[02-Jul-2020 20:08:24 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 77
+[02-Jul-2020 20:08:24 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 78
+[02-Jul-2020 20:08:24 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 79
+[02-Jul-2020 20:08:24 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 80
+[02-Jul-2020 20:08:24 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 81
+[02-Jul-2020 20:08:24 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 82
+[02-Jul-2020 20:08:24 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 83
+[02-Jul-2020 20:08:24 America/Vancouver] PHP Notice:  Array to string conversion in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 92
+[02-Jul-2020 20:25:29 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 227
+[02-Jul-2020 20:25:29 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 228
+[02-Jul-2020 20:25:29 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 229
+[02-Jul-2020 20:25:29 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 230
+[02-Jul-2020 20:25:29 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 231
+[02-Jul-2020 20:25:29 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[02-Jul-2020 20:25:29 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 74
+[02-Jul-2020 20:25:29 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 75
+[02-Jul-2020 20:25:29 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 76
+[02-Jul-2020 20:25:29 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 77
+[02-Jul-2020 20:25:29 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 78
+[02-Jul-2020 20:25:29 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 79
+[02-Jul-2020 20:25:29 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 80
+[02-Jul-2020 20:25:29 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 81
+[02-Jul-2020 20:25:29 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 82
+[02-Jul-2020 20:25:29 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 83
+[02-Jul-2020 20:25:29 America/Vancouver] PHP Notice:  Undefined variable: request in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 97
+[02-Jul-2020 20:25:29 America/Vancouver] PHP Fatal error:  Uncaught Error: Class 'ViewNewRequest' not found in /home1/s4u/public_html/classes/Controllers/CtlRequests.php:97
+Stack trace:
+#0 /home1/s4u/public_html/s4u.php(73): CtlRequests->insertRequest(NULL)
+#1 {main}
+  thrown in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 97
+[02-Jul-2020 20:27:11 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 227
+[02-Jul-2020 20:27:11 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 228
+[02-Jul-2020 20:27:11 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 229
+[02-Jul-2020 20:27:11 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 230
+[02-Jul-2020 20:27:11 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 231
+[02-Jul-2020 20:27:11 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[02-Jul-2020 20:27:11 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 74
+[02-Jul-2020 20:27:11 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 75
+[02-Jul-2020 20:27:11 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 76
+[02-Jul-2020 20:27:11 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 77
+[02-Jul-2020 20:27:11 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 78
+[02-Jul-2020 20:27:11 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 79
+[02-Jul-2020 20:27:11 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 80
+[02-Jul-2020 20:27:11 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 81
+[02-Jul-2020 20:27:11 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 82
+[02-Jul-2020 20:27:11 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 83
+[02-Jul-2020 20:27:11 America/Vancouver] PHP Fatal error:  Uncaught Error: Class 'ViewNewRequest' not found in /home1/s4u/public_html/classes/Controllers/CtlRequests.php:97
+Stack trace:
+#0 /home1/s4u/public_html/s4u.php(73): CtlRequests->insertRequest(NULL)
+#1 {main}
+  thrown in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 97
+[02-Jul-2020 20:27:55 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 227
+[02-Jul-2020 20:27:55 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 228
+[02-Jul-2020 20:27:55 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 229
+[02-Jul-2020 20:27:55 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 230
+[02-Jul-2020 20:27:55 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 231
+[02-Jul-2020 20:27:55 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[02-Jul-2020 20:27:55 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 74
+[02-Jul-2020 20:27:55 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 75
+[02-Jul-2020 20:27:55 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 76
+[02-Jul-2020 20:27:55 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 77
+[02-Jul-2020 20:27:55 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 78
+[02-Jul-2020 20:27:55 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 79
+[02-Jul-2020 20:27:55 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 80
+[02-Jul-2020 20:27:55 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 81
+[02-Jul-2020 20:27:55 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 82
+[02-Jul-2020 20:27:55 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 83
+[02-Jul-2020 20:27:55 America/Vancouver] PHP Fatal error:  Uncaught Error: Class 'ViewNewRequest' not found in /home1/s4u/public_html/classes/Controllers/CtlRequests.php:97
+Stack trace:
+#0 /home1/s4u/public_html/s4u.php(73): CtlRequests->insertRequest(NULL)
+#1 {main}
+  thrown in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 97
+[02-Jul-2020 20:35:27 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 227
+[02-Jul-2020 20:35:27 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 228
+[02-Jul-2020 20:35:27 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 229
+[02-Jul-2020 20:35:27 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 230
+[02-Jul-2020 20:35:27 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 231
+[02-Jul-2020 20:35:27 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[02-Jul-2020 20:35:27 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 74
+[02-Jul-2020 20:35:27 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 75
+[02-Jul-2020 20:35:27 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 76
+[02-Jul-2020 20:35:27 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 77
+[02-Jul-2020 20:35:27 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 78
+[02-Jul-2020 20:35:27 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 79
+[02-Jul-2020 20:35:27 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 80
+[02-Jul-2020 20:35:27 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 81
+[02-Jul-2020 20:35:27 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 82
+[02-Jul-2020 20:35:27 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 83
+[02-Jul-2020 20:35:27 America/Vancouver] PHP Fatal error:  Uncaught Error: Class 'ViewNewRequest' not found in /home1/s4u/public_html/classes/Controllers/CtlRequests.php:97
+Stack trace:
+#0 /home1/s4u/public_html/s4u.php(73): CtlRequests->insertRequest(NULL)
+#1 {main}
+  thrown in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 97
+[02-Jul-2020 20:46:37 America/Vancouver] PHP Notice:  Undefined index: $requestId in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 86
+[02-Jul-2020 20:46:37 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 74
+[02-Jul-2020 20:46:37 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 75
+[02-Jul-2020 20:46:37 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 76
+[02-Jul-2020 20:46:37 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 77
+[02-Jul-2020 20:46:37 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 78
+[02-Jul-2020 20:46:37 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 79
+[02-Jul-2020 20:46:37 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 80
+[02-Jul-2020 20:46:37 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 81
+[02-Jul-2020 20:46:37 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 82
+[02-Jul-2020 20:46:37 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 83
+[02-Jul-2020 20:46:37 America/Vancouver] PHP Notice:  Array to string conversion in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 92
+[02-Jul-2020 22:32:30 America/Vancouver] PHP Notice:  Undefined index: $requestId in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 86
+[02-Jul-2020 22:32:30 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 74
+[02-Jul-2020 22:32:30 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 75
+[02-Jul-2020 22:32:30 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 76
+[02-Jul-2020 22:32:30 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 77
+[02-Jul-2020 22:32:30 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 78
+[02-Jul-2020 22:32:30 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 79
+[02-Jul-2020 22:32:30 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 80
+[02-Jul-2020 22:32:30 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 81
+[02-Jul-2020 22:32:30 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 82
+[02-Jul-2020 22:32:30 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 83
+[02-Jul-2020 22:32:30 America/Vancouver] PHP Notice:  Array to string conversion in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 92
+[02-Jul-2020 23:37:54 America/Vancouver] PHP Notice:  Undefined index: $requestId in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 86
+[02-Jul-2020 23:37:54 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 74
+[02-Jul-2020 23:37:54 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 75
+[02-Jul-2020 23:37:54 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 76
+[02-Jul-2020 23:37:54 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 77
+[02-Jul-2020 23:37:54 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 78
+[02-Jul-2020 23:37:54 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 79
+[02-Jul-2020 23:37:54 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 80
+[02-Jul-2020 23:37:54 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 81
+[02-Jul-2020 23:37:54 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 82
+[02-Jul-2020 23:37:54 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 83
+[02-Jul-2020 23:37:54 America/Vancouver] PHP Notice:  Array to string conversion in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 92
+[04-Jul-2020 08:36:22 America/Vancouver] PHP Notice:  Undefined index: $requestId in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 86
+[04-Jul-2020 08:36:22 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 74
+[04-Jul-2020 08:36:22 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 75
+[04-Jul-2020 08:36:22 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 76
+[04-Jul-2020 08:36:22 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 77
+[04-Jul-2020 08:36:22 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 78
+[04-Jul-2020 08:36:22 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 79
+[04-Jul-2020 08:36:22 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 80
+[04-Jul-2020 08:36:22 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 81
+[04-Jul-2020 08:36:22 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 82
+[04-Jul-2020 08:36:22 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 83
+[04-Jul-2020 08:36:22 America/Vancouver] PHP Notice:  Array to string conversion in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 92
+[04-Jul-2020 08:40:06 America/Vancouver] PHP Notice:  Undefined index: $requestId in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 86
+[04-Jul-2020 08:40:06 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 74
+[04-Jul-2020 08:40:06 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 75
+[04-Jul-2020 08:40:06 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 76
+[04-Jul-2020 08:40:06 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 77
+[04-Jul-2020 08:40:06 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 78
+[04-Jul-2020 08:40:06 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 79
+[04-Jul-2020 08:40:06 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 80
+[04-Jul-2020 08:40:06 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 81
+[04-Jul-2020 08:40:06 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 82
+[04-Jul-2020 08:40:06 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 83
+[04-Jul-2020 08:40:06 America/Vancouver] PHP Notice:  Array to string conversion in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 92
+[04-Jul-2020 08:40:17 America/Vancouver] PHP Notice:  Undefined index: $requestId in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 86
+[04-Jul-2020 08:40:17 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 74
+[04-Jul-2020 08:40:17 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 75
+[04-Jul-2020 08:40:17 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 76
+[04-Jul-2020 08:40:17 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 77
+[04-Jul-2020 08:40:17 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 78
+[04-Jul-2020 08:40:17 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 79
+[04-Jul-2020 08:40:17 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 80
+[04-Jul-2020 08:40:17 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 81
+[04-Jul-2020 08:40:17 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 82
+[04-Jul-2020 08:40:17 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 83
+[04-Jul-2020 08:40:17 America/Vancouver] PHP Notice:  Array to string conversion in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 92
+[04-Jul-2020 10:42:48 America/Vancouver] PHP Notice:  Undefined index: $requestId in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 86
+[04-Jul-2020 10:42:48 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 74
+[04-Jul-2020 10:42:48 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 75
+[04-Jul-2020 10:42:48 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 76
+[04-Jul-2020 10:42:48 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 77
+[04-Jul-2020 10:42:48 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 78
+[04-Jul-2020 10:42:48 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 79
+[04-Jul-2020 10:42:48 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 80
+[04-Jul-2020 10:42:48 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 81
+[04-Jul-2020 10:42:48 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 82
+[04-Jul-2020 10:42:48 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 83
+[04-Jul-2020 10:42:48 America/Vancouver] PHP Notice:  Array to string conversion in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 92
+[04-Jul-2020 10:46:13 America/Vancouver] PHP Notice:  Undefined index: reqType in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 73
+[04-Jul-2020 10:46:13 America/Vancouver] PHP Notice:  Undefined index: reqDate in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 74
+[04-Jul-2020 10:46:13 America/Vancouver] PHP Notice:  Undefined index: userIdDonor in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 76
+[04-Jul-2020 10:46:13 America/Vancouver] PHP Notice:  Undefined index: status in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 77
+[04-Jul-2020 10:46:13 America/Vancouver] PHP Notice:  Undefined index: bestTime in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 79
+[04-Jul-2020 10:46:13 America/Vancouver] PHP Notice:  Undefined index: gameId in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 80
+[04-Jul-2020 10:46:13 America/Vancouver] PHP Notice:  Undefined index: gameName in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 81
+[04-Jul-2020 10:46:13 America/Vancouver] PHP Notice:  Undefined index: item in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 82
+[04-Jul-2020 10:46:13 America/Vancouver] PHP Notice:  Undefined index: langId in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 83
+[04-Jul-2020 10:46:13 America/Vancouver] PHP Notice:  Undefined index: phone in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 84
+[04-Jul-2020 10:46:13 America/Vancouver] PHP Notice:  Undefined index: quantity in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 85
+[04-Jul-2020 10:46:13 America/Vancouver] PHP Notice:  Undefined index: $requestId in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 86
+[04-Jul-2020 10:46:13 America/Vancouver] PHP Notice:  Undefined index: typeTime in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 87
+[04-Jul-2020 10:46:13 America/Vancouver] PHP Notice:  Undefined index: unitId in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 88
+[04-Jul-2020 10:46:13 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 74
+[04-Jul-2020 10:46:13 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 75
+[04-Jul-2020 10:46:13 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 76
+[04-Jul-2020 10:46:13 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 77
+[04-Jul-2020 10:46:13 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 78
+[04-Jul-2020 10:46:13 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 79
+[04-Jul-2020 10:46:13 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 80
+[04-Jul-2020 10:46:13 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 81
+[04-Jul-2020 10:46:13 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 82
+[04-Jul-2020 10:46:13 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 83
+[04-Jul-2020 10:48:14 America/Vancouver] PHP Notice:  Undefined index: $requestId in /home1/s4u/public_html/classes/Controllers/CtlRequests.php on line 86
+[04-Jul-2020 10:48:14 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 74
+[04-Jul-2020 10:48:14 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 75
+[04-Jul-2020 10:48:14 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 76
+[04-Jul-2020 10:48:14 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 77
+[04-Jul-2020 10:48:14 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 78
+[04-Jul-2020 10:48:14 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 79
+[04-Jul-2020 10:48:14 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 80
+[04-Jul-2020 10:48:14 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 81
+[04-Jul-2020 10:48:14 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 82
+[04-Jul-2020 10:48:14 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 83
+[04-Jul-2020 10:51:39 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 227
+[04-Jul-2020 10:51:39 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 228
+[04-Jul-2020 10:51:39 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 229
+[04-Jul-2020 10:51:39 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 230
+[04-Jul-2020 10:51:39 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 231
+[04-Jul-2020 10:51:39 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 232
+[04-Jul-2020 10:51:39 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 74
+[04-Jul-2020 10:51:39 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 75
+[04-Jul-2020 10:51:39 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 76
+[04-Jul-2020 10:51:39 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 77
+[04-Jul-2020 10:51:39 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 78
+[04-Jul-2020 10:51:39 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 79
+[04-Jul-2020 10:51:39 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 80
+[04-Jul-2020 10:51:39 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 81
+[04-Jul-2020 10:51:39 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 82
+[04-Jul-2020 10:51:39 America/Vancouver] PHP Notice:  Only variables should be passed by reference in /home1/s4u/public_html/classes/Models/MdlRequests.php on line 83
