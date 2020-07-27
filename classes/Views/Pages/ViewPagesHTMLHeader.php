@@ -26,7 +26,7 @@ class ViewPagesHTMLHeader
 
         // static links
         $output = str_replace('{s4uHomeLink}',Util::createLink("CtlPages","home"), $output);
-    //    $output = str_replace('{s4uAboutLink}',Util::createLink("CtlPages","about"), $output);
+        // $output = str_replace('{s4uAboutLink}',Util::createLink("CtlPages","about"), $output);
         $output = str_replace('{s4uUserRegisterLink}',Util::createLink("CtlUsers","userRegister"), $output);
 
         // dynamic links

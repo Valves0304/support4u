@@ -33,8 +33,8 @@ class ViewUserRegister
         $output = str_replace('{s4uAddress}', $this->controllerModel->user->getAddress(), $output);
         $output = str_replace('{s4uLogin}', $this->controllerModel->user->getUserLogin(), $output);
         $output = str_replace('{s4uPass}', "", $output);
-
-        if (isset($_SESSION['NAME_USER'])) {
+        
+        if (isset($_SESSION['NOME_USUARIO'])) {
                   $output = str_replace('{s4uButton}', "Update", $output);
                   $output = str_replace('{s4uVisible}', "logHidden", $output);
         } else {
