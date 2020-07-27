@@ -1,126 +1,46 @@
-<div class="header">
     <h1>Request Grocery</h1>
-</div>
-<div class="main">
-    <form action="{s4uCreateRequest}" name="createRequest" id="createRequest" method="POST">
-        <table>
-            <thead>
-              <tr>
-                <td>Item</td>
-                <td>Qty</td>
-                <td>Unit</td>
-              </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td><input type="text" name="item[]" value="{s4uitem0}" /></td>
-                <td><input type="text" name="qty[]"  value="{s4uqty0}" /></td>
-                <td>
-                    <select    class = "selInsert"        name="unit[]"    value="{s4uunit0}"
-                        <option value=0> Not informed</option>
+<div class="content">
+    <form class="pure-form pure-form-stacked">
+        <article class="card no-icon padding">
+            <legend>New Item</legend>
+            <div class="pure-g">
+                <div class="pure-u-12-24 pure-u-sm-13-24">
+                    <label>Item</label>
+                    <input type="text" name="item[]" value="" class="pure-u-1">
+                </div>
+                <div class="pure-u-3-24 pure-u-sm-3-24">
+                    <label>Qty</label>
+                    <input type="text" name="qty[]" value="" class="pure-u-1">
+                </div>
+                <div class="pure-u-7-24 pure-u-sm-7-24">
+                    <label>Unit</label>
+                    <select name="unit[]" value="" class="pure-u-1">
                         {s4uListUnits}
                     </select>
-                </td>
-            </tr>
-
-            <tr>
-                <td><input type="text" name="item[]" value="{s4uitem1}" /></td>
-                <td><input type="text" name="qty[]"  value="{s4uqty1}" /></td>
-                <td>
-                    <select    class = "selInsert"    name="unit[]"    value="{s4uunit1}"
-                        <option value=0>Not informed</option>
-                        {s4uListUnits}
-                    </select>
-                </td>
-            </tr>
-
-            <tr>
-                <td><input type="text" name="item[]" value="{s4uitem2}" /></td>
-                <td><input type="text" name="qty[]"  value="{s4uqty2}" /></td>
-                <td>
-                    <select     class = "selInsert"      name="unit[]"    value="{s4uunit2}"
-                        <option value=0>Not informed</option>
-                        {s4uListUnits}
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td><input type="text" name="item[]" value="{s4uitem3}" /></td>
-                <td><input type="text" name="qty[]"  value="{s4uqty3}" /></td>
-                <td>
-                    <select     class = "selInsert"      name="unit[]"    value="{s4uunit2}"
-                        <option value=0>Not informed</option>
-                        {s4uListUnits}
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td><input type="text" name="item[]" value="{s4uitem4}" /></td>
-                <td><input type="text" name="qty[]"  value="{s4uqty4}" /></td>
-                <td>
-                    <select     class = "selInsert"      name="unit[]"    value="{s4uunit2}"
-                        <option value=0>Not informed</option>
-                        {s4uListUnits}
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td><input type="text" name="item[]" value="{s4uitem5}" /></td>
-                <td><input type="text" name="qty[]"  value="{s4uqty5}" /></td>
-                <td>
-                    <select     class = "selInsert"      name="unit[]"    value="{s4uunit2}"
-                        <option value=0>Not informed</option>
-                        {s4uListUnits}
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td><input type="text" name="item[]" value="{s4uitem6}" /></td>
-                <td><input type="text" name="qty[]"  value="{s4uqty6}" /></td>
-                <td>
-                    <select     class = "selInsert"      name="unit[]"    value="{s4uunit2}"
-                        <option value=0>Not informed</option>
-                        {s4uListUnits}
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td><input type="text" name="item[]" value="{s4uitem7}" /></td>
-                <td><input type="text" name="qty[]"  value="{s4uqty7}" /></td>
-                <td>
-                    <select     class = "selInsert"      name="unit[]"    value="{s4uunit2}"
-                        <option value=0>Not informed</option>
-                        {s4uListUnits}
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td><input type="text" name="item[]" value="{s4uitem8}" /></td>
-                <td><input type="text" name="qty[]"  value="{s4uqty8}" /></td>
-                <td>
-                    <select     class = "selInsert"      name="unit[]"    value="{s4uunit2}"
-                        <option value=0>Not informed</option>
-                        {s4uListUnits}
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td><input type="text" name="item[]" value="{s4uitem9}" /></td>
-                <td><input type="text" name="qty[]"  value="{s4uqty9}" /></td>
-                <td>
-                    <select     class = "selInsert"      name="unit[]"    value="{s4uunit2}"
-                        <option value=0>Not informed</option>
-                        {s4uListUnits}
-                    </select>
-                </td>
-            </tr>
-          </tbody>
-        </table>
-        <div>
-           <p> How much do you think this will cost? </p>
-           <input type="text" name="price" value="" placeholder="C$" />
-        </div>
-
-        <p class="submit"> <input type="submit" name="commit" value="Create Request" /> </p>
+                </div>
+                <div class="pure-u-2-24 pure-u-sm-1-24 icon-action">
+                    <label></label>
+                    <a href="#" class="icon-action add"><i class="fas fa-plus-circle"></i></a>
+                </div>
+            </div>
+        </article>
+    </form>
+    <form action="{s4uCreateRequest}" name="createRequest" id="createRequest" method="POST" class="pure-form pure-form-stacked">
+        <fieldset>
+            <div class="list-items"></div>
+            <div class="pure-g">
+                <div class="pure-u-1 pure-u-sm-10-24 request-grocery-cost">
+                    <label>How much do you think this will cost?</label>
+                   <input type="text" name="price" value="" placeholder="C$" class="pure-u-1"/>
+                </div>
+            </div>
+            <div class="pure-g">
+                <div class="pure-u-1">
+                    <p class="action-buttons">
+                            <input type="submit" name="commit" value="Create Request" />
+                    </p>
+                </div>
+            </div>
+        </fieldset>
     </form>
 </div>

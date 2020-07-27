@@ -1,47 +1,31 @@
-<link rel="stylesheet" type="text/css" href="../classes/Views/Style/styleRequest.css">
-   <div class="header">
-      <h1>Let's donate groceries for whoever needs it</h1>
-   </div>
-   <div class="main">
-      <div class="float: left; width: 500px;">
-         <div>
-            <form action="{s4uFilterRequest}" name="searchRequest" id="searchRequest" method="POST">
-               <table class="pure-table pure-table-horizontal ">
-                 <thead></thead>
-                 <tbody>
-                  <tr>
-                     <td>
-                        <div>
-                           <p>How much you plan to donate?</p>
-                           <input type="text" name="price" value="" placeholder="C$" />
-                        </div>
-                     </td>
-                     <td>
-                        <div>
-                           <label for="city" class="city">City     :    </label>
-                           <select class = "cityselect" name="cityId" style="width:150px;">
-                              <option value=0>Any</option>
-                              {s4uListCities}
-                           </select>
-                        </div>
-                        <p class="submit">
-                           <input type="submit" name="commit" value="Filter" />
-                        </p>
-                     </td>
-                  </tr>
-                  </tbody>
-               </table>
-            </form>
-         </div>
-         <div>
-            <form action="{s4uRequestMatch}" name="searchRequest" id="searchRequest" method="POST">
-               <table class="pure-table pure-table-horizontal ">
-               {s4uTableRequests}
-               </table>
-               <p class="submit">
-                  <input type="submit" name="commit" value="Ok" />
-               </p>
-            </form>
-         </div>
-      </div>
-   </div>
+<h1>Let's donate groceries for whoever needs it</h1>
+<div class="content">
+    <form action="{s4uFilterRequest}" name="searchRequest" id="searchRequest" method="POST" class="pure-form pure-form-stacked">
+       <fieldset>
+            <div class="pure-g">
+                <div class="pure-u-1 pure-u-sm-2-5">
+                    <label for="price">How much you plan to donate?</label>
+                    <input type="text" name="price" value="" placeholder="C$" class="pure-u-1" />
+                </div>
+                <div class="pure-u-1 pure-u-sm-2-5">
+                    <label for="city">City:</label>
+                    <select name="cityId" class="pure-u-1">
+                        <option value=0>Any</option>
+                        {s4uListCities}
+                    </select>
+                </div>
+                <div class="pure-u-1 pure-u-sm-1-5">
+                   <label></label>
+                   <input type="submit" name="commit" value="Filter" />
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    <form action="{s4uRequestMatch}" name="searchRequest" id="searchRequest" method="POST">
+
+       {s4uTableRequests}
+       <p class="action-buttons">
+          <input type="submit" name="commit" value="Ok" />
+       </p>
+    </form>
+</div>

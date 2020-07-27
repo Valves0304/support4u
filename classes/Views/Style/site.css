@@ -254,6 +254,108 @@ footer .version p {
     border-color: #ff0000 !important;
 }
 
+button.icon-action {
+    color: white;
+}
+
+a.icon-action {
+    font-size: 24px;
+    color: #92ACAE;
+}
+
+button.icon-action:hover {
+    background-color: #6D9093;
+}
+
+a.icon-action:hover {
+    color: #6D9093;
+}
+
+a.icon-action i {
+    padding-top: 5px;
+}
+
+.list-items {
+    padding: 20px 20px 0 20px;
+}
+
+.request-grocery-cost {
+    padding: 0 20px;
+}
+
+.modal {
+    padding: 0;
+}
+
+.modal .modal-title {
+    background-color: #7D8282;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 8px 0 0 0;
+    font-size: 20px;
+}
+
+.modal .modal-content {
+    padding: 10px 20px;
+}
+
+.modal .modal-content div:not(.list) {
+    display: inline-block;
+    padding-bottom: 10px;
+    font-size: 16px;
+    width: 50%;
+}
+
+.modal .modal-content div:not(.list):nth-child(2) {
+    text-align: right;
+}
+
+.modal .modal-content div:not(.list) span {
+    display: block;
+    font-size: 10px;
+    color: #7F9EA1;
+}
+
+.modal .modal-content div.list {
+    padding-top: 10px;
+    position: relative;
+}
+
+.modal .modal-content div.list div {
+    display: block;
+    width: 100%;
+    text-align: left !important;
+    padding: 10px;
+}
+
+.modal .modal-content div.list div:nth-child(odd) {
+    background: #DAE3E4
+}
+
+.modal .modal-content div.list div span {
+    display: inline-block;
+    right: 10px;
+    position: absolute;
+    font-size: 16px;
+}
+
+.open-modal a {
+    color: white;
+    text-decoration: none;
+    background-color: #92ACAE;
+    border-radius: 15px;
+    padding: 5px 10px;
+    color: white;
+}
+
+.open-modal a:hover {
+    background-color: #6D9093;
+}
+
+.blocker {
+    z-index: 2000;
+}
+
 @media only screen and (min-width: 568px) {
     header {
         position: initial;

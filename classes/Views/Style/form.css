@@ -23,7 +23,11 @@ button:hover, input[type=submit]:hover {
     text-align: right;
 }
 
-form.pure-form.pure-form-stacked [class*="pure-u-sm-"] {
+.action-buttons button, .action-buttons input[type=submit]{
+    min-width: 200px;
+}
+
+form.pure-form.pure-form-stacked [class*="pure-u-"] {
     padding-right: 5px;
 }
 

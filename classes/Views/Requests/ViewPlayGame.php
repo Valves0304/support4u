@@ -23,7 +23,7 @@ class ViewPlayGame
 
         // tag <SELECT> for Games
         $output = str_replace('{s4uListGames}',
-                              Util::createSelect(MdlGames::listGames(), 'getGameId', 'getGameName', 
+                              Util::createSelect(MdlGames::listGames(), 'getGameId', 'getGameName',
                               (!empty($this->controllerModel->errorField)) ? $this->controllerModel->request->getRequestItems()[0]->getGameId() : NULL),
                               $output);
 
@@ -36,7 +36,7 @@ class ViewPlayGame
             $output = str_replace('{s4uErrorField' . $this->controllerModel->errorField . '}', 'has-error', $output);
         }
         $output = str_replace('{s4uErrorMessage}', $this->controllerModel->errorMsg, $output);
-        
+
         return $output;
     }
 }

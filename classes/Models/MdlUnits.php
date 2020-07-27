@@ -94,7 +94,7 @@ class MdlUnits
         $unitList = array();
 
         $query = 'SELECT * FROM unit where 1=1 ' . (is_null($crit) ? '' : 'and ' . $crit);
-        $query .= ' ORDER BY unit_name';
+        $query .= ' ORDER BY unit_id';
         if (!is_null($limit))
         {
             $query .= ' LIMIT ' . $limit;

@@ -5,20 +5,15 @@
         </div>
     </footer>
 
+    <div id="defaultModal" class="modal">
+        <section class="modal-title"></section>
+        <section class="modal-content"></section>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-    <script>
-        $('.nav-button, .clear-overlay').on('click', function (e) {
-            e.preventDefault();
-            $('.nav-button a i').toggleClass("visible");
-            $('nav').toggleClass('open');
-        });
-        
-        if($('.user').text().length == 0){
-            $('.user').hide();
-        }else{
-            $('.user').show();
-        }
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="../classes/Views/Scripts/site.js"></script>
+
     </div>
 </body>
 </html>

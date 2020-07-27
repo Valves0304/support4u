@@ -82,10 +82,18 @@ class CtlRequests
         if ($_GET['reqType'] == MdlRequests::GROCERY_REQUEST) {
             for ($i = 0; $i < 10; $i++) {
                 if ($_POST['item'][$i] != '') {
+
                     $requestItem = new RequestItem();
                     $requestItem->setItem($_POST['item'][$i]);
-                    $requestItem->setQuantity($_POST['qty'][$i]);
-                    $requestItem->setUnitId($_POST['unit'][$i]);
+
+                    if ($_POST['qty'][$i] == ''){
+                      $requestItem->setQuantity(0);
+                    } else { $requestItem->setQuantity($_POST['qty'][$i]);}
+
+                    if ($_POST['unit'] == ''){
+                      $requestItem->setUnitId(0);
+                    } else { $requestItem->setUnitId($_POST['unit'][$i]);}
+
                     $this->model->request->addRequestItem($requestItem);
                 }
             }
@@ -223,11 +231,7 @@ class CtlRequests
 
     public function newPhoneCallDonation()
     {
-        $loginView = CtlUSers::checkUserSession();
-        if(isset($loginView)){
-            $this->view = $loginView;
-            return;
-        }
+
 
           $languageId = isset($_POST['languageId']) ? $_POST['languageId'] : 1;
           $bestTime = isset($_POST['bestTime']) ? $_POST['bestTime'] : 4;
@@ -264,8 +268,8 @@ class CtlRequests
 
        public function matchDonation()
        {
-         MdlRequests::confirmDonation($_GET["reqId"],$_SESSION['ID_USUARIO'],2);
-        $this->view = new ViewPagesHome($this->model);
+         MdlRequests::confirmDonation($_GET["reqId"],$_SESSION['ID_USER'],2);
+        $this->view = new ViewPagesThankYou($this->model);
 
         }
         public function newWalkDogDonation()
@@ -310,13 +314,15 @@ class CtlRequests
               $criteria = ' 1 = 1 ';
               $criteria .= $cityId > 0 ? ' AND c.city_id = ' . $cityId : '';
 
-            if ($price <> '') {
+            if ($price != '') {
               $criteria .= ' AND r.price <= ' . $price;
             }
 
               $criteria .= ' AND status = ' . MdlRequests::ACTIVE_REQUEST;
 
+
               $this->model->requestList = MdlRequests::listGroceryRequests($criteria);
+
               $this->view = new ViewGroceryDonation($this->model);
 
           }

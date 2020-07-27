@@ -25,18 +25,29 @@ class ViewGroceryMatch
         $output = str_replace('{s4uCancel}',  Util::createLink("CtlRequests","newGroceryDonation"), $output);
 
         // table with Grocery Items
-        $groceryItems = '<TABLE class="pure-table pure-table-bordered"><THEAD><TR><TD>Item</TD><TD>Unit</TD><TD>Quantity</TD></TR></THEAD> ';
-        $groceryItems .= '<TBODY>';
-        foreach ($this->controllerModel->request->getRequestItems() as $requestItem) {
-            $groceryItems .= "  <TR><TD>"  . $requestItem->getItem(). "</TD>" .
-                             '      <TD>' . MdlUnits::findUnit($requestItem->getUnitId())->getUnitName() . '</TD>' .
-                             '      <TD>' . $requestItem->getQuantity() . '</TD>' .
-                             '  </TR>';
-        }
-        $groceryItems .= '</TBODY>';
-        $groceryItems .= "\n</TABLE>";
 
-        $output = str_replace('{s4uGroceryItems}', $groceryItems, $output);
+$request = $this->controllerModel->request;
+
+        $user = MdlUsers::findUser($request->getUserIdReq());
+
+            $userAndGroceryItems = '    <article class="card match">'.
+                                '        <div class="card-header"><i></i><h3>' . $user->getFirstName() . '</h3></div>'.
+                                '        <div class="card-content">'.
+                                '            <div><span>City</span>' . MdlCities::findCity($user->getCityId())->getCityName() . '</div>'.
+                                '            <div><span>eMail</span>' . $user->getEmail() . '</div>'.
+                                '            <div><span>Estimated Price</span>$' . number_format($request->getPrice(),2) . '</div>'.
+                                '            <div class="open-modal"><a href="#defaultModal" rel="modal:open"><i class="fas fa-th-list"></i> View List (' . count($request->getRequestItems()) . ')</a></div>'.
+                                '        </div>'.
+                                '        <div class="card-list">';
+                                foreach ($request->getRequestItems() as $requestItem) {
+                                    $userAndGroceryItems .='<div>' . $requestItem->getItem() . ' <span>' . $requestItem->getQuantity() . ' <small>' . MdlUnits::findUnit($requestItem->getUnitId())->getUnitName() . '</small></span></div>';
+                                }
+            $userAndGroceryItems .= '        </div>'.
+                              '    </article>'.
+                                '</label>';
+
+        $output = str_replace('{s4uUserAndGroceryItems}', $userAndGroceryItems, $output);
+
 
         $output = str_replace('{version}', getenv('VER'), $output);
 

@@ -1,35 +1,35 @@
 <h1>Let's donate a phone call</h1>
 
 <div class="content">
-    <form action="{s4uFilterRequest}" name="searchRequest" id="searchRequest" method="POST" class="pure-form pure-form-stacked">
-       <fieldset>
-            <div class="pure-g">
-                <div class="pure-u-1 pure-u-sm-2-5">
-                    <label>What is the best time to call?</label>
-                    <select class="pure-u-1" name="bestTime">
-                      <option value="1">Morning</option>
-                      <option value="2">Afternoon</option>
-                      <option value="3">Night</option>
-                      <option value="4" selected>Anytime</option>
-                   </select>
-               </div>
-               <div class="pure-u-1 pure-u-sm-2-5">
-                   <label for="language">Language:</label>
-                   <select class = "pure-u-1" name="languageId">
-                      {s4uListLanguages}
-                   </select>
-               </div>
-               <div class="pure-u-1 pure-u-sm-1-5">
-                   <label></label>
-                   <input type="submit" name="commit" value="Filter" />
-               </div>
-           </div>
-       </fieldset>
-    </form>
-    <form action="{s4uRequestMatch}" name="searchRequest" id="searchRequest" method="POST" class="pure-form pure-form-stacked">
-       {s4uTableRequests}
-       <p class="action-buttons">
-          <input type="submit" name="commit" value="Ok" />
-       </p>
-    </form>
+  <form action="{s4uFilterRequest}" name="searchRequest" id="searchRequest" method="POST" class="pure-form pure-form-stacked">
+    <fieldset>
+      <div class="pure-g">
+        <div class="pure-u-1 pure-u-sm-2-5">
+          <label>What is the best time to call?</label>
+          <select class="pure-u-1" name="bestTime">
+            <option value="1">Morning</option>
+            <option value="2">Afternoon</option>
+            <option value="3">Night</option>
+            <option value="4" selected>Anytime</option>
+          </select>
+        </div>
+        <div class="pure-u-1 pure-u-sm-2-5">
+          <label for="language">Language:</label>
+          <select class="pure-u-1" name="languageId">
+            {s4uListLanguages}
+          </select>
+        </div>
+        <div class="pure-u-1 pure-u-sm-1-5">
+          <label></label>
+          <input type="submit" name="commit" value="Filter" />
+        </div>
+      </div>
+    </fieldset>
+  </form>
+  <form action="{s4uRequestMatch}" name="searchRequest" id="searchRequest" method="POST" class="pure-form pure-form-stacked">
+    {s4uTableRequests}
+    <p class="action-buttons">
+      <input type="submit" name="commit" value="Ok" />
+    </p>
+  </form>
 </div>

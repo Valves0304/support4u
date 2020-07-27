@@ -23,6 +23,7 @@
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Pages/ViewPagesLogin.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Pages/ViewPagesAbout.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Pages/ViewPagesHome.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Pages/ViewPagesThankYou.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Pages/ViewPagesHTMLHeader.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Pages/ViewPagesErro.php';
 

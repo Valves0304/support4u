@@ -1,32 +1,33 @@
+<h1>Walk dog confirmation</h1>
 
-   <div class="header">
-      <h1>Walk dog confirmation</h1>
-   </div>
-   <div class="main">
-   <div class="float: left; width: 500px;">
-   	  	<form action="{s4uConfirmation}" name="confirmMatch" id="confirmMatch" method="POST">
-   	  		<h2>
-   	  			OK, let's walk this dog!<BR><BR>
-              We will send {s4uDogOwnerName} your email address,
-              and he/she will contact you so you both can arrange
-              the details of this walk the dog.<BR>
-            </h2>
-            <BR><BR>
-                <table class="pure-table pure-table-striped">
-            	    <tr><td><strong>Beneficiary: </strong></td><td>{s4uBeneficiaryName}</TD></tr>
-    	            <tr><td><strong>Email: </strong></td><td>{s4uBeneficiaryEmail}</TD></tr>
-            	    <tr><td><strong>Best time: </strong></td><td>{s4uBeneficiaryBestTime}</TD></tr>
-    	            <tr><td><strong>City: </strong></td><td>{s4uBeneficiaryCity}</TD></tr>
-                </table>
+<div class="content">
+  <form action="{s4uConfirmation}" name="confirmMatch" id="confirmMatch" method="POST" class="pure-form pure-form-stacked">
+    <div>
+      <p> OK, let's walk this dog!</p>
+      <p> We will send {s4uDogOwnerName} your email address,
+        and he/she will contact you so you both can arrange
+        the details of this walk the dog.</p>
+    </div>
 
-            <p class="submit">
-    	    	<input type="submit" name="commit" value="Ok. Send this email" />
-        	 </p>
-        	</form>
-           	<form action="{s4uCancel}" name="cancelMatch" id="cancelMatch" method="POST">
-           		<p class="submit">
-                    <input type="submit" name="cancel" value="No. I change my mind" />
-                </p>
-            </form>
+    <article class="card match">
+      <div class="card-header">
+        <i></i>
+        <h3>{s4uBeneficiaryName}</h3>
       </div>
-   </div>
+      <div class="card-content">
+        <div><span>Best time</span>{s4uBeneficiaryBestTime}</div>
+        <div><span>City</span>{s4uBeneficiaryCity}</div>
+        <div><span>Email</span>{s4uBeneficiaryEmail}</div>
+      </div>
+    </article>
+
+    <p class="action-buttons">
+      <input type="submit" name="commit" value="Ok. Send this email" />
+    </p>
+  </form>
+  <form action="{s4uCancel}" name="cancelMatch" id="cancelMatch" method="POST" class="pure-form pure-form-stacked">
+    <p class="action-buttons">
+      <input type="submit" name="cancel" value="No. I change my mind" />
+    </p>
+  </form>
+</div>

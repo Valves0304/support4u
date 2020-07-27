@@ -26,7 +26,7 @@ class ViewPlayGameMatch
         $user = MdlUsers::findUser($this->controllerModel->request->getUserIdReq());
 
         $output = str_replace('{s4uPlayerName}', $user->getFirstName(), $output);
-        $output = str_replace('{s4uBeneficiaryName}', $user->getLastName() . ',' . $user->getFirstName(), $output);
+        $output = str_replace('{s4uBeneficiaryName}', $user->getLastName() . ', ' . $user->getFirstName(), $output);
         $output = str_replace('{s4uBeneficiaryEmail}', $user->getEmail(), $output);
         $output = str_replace('{s4uBeneficiaryBestTime}', $this->controllerModel->request->getRequestItems()[0]->getBestTime(), $output);
         $output = str_replace('{s4uBeneficiaryLanguage}', $this->controllerModel->request->getRequestItems()[0]->getLangName(), $output);

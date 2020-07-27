@@ -4,6 +4,14 @@
     background-color: #EDF1F2;
 }
 
+.card label:after {
+    content: "";
+}
+
+.card .icon-action label:after {
+    content: "\00a0";
+}
+
 .card-radio {
     cursor: pointer;
 }
@@ -31,13 +39,17 @@
     padding: 20px 20px 0 0;
 }
 
+.card.no-icon:before {
+    content: "";
+}
+
 .card-radio input[type=radio]:checked+.card::before {
     font-weight: 900;
     color: #6D9093;
 }
 
 .card .card-header {
-    padding: 20px 20px 0 20px;
+    padding: 20px;
 }
 
 .card .card-header i:before {
@@ -59,8 +71,8 @@
 
 .card .card-content {
     display: inline-block;
-    width: 80%;
-    padding: 10px 20px 20px 20px;
+    width: 100%;
+    padding: 0px 20px 20px 20px;
 }
 
 .card .card-content div {
@@ -70,10 +82,24 @@
     font-size: 12px;
 }
 
+.card .card-content div.open-modal {
+    float: right;
+    padding: 0;
+    padding-top: 10px;
+}
+
 .card .card-content div span {
     display: block;
     font-size: 9px;
     color: #7F9EA1;
+}
+
+.card .card-list {
+    display: none;
+}
+
+.card.padding {
+    padding: 20px;
 }
 
 .card.match::before {
@@ -81,10 +107,6 @@
     font-weight: 900;
     color: #000;
 }
-
-/* .card.match .card-header i:before{
-    content: "\f4fc";
-} */
 
 .card.match .card-header {
     padding: 20px 20px 10px 20px;
@@ -97,4 +119,31 @@
 .card.match .card-content div {
     font-size: 14px;
     padding-right: 1em;
+}
+
+.card.match .open-modal {
+    display: none;
+}
+
+.card.match .card-list {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+.card.match .card-list div {
+    width: 100%;
+    text-align: left !important;
+    padding: 10px;
+}
+
+.card.match .card-list div span {
+    display: inline-block;
+    right: 10px;
+    position: absolute;
+    font-size: 16px;
+}
+
+.card.match .card-list div:nth-child(odd) {
+    background: #DAE3E4
 }

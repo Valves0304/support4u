@@ -233,6 +233,7 @@ class MdlRequests
         $qryInsert->bind_param('iisiisi', $request->getRequestId() , $request->getRequestType() , $request->getRequestDate() , $request->getUserIdReq() , $request->getUserIdDonor() , $request->getPrice() , $request->getStatusRequest());
         error_reporting(E_ALL);
 
+
         // it runs insert query
         if ($qryInsert->execute() === true)
         {
@@ -316,17 +317,18 @@ class MdlRequests
         $requestList = array();
 
         $query = 'select r.request_id, r.req_type, r.req_date, r.user_id_req, r.user_id_donor, r.price, r.status ' .
-                 '  from request r, request_items ri ' .
-                 ' where ri.request_id = r.request_id ' . (is_null($crit) ? '' : 'and ' . $crit);
+                 '  from request r, request_items ri, city c, user_s4u u' .
+                 ' where ri.request_id = r.request_id AND c.city_id = u.city_id AND u.user_id = r.user_id_req ' . (is_null($crit) ? '' : 'and ' . $crit);
 
         $query .= ' group by r.request_id, r.req_type, r.req_date, r.user_id_req, r.user_id_donor, r.price, r.status ';
+
 
         if (!is_null($limit))
         {
             $query .= ' LIMIT ' . $limit;
         }
 
-#        echo $query;
+    //    echo $query;
 
         try
         {
