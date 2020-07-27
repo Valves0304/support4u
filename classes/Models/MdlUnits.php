@@ -1,15 +1,13 @@
 <?php
 // MdlUnits.php: Model of measure units
 // ---------------------------------------------------------------------------
-require_once($_SERVER['DOCUMENT_ROOT'] . '/connection.php');
-//require $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php';
+require_once ($_SERVER['DOCUMENT_ROOT'] . '/connection.php');
 
 class MdlUnits
 {
 
-    public $unit;                 // it keeps the last unit handled
-    public $unitList = array();  // it keeps the last asked unit list
-
+    public $unit; // it keeps the last unit handled
+    public $unitList = array(); // it keeps the last asked unit list
     public $errorField;
     public $errorMsg;
 
@@ -30,11 +28,25 @@ class MdlUnits
         $db = Db::getInstance();
 
         // it creates INSERT Query
+        $qryInsert = $db->prepare('INSERT INTO unit (unit_name)' . ' VALUES ( ? )');
 
         // add values to the query
+        $qryInsert->bind_param('s', $unit->getUnitname());
 
         // it runs insert query
+        if ($qryInsert->execute() === true)
+        {
+            // it gets the last id genereated by auto insert from DB and update object with this id
+            $game->setUnitId(mysqli_insert_id($db));
+        }
+        else
+        {
+            // log error
+            error_log(date('DATE_ATOM') . ' - Insert Unit Error ', 3, getenv('LOG_FILE'));
+            error_log('                         - erro: ' . $qryInsert->error_list, 3, getenv('LOG_FILE'));
 
+            throw new exception('Data Base Fails. Insert not perfomed. ');
+        }
 
         return $unit;
     }
@@ -51,48 +63,65 @@ class MdlUnits
         $db = Db::getInstance();
 
         // it creates UPDATE Query
+        $qryUpdate = $db->prepare('UPDATE unit SET unit_name = ? ' . '             WHERE unit_id =?');
 
         // add values to the query
+        $qryUpdate->bind_param('si', $game->getUnitName() , $game->getUnitId());
 
         // it runs UPDATE query
+        if ($qryUpdate->execute() === false)
+        {
 
+            // if Error it generates a Log
+            error_log(date('DATE_ATOM') . ' - Error update Unit', 3, getenv('LOG_FILE'));
+            error_log('                         - erro: ' . $qryUpdate->error_list, 3, getenv('LOG_FILE'));
+
+            throw new exception('Data Base Fails. Update not perfomed. ');
+        }
     }
 
     // *******************************************************************************************************
     // *** listUnits
     // *******************************************************************************************************
     // ***
-    // *** It gets a array of units based on given criterias
-    // *** it is possible to limit it in order to help display layout
     // ***
-    public static function listUnits($crit = null, $limit = null) {
+    public static function listUnits($crit = null, $limit = null)
+    {
         // get instance from DB
         $db = Db::getInstance();
 
-        // unit array creation
+        // cities array creation
         $unitList = array();
 
         $query = 'SELECT * FROM unit where 1=1 ' . (is_null($crit) ? '' : 'and ' . $crit);
-        $query .= ' ORDER BY unit_description';
-        if (!is_null($limit)) {
+        $query .= ' ORDER BY unit_name';
+        if (!is_null($limit))
+        {
             $query .= ' LIMIT ' . $limit;
         }
 
-        try {
+        try
+        {
             $result = $db->query($query);
-        } catch (Exception $e) {
+        }
+        catch(Exception $e)
+        {
             return null;
         }
 
-        if ($result->num_rows == 0) {
-            return array(0 => NULL);
+        if ($result->num_rows == 0)
+        {
+            return array(
+                0 => NULL
+            );
         }
 
         // return array with values
-        while($unit = $result->fetch_assoc()) {
+        while ($unit = $result->fetch_assoc())
+        {
             $unitData = new Unit();
             $unitData->setUnitId($unit['unit_id']);
-            $unitData->setUnitDesc($unit['unit_description']);
+            $unitData->setUnitName($unit['unit_name']);
 
             array_push($unitList, $unitData);
         }
@@ -106,8 +135,9 @@ class MdlUnits
     // ***
     // *** Return unit based on unit_id
     // ***
-    public static function findUnit($unitId) {
-        return (MdlUnits::listUnits('unit_id = ' . $unitId)[0]);
+    public static function findUnit($unitId)
+    {
+        return (MdlUnits::listUnits('unit_id = ' . $unitId) [0]);
     }
 
 }
@@ -117,34 +147,32 @@ class MdlUnits
 // ***
 // *** Defines Unit
 // ***
-
 class Unit
 {
-    private $unit_id;
-    private $unit_description;
+    private $unitId;
+    private $unitName;
 
     // getters e setters
-
-    // unit_id
+    // game_id
     public function getUnitId()
     {
-        return $this->unit_id;
+        return $this->unitId;
     }
 
-    public function setUnitId($unit_id)
+    public function setUnitId($unitId)
     {
-        $this->unit_id = $unit_id;
+        $this->unitId = $unitId;
     }
 
-    // unit_description
-    public function getUnitDesc()
+    // game_name
+    public function getUnitName()
     {
-        return $this->unit_description;
+        return $this->unitName;
     }
 
-    public function setUnitDesc($unit_description)
+    public function setUnitName($unitName)
     {
-        $this->unit_description = $unit_description;
+        $this->unitName = $unitName;
     }
 
 }

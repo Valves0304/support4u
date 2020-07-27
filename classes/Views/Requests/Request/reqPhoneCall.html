@@ -1,0 +1,58 @@
+<link rel="stylesheet" type="text/css" href="../classes/Views/Style/styleRequest.css">
+<body>
+    <div class="header">
+        <h1>Request</h1>
+    </div>
+    <div class="main">
+        <form action="{s4uInsertRequest}" name="createRequest" id="createRequest" method="POST">
+
+            <div>
+
+                <p>What is the best time to someone call you?</p>
+                <input type="radio" id="MORNING" name="bestTime" value="1">
+                <label for="MORNING">Morning</label><br>
+                <input type="radio" id="AFTERNOON" name="bestTime" value="2">
+                <label for="AFTERNOON">Afternoon</label><br>
+                <input type="radio" id="NIGHT" name="bestTime" value="3">
+                <label for="NIGHT">Night</label><br>
+                <input type="radio" id="ANYTIME" name="bestTime" value="4" checked="checked">
+                <label for="ANYTIME">Anytime</label><br>
+<!--
+                <div class="{s4uField}">
+                    <label for="langId">Language ID:</label>
+                    <input type="text" id="langId" name="langId" placeholder="Language:" value="{s4ulangId}" />
+                </div>
+-->
+                <div class="{s4uField}">
+                    <label for="language" class= lang >Language:</label><BR>
+                    <select name="langId" style="   font-family: 'Lucida Grande', Tahoma, Verdana, sans-serif;
+                                                        font-size: 14px;
+                                                        margin: 5px;
+                                                        padding: 0 10px;
+                                                        width: 278px;
+                                                        height: 34px;
+                                                        color: #404040;
+                                                        background: white;
+                                                        border: 1px solid;
+                                                        border-color: #c4c4c4 #d1d1d1 #d4d4d4;
+                                                        border-radius: 2px;
+                                                        outline: 5px solid #eff4f7;" >
+                        <option value=0>Not informed</option>
+                        {s4uListLangs}
+
+                    </select>
+
+                </div>
+
+                <div class="{s4uField}">
+                    <label for="phone">Phone:</label>
+                    <input type="text" id="phone" name="phone" placeholder="(xxx)xxx-xxxx" value="" />
+                </div>
+
+            <p class="submit">
+
+                    <input type="submit" name="commit" value="OK" />
+            </p>
+        </form>
+    </div>
+</body>

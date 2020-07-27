@@ -2,7 +2,7 @@
 // MdlGames.php: Model of game
 // ---------------------------------------------------------------------------
 require_once($_SERVER['DOCUMENT_ROOT'] . '/connection.php');
-//require $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php';
+
 
 class MdlGames
 {
@@ -117,8 +117,8 @@ class MdlGames
         // return array with values
         while($game = $result->fetch_assoc()) {
             $gameData = new Game();
-            $gameData->setGame_id($game['game_id']);
-            $gameData->setGame_name($game['game_name']);
+            $gameData->setGameId($game['game_id']);
+            $gameData->setGameName($game['game_name']);
 
             array_push($gameList, $gameData);
         }
@@ -146,31 +146,31 @@ class MdlGames
 
 class Game
 {
-    private $game_id;
-    private $game_name;
+    private $gameId;
+    private $gameName;
 
     // getters e setters
 
     // game_id
-    public function getGame_id()
+    public function getGameId()
     {
-        return $this->game_id;
+        return $this->gameId;
     }
 
-    public function setGame_id($game_id)
+    public function setGameId($gameId)
     {
-        $this->game_id = $game_id;
+        $this->gameId = $gameId;
     }
 
     // game_name
-    public function getGame_name()
+    public function getGameName()
     {
-        return $this->game_name;
+        return $this->gameName;
     }
 
-    public function setGame_name($game_name)
+    public function setGameName($gameName)
     {
-        $this->game_name = $game_name;
+        $this->gameName = $gameName;
     }
 
 }

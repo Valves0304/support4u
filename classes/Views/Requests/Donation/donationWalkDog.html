@@ -1,0 +1,23 @@
+<link rel="stylesheet" type="text/css" href="../classes/Views/Style/styleRequest.css">
+
+<body>
+    <div class="header">
+        <h1>Request</h1>
+    </div>
+    <div class="main">
+      <div class="filterOptions">
+        <p><a href="{s4uDogMorning}"Morning</a></p>
+        <p><a href="{s4uDogAfternoon}">Afternoon</a></p>
+        <p><a href="{s4uDogNight}">Night</a></p>
+        <p><a href="{s4uDogAnytime}">Anytime</a></p>
+      </div>
+    <form action="{s4uInsertRequest}" name="createRequest" id="createRequest" method="POST">
+      <div>
+        {s4uTableDog}
+      </div>
+      <p class="submit">
+        <input type="submit" name="commit" value="It is ok to share my address. " />
+      </p>
+    </form>
+    </div>
+</body>

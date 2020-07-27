@@ -2,7 +2,7 @@
 // MdlCity.php: Model of City
 // ---------------------------------------------------------------------------
 require_once($_SERVER['DOCUMENT_ROOT'] . '/connection.php');
-//require $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php';
+
 
 class MdlCities
 {
@@ -139,8 +139,6 @@ class MdlCities
 
 
 }
-
-
 
 // *******************************************************************************************************
 // *** Class

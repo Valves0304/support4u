@@ -19,11 +19,10 @@ class ViewChooseDonation
 
         // variables replacement
 
-        $output = str_replace('{s4uDonateGrocery}',"''",$output);
-        $output = str_replace('{s4uDonateTalk}',"''",$output);
-        $output = str_replace('{s4uDonateDog}',"''",$output);
-        $output = str_replace('{s4uDonateGame}',"''",$output);
-        $output = str_replace('{s4uDonateOther}',"''",$output);
+        $output = str_replace('{s4uDonateGrocery}', Util::createLink("CtlRequests","newGroceryDonation"),$output);
+        $output = str_replace('{s4uDonatePhoneCall}', Util::createLink("CtlRequests","newPhoneDonation"), $output);
+        $output = str_replace('{s4uDonateWalkDog}',   Util::createLink("CtlRequests","newDogDonation"), $output);
+        $output = str_replace('{s4uDonatePlayGame}',  Util::createLink("CtlRequests","newPlayDonation"), $output);
 
         $output = str_replace('{version}', getenv('VER'), $output);
 

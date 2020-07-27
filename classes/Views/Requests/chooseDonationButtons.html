@@ -1,33 +1,14 @@
-<style>
-  .button {
-  border: none;
-  color: white;
-  padding: 15px 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 2px 2px;
-  cursor: pointer;
-  background-color: #00bfff;
-  transition-duration: 1s;
-}
-.button:hover {
-  background-color: #0040ff;
-  color: white;
-}
-
-</style>
+<link rel="stylesheet" type="text/css" href="../classes/Views/Style/styleRequest.css">
 
 <body>
 <h1> Cool! What you want to donate? <BR> </h1>
-
-<h2><BR></h2>
-
-  <button onclick={s4uDonateGrocery} class="button">GROCERY           </button>
-  <button onclick={s4uDonateTalk}    class="button">TALK              </button>
-  <button onclick={s4uDonateDog}     class="button">WALK MY DOG       </button>
-  <button onclick={s4uDonateGame}    class="button">PLAY VIDEO GAME   </button>
-  <button onclick={s4uDonateOther}   class="button">A DIFFERENT THING </button>
-
+  <h2><BR></h2>
+  <div class="main">
+    <div class="alignbuttons">
+      <button onclick="window.location.href='{s4uDonateGrocery}'"   class="buttonchoose">GROCERY</button>
+      <button onclick="window.location.href='{s4uDonatePhoneCall}'"     class="buttonchoose">TALK</button>
+      <button onclick="window.location.href='{s4uDonateWalkDog}'"       class="buttonchoose">WALK A DOG</button>
+      <button onclick="window.location.href='{s4uDonatePlayGame}'"      class="buttonchoose">PLAY VIDEO GAME</button>
+        </div>
+  </div>
 </body>

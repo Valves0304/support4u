@@ -71,9 +71,18 @@ class Util
     // *******************************************************************************************************
     // ***
     // *** Returns the appropriate URL given a Controller and Action
-    public static function createLink($controller, $action)
+    public static function createLink($controller, $action,$reqtype=NULL,$typetime=NULL)
     {
-        return 'http://support4u.website/s4u.php?c=' . $controller . '&action=' . $action;
+
+      if ($reqtype===NULL and $typetime===NULL) {
+           return 'http://support4u.website/s4u.php?c=' . $controller . '&action=' . $action;
+         } elseif ($reqtype!=NULL and $typetime!=NULL) {
+           return 'http://support4u.website/s4u.php?c=' . $controller . '&action=' . $action . '&reqType=' . $reqtype . '&typeTime=' . $typetime;
+         } elseif($reqtype!=NULL and $typetime===NULL) {
+           return 'http://support4u.website/s4u.php?c=' . $controller . '&action=' . $action . '&reqType=' . $reqtype;
+         } else{
+           return 'http://support4u.website/s4u.php?c=' . $controller . '&action=' . $action;
+         }
     }
 
     // *******************************************************************************************************

@@ -1,35 +1,14 @@
-
-
-<style>
-  .button {
-  border: none;
-  color: white;
-  padding: 15px 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 2px 2px;
-  cursor: pointer;
-  background-color: #00bfff;
-  transition-duration: 1s;
-}
-.button:hover {
-  background-color: #0040ff;
-  color: white;
-}
-
-</style>
+<link rel="stylesheet" type="text/css" href="../classes/Views/Style/styleRequest.css">
 
 <body>
-<h1> What are you needing?<BR> </h1>
-
-<h2><BR></h2>
-
-  <button onclick={s4uRequestGrocery} class="button">GROCERY</button>
-  <button onclick={s4uRequestTalk}    class="button">TALK</button>
-  <button onclick={s4uRequestDog}     class="button">WALK MY DOG</button>
-  <button onclick={s4uRequestGame}    class="button">PLAY VIDEO GAME</button>
-  <button onclick={s4uRequestOther}   class="button">A DIFFERENT THING</button>
-    <button onclick="window.location.href='{s4uRequestTest}'" class="button">TEST</button>
+  <h1> What are you needing?<BR> </h1>
+  <h2><BR></h2>
+  <div class="main">
+    <div class="alignbuttons">
+      <button onclick="window.location.href='{s4uRequestGrocery}'"   class="buttonchoose">GROCERY</button>
+      <button onclick="window.location.href='{s4uReqPhoneCall}'"     class="buttonchoose">TALK</button>
+      <button onclick="window.location.href='{s4uReqWalkDog}'"       class="buttonchoose">WALK MY DOG</button>
+      <button onclick="window.location.href='{s4uReqPlayGame}'"      class="buttonchoose">PLAY VIDEO GAME</button>
+    </div>
+  </div>
 </body>

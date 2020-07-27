@@ -3,3 +3,7 @@ body {
   color: #404040;
   background: white;
 }
+
+div.agree_box { width: 337px; }
+div.agree_box { border: 2px solid #E6E6E6; border-bottom: none; margin-left: 2px; height: 7px; width: 323px; }
+div.agree_box { border-left: 4px solid #E6E6E6; border-right: 10px solid #E6E6E6; border-bottom: 10px solid #E6E6E6; height: 340px; padding: 5px 0; }

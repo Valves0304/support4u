@@ -5,36 +5,36 @@
 // view Home Page
 class ViewNewGroceryRequest
 {
-    // ViewPagesHome Construtor
-    public function __construct()
+    private $model;
+
+    // Construtor
+    public function __construct($model)
     {
-//        echo "<BR>Construtor da ViewNewRequest";
+        $this->model = $model;
     }
 
     public function output()
     {
         $output  = ViewPagesHTMLHeader::output();
-        $output .= file_get_contents('classes/Views/Requests/createRequest.html');
+        $output .= file_get_contents('classes/Views/Requests/Request/reqGrocery.html');
         $output .= file_get_contents('classes/Views/Pages/footer.html');
 
         // variables replacement
-        $output = str_replace('{s4uCreateRequest}', Util::createLink("CtlRequests","insertRequest"), $output);
+        $output = str_replace('{s4uCreateRequest}', Util::createLink("CtlRequests","insertRequest","1"), $output);
 
-        $output = str_replace('{s4uField}',"",$output);
-        $output = str_replace('{s4ureqType}',"",$output);
-        $output = str_replace('{s4ureqDate}',"",$output);
-        $output = str_replace('{s4uuserIdReq}',"",$output);
-        $output = str_replace('{s4uuserIdDonor}',"",$output);
-        $output = str_replace('{s4ustatus}',"",$output);
-        $output = str_replace('{s4ubestTime}',"",$output);
-        $output = str_replace('{s4utypeTime}',"",$output);
-        $output = str_replace('{s4ulangId}',"",$output);
-        $output = str_replace('{s4uitem}',"",$output);
-        $output = str_replace('{s4uphone}',"",$output);
-        $output = str_replace('{s4ugameId}',"",$output);
-        $output = str_replace('{s4ugameName}',"",$output);
-        $output = str_replace('{s4uunitId}',"",$output);
-        $output = str_replace('{s4uquantity}',"",$output);
+        for ($i = 0; $i < 10; $i++) {
+            $output = str_replace('{s4uitem'. $i . '}',"",$output);
+            $output = str_replace('{s4uqty'. $i . '}',"",$output);
+            $output = str_replace('{s4uunit'. $i . '}',"",$output);
+        }
+
+
+
+        // tag <SELECT> for Units
+        $output = str_replace('{s4uListUnits}',
+                              Util::createSelect(MdlUnits::listUnits(), 'getUnitId', 'getUnitName', NULL),
+                              $output);
+
 
         $output = str_replace('{version}', getenv('VER'), $output);
 

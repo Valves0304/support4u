@@ -1,22 +1,21 @@
 <?php
-// Boiler
-// MdlPages.php: definiçao do modelo da navegação básica do site
-// autor: Dudu Waghabi
+// S4U
+// MdlPages.php:
+// autor: Vinicius Alves
 // ---------------------------------------------------------------------------
-// -> este é um modelo básico para o controle de páginas da aplicação
+require_once ($_SERVER['DOCUMENT_ROOT'] . '/connection.php');
+
 class MdlPages
 {
     public $codError;
     public $msgError;
 
-// MdlPages Constructor
+    // MdlPages Constructor
     public function __construct()
     {
         $this->codError = null;
         $this->msgError = null;
     }
-
-
 
 }
 class HtmlHeaderItem
@@ -25,6 +24,7 @@ class HtmlHeaderItem
     private $fileURL;
 
     public function __construct($url = null) // user must provide the url of the file with the constructor - the class doens't have setters
+
     {
         $this->fileURL = $url;
         $this->fileType = (empty($url) ? "err" : substr($url, -3));

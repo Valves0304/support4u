@@ -12,6 +12,7 @@
 // Models
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/Models/MdlCities.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/Models/MdlGames.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/classes/Models/MdlUnits.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/Models/MdlPages.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/Models/MdlLanguages.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/Models/MdlRequests.php';
@@ -25,11 +26,16 @@
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Pages/ViewPagesHTMLHeader.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Pages/ViewPagesErro.php';
 
+    include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Requests/ViewChooseDonation.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Requests/ViewChooseRequest.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Requests/ViewFindRequest.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Requests/ViewGetStarted.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Requests/ViewNewGroceryRequest.php';
-    include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Requests/ViewFindRequest.php';
-    include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Requests/ViewChooseRequest.php';
-    include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Requests/ViewChooseDonation.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Requests/ViewPhoneCall.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Requests/ViewPlayGame.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Requests/ViewPlayGameDonation.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Requests/ViewSuccessReq.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Requests/ViewWalkDog.php';
 
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Users/ViewUserRegister.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Users/ViewUsersEmailList.php';

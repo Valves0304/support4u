@@ -1,0 +1,36 @@
+<link rel="stylesheet" type="text/css" href="../classes/Views/Style/styleRequest.css">
+
+<body>
+    <div class="header">
+        <h1>Request</h1>
+    </div>
+    <div class="main">
+    <form action="{s4uInsertRequest}" name="createRequest" id="createRequest" method="POST">
+        <div>
+        <p>What is the best time to someone walk your dog?</p>
+        <input type="radio" id="MORNING" name="bestTime" value="1">
+        <label for="MORNING">Morning</label><br>
+        <input type="radio" id="AFTERNOON" name="bestTime" value="2">
+        <label for="AFTERNOON">Afternoon</label><br>
+        <input type="radio" id="NIGHT" name="bestTime" value="3">
+        <label for="NIGHT">Night</label><br>
+        <input type="radio" id="ANYTIME" name="bestTime" value="4" checked="checked">
+        <label for="ANYTIME">Anytime</label><br>
+        <div class="ac_box">
+        <div class="ac_box_top">
+        <div>
+        <p class="agree_box">
+          We are looking for someone to walk your dog.
+          <BR>
+          You will be receive an email from us we find this person.
+          <BR>
+            Is it ok to show him your address?
+        </p>
+            <div>
+            </div>
+            <p class="submit">
+                <input type="submit" name="commit" value="It is ok to share my address. " />
+            </p>
+    </form>
+    </div>
+</body>

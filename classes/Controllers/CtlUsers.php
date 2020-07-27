@@ -238,7 +238,7 @@ class CtlUsers
             $_SESSION['NOME_USUARIO'] = $this->model->user->getFirstName();
 
             // define the view
-            $this->view = new ViewNewRequest();
+            $this->view = new ViewGetStarted();
 
         } else {
 
@@ -248,7 +248,7 @@ class CtlUsers
             $_SESSION['NOME_USUARIO'] = $this->model->user->getFirstName();
 
             // define the view
-            $this->view = new ViewNewRequest();
+            $this->view = new ViewGetStarted();
         }
     }
 
