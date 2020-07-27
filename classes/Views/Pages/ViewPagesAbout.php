@@ -1,7 +1,7 @@
 <?php
 // S4U
 // ViewPagesAbout.php: About view of CtlPages
-// autor: Support4u team
+// author: Support4u team
 // ---------------------------------------------------------------------------
 class ViewPagesAbout
 {

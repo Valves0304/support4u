@@ -407,7 +407,7 @@ class MdlRequests
     {
         return (MdlRequests::listRequests('r.request_id = ' . $requestId) [0]);
     }
-    
+
     // *******************************************************************************************************
     // *** find requests
     // *******************************************************************************************************
@@ -436,7 +436,7 @@ class MdlRequests
     {
         return (MdlRequests::listRequests('req_type = ' . MdlRequests::GROCERY_REQUEST . ' AND ' . $criteria));
     }
-    
+
     // *******************************************************************************************************
     // *** find User requests
     // *******************************************************************************************************
@@ -472,6 +472,7 @@ class MdlRequests
   { echo 'request ID ' . $requestId . '</BR>' ;
     echo 'User ID ' . $userIdDonor. '</BR> ';
     echo 'Status ' . $status.  '</BR>' ;
+    echo 'Usuario ' . $_SESSION['NAME_USER'] .'</BR>' ;
       // get instance from DB
       $db = Db::getInstance();
 

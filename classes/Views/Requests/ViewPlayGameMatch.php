@@ -21,7 +21,7 @@ class ViewPlayGameMatch
 
         // variables replacement
         $output = str_replace('{s4uConfirmation}', Util::createLink("CtlRequests","matchDonation","","",$this->controllerModel->request->getRequestId()), $output);
-        $output = str_replace('{s4uCancel}',  Util::createLink("CtlRequests","newPlayDonation"), $output);
+        $output = str_replace('{s4uCancel}',  Util::createLink("CtlRequests","newPlayGameDonation"), $output);
 
         $user = MdlUsers::findUser($this->controllerModel->request->getUserIdReq());
 

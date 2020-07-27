@@ -1,7 +1,7 @@
 <?php
 // S4U
 // MdlPages.php:
-// autor: Vinicius Alves
+// author: Vinicius Alves
 // ---------------------------------------------------------------------------
 require_once ($_SERVER['DOCUMENT_ROOT'] . '/connection.php');
 

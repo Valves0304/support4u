@@ -1,7 +1,7 @@
 <?php
 // Support for you
 // CtlPages.php: controller of user's site browsing
-// autor: Vinicius Alves
+// author: Vinicius Alves
 // ---------------------------------------------------------------------------
 // - Controller actions:
 // - Home - Home Page load
@@ -41,14 +41,14 @@ class CtlPages
         if(isset($_COOKIE['boilerchannel'])) {
 
             $ctl = new CtlUsuarios();
-            $ctl->login($_COOKIE['boilerchannel']); // aqui era a chamada que te confundiu, passando o login via parâmetro
+            $ctl->login($_COOKIE['boilerchannel']);
             $this->view = $ctl->view;
 
         } else {
 
-            // aqui ele coloca a mensagem de erro e campo que ele recebeu,
-            // porque ele pode estar chamando esta ação pela segunda vez, em caso de erro,
-            // e quer exibir a mensagem na tela
+            // here the system inserts the error message and field received,
+           // because it may be calling this action a second time, in case of an error,
+          // and it may needs to display the message on the screen
             $this->model->msgErro = $msgErro;
             $this->model->campoErro = $campoErro;
             $this->view = new ViewPagesLogin($this->model);
@@ -63,7 +63,7 @@ class CtlPages
 
     public function error($codErro, $msgErro)
     {
-        // modifica o modelo para que a view o consulte diretamente
+        // modify the model so that the view queries it directly
         $this->model->msgErro = $msgErro;
         $this->model->codErro = $codErro;
         $this->view = new ViewPagesErro($this->model);

@@ -1,7 +1,7 @@
 <?php
 // Support for you
 // CtlRequests.php: controller of Requests
-// autor: Vinicius Alves
+// author: Vinicius Alves
 // ---------------------------------------------------------------------------
 // - Controller actions:
 // - Home - Home Page load
@@ -73,7 +73,7 @@ class CtlRequests
         $this->model->request = new Request();
         $this->model->request->setRequestType($_GET['reqType']);
         $this->model->request->setRequestDate(date("Y/m/d"));
-        $this->model->request->setUserIdReq($_SESSION['ID_USUARIO']);
+        $this->model->request->setUserIdReq($_SESSION['ID_USER']);
         $price = isset($_POST["price"]) ? $_POST['price'] : 0;
         $this->model->request->setPrice($price);
         $this->model->request->setStatusRequest('1'); // we are creating the request so Status is always 1
@@ -216,11 +216,11 @@ class CtlRequests
         } else{
 
         $this->view = new ViewPlayGameDonation($this->model);
-            
+
         }
 
     }
-    
+
     public function newPhoneCallDonation()
     {
         $loginView = CtlUSers::checkUserSession();
@@ -228,7 +228,7 @@ class CtlRequests
             $this->view = $loginView;
             return;
         }
-            
+
           $languageId = isset($_POST['languageId']) ? $_POST['languageId'] : 1;
           $bestTime = isset($_POST['bestTime']) ? $_POST['bestTime'] : 4;
 
@@ -258,7 +258,7 @@ class CtlRequests
             $this->model->request = MdlRequests::findRequest($request);
             $this->view = new ViewPhoneCallMatch($this->model);
         }else{
-            $this->view = new ViewPhoneCallDonation($this->model);    
+            $this->view = new ViewPhoneCallDonation($this->model);
         }
     }
 
@@ -309,11 +309,11 @@ class CtlRequests
 
               $criteria = ' 1 = 1 ';
               $criteria .= $cityId > 0 ? ' AND c.city_id = ' . $cityId : '';
-                
+
             if ($price <> '') {
               $criteria .= ' AND r.price <= ' . $price;
             }
-            
+
               $criteria .= ' AND status = ' . MdlRequests::ACTIVE_REQUEST;
 
               $this->model->requestList = MdlRequests::listGroceryRequests($criteria);
@@ -323,7 +323,7 @@ class CtlRequests
         public function matchGrocery()
         {
             $request = isset($_POST["optionRequest"]) ? $_POST['optionRequest'] : 0;
-        
+
             if ($request !=0){
                 $this->model->request = MdlRequests::findRequest($request);
                 $this->view = new ViewGroceryMatch($this->model);

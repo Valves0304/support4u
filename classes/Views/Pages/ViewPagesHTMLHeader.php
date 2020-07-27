@@ -1,7 +1,7 @@
 <?php
 // SupportForYou
 // ViewPagesHTMLHeader.php: output and substitution operations for header with user information
-// autor: Team Support for you
+// author: S4U
 // ---------------------------------------------------------------------------
 class ViewPagesHTMLHeader
 {
@@ -9,7 +9,7 @@ class ViewPagesHTMLHeader
     {
 
         // initializes $output with header html
-        $output  = file_get_contents('classes/Views/Pages/newHeader.html');
+        $output  = file_get_contents('classes/Views/Pages/header.html');
 
         // checks if caller view wants to add .css or .js files
         $customHeaders = '';
@@ -32,18 +32,18 @@ class ViewPagesHTMLHeader
         // dynamic links
 
         // checks if user is logged in
-        if (isset($_SESSION['USUARIO'])) {
-            $output = str_replace('{s4uUserGreeting}','Hello, ' . $_SESSION['NOME_USUARIO'] . '!', $output);
-            
+        if (isset($_SESSION['USER'])) {
+            $output = str_replace('{s4uUserGreeting}','Hello, ' . $_SESSION['NAME_USER'] . '!', $output);
+
             $output = str_replace('{s4uSignUp}','My Register ', $output);
             $output = str_replace('{s4uGetStartedLink}',Util::createLink("CtlRequests","getStarted"), $output);
             $output = str_replace('{s4uGetStarted}','Get Started', $output);
-            
+
             $output = str_replace('{s4uLoginLogoutLink}',Util::createLink("CtlUsers","logout"), $output);
             $output = str_replace('{s4uLoginLogout}','Logout', $output);
 
         } else {
-            $output = str_replace('{s4uUserGreeting}','', $output);
+            $output = str_replace('{s4uUserGreeting}','', $output);            
             $output = str_replace('{s4uLoginLogoutLink}',Util::createLink("CtlUsers","login"), $output);
             $output = str_replace('{s4uLoginLogout}','Login', $output);
             $output = str_replace('{s4uSignUp}','Sign up', $output);

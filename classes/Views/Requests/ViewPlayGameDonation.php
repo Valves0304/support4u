@@ -27,24 +27,28 @@ class ViewPlayGameDonation
                               $output);
 
         // table with requests
-        $tableRequests = '<TABLE class="pure-table pure-table-bordered"><THEAD><TD>Select</TD><TD>Name</TD><TD>Platform</TD><TD>Game</TD><TD>Time</TD></THEAD> ';
+        $tableRequests = '';
         if ($this->controllerModel->requestList[0] == NULL) {
-            $tableRequests .= '<TR><TD COLSPAN=5>There are no requests. Try changing your filter.</TD></TR>';
+            $tableRequests .= '<h3>There are no requests. Try changing your filter.</h3>';
         } else {
             foreach ($this->controllerModel->requestList as $request) {
-                $tableRequests .= "\n<TR><TD>"  . '<input type="radio" name="optionRequest" value=" ' . $request->getRequestId() . ' "> ' .  "</TD>" .
-                              '      <TD>' . MdlUsers::findUser($request->getUserIdReq())->getFirstName() . '</TD>' .
-                              '      <TD>' . MdlGames::findGame($request->getRequestItems()[0]->getGameId())->getGameName() . '</TD>' .
-                              '      <TD>' . $request->getRequestItems()[0]->getGameName() . '</TD>' .
-                              '      <TD>' . $request->getRequestItems()[0]->getBestTime() . '</TD>' .
-
-
-                              '  </TR>';
+                $user = MdlUsers::findUser($request->getUserIdReq());
+                $tableRequests .=   '<label class="card-radio">'.
+                                    '<input type="radio" name="optionRequest" value="' . $request->getRequestId(). '"> '.
+                                    '<article class="card">'.
+                                        '<div class="card-header"><i></i><h3>' . MdlUsers::findUser($request->getUserIdReq())->getFirstName() . '</h3></div>'.
+                                        '<div class="card-content">'.
+                                            '<div><span>Time</span>' . MdlGames::findGame($request->getRequestItems()[0]->getGameId())->getGameName() .'</div>'.
+                                            '<div><span>Time</span>' . $request->getRequestItems()[0]->getGameName() . '</div>'.
+                                            '<div><span>City</span>' . $request->getRequestItems()[0]->getBestTime() . '</div>'.
+                                        '</div>'.
+                                    '</article>'.
+                                '</label>';
             }
         }
-        $tableRequests .= "\n</TABLE>";
 
         $output = str_replace('{s4uTableRequests}', $tableRequests, $output);
+
 
         $output = str_replace('{version}', getenv('VER'), $output);
 

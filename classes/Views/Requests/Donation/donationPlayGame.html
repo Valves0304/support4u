@@ -1,52 +1,37 @@
-
-
-   <div class="header">
-      <h1>Let's donate a game play to anyone who needs it</h1>
-   </div>
-   <div class="main">
-      <div class="float: left; width: 500px;">
-         <div>
-            <form action="{s4uFilterRequest}" name="searchRequest" id="searchRequest" method="POST">
-               <table class="pure-table pure-table-horizontal ">
-                  <tr>
-                     <td>
-                        <div>
-                           <p>What is the best time to play?</p>
-                           <input type="radio" id="MORNING" name="bestTime" value="1">
-                           <label for="MORNING">Morning</label><br>
-                           <input type="radio" id="AFTERNOON" name="bestTime" value="2">
-                           <label for="AFTERNOON">Afternoon</label><br>
-                           <input type="radio" id="NIGHT" name="bestTime" value="3">
-                           <label for="NIGHT">Night</label><br>
-                           <input type="radio" id="ANYTIME" name="bestTime" value="4" checked="checked">
-                           <label for="ANYTIME">Anytime</label><br>
-                        </div>
-                     </td>
-                     <td>
-                        <div>
-                           <label for="game" class="game">Plataform     :    </label>
-                           <select class = "gameselect" name="gameId" style="width:150px;">
-                              <option value=0>Any</option>
-                              {s4uListGames}
-                           </select>
-                        </div>
-                        <p class="submit">
-                           <input type="submit" name="commit" value="Filter" />
-                        </p>
-                     </td>
-                  </tr>
-               </table>
-            </form>
-         </div>
-         <div>
-            <form action="{s4uRequestMatch}" name="searchRequest" id="searchRequest" method="POST">
-               <table class="pure-table pure-table-horizontal ">
-               {s4uTableRequests}
-               <p class="submit">
-                  <input type="submit" name="commit" value="Ok" />
-               </p>
-            </form>
-         </div>
-      </div>
-   </div>
-</body>
+<h1>Let's donate a game play to anyone who needs it</h1>
+<div class="content">
+    <form action="{s4uFilterRequest}" name="searchRequest" id="searchRequest" method="POST">
+        <fieldset>
+            <div class="pure-g">
+                <div class="pure-u-1 pure-u-sm-2-5">
+                    <label>What is the best time to call?</label>
+                    <select class="pure-u-1" name="bestTime">
+                        <option value="1">Morning</option>
+                        <option value="2">Afternoon</option>
+                        <option value="3">Night</option>
+                        <option value="4" selected>Anytime</option>
+                    </select>
+                </div>
+                <div class="pure-u-1 pure-u-sm-2-5">
+                    <label for="game" class="game">Plataform : </label>
+                    <select class="pure-u-1" name="gameId">
+                        <option value="0">Any</option>
+                        {s4uListGames}
+                    </select>
+                </div>
+                <div class="pure-u-1 pure-u-sm-1-5">
+                    <label></label>
+                    <input type="submit" name="commit" value="Filter" /> 
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    <form action="{s4uRequestMatch}" name="searchRequest" id="searchRequest" method="POST">
+        <table class="pure-table pure-table-horizontal">
+            {s4uTableRequests}
+        </table>
+        <p class="submit">
+            <input type="submit" name="commit" value="Ok" />
+        </p>
+    </form>
+</div>

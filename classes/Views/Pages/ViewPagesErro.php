@@ -1,7 +1,7 @@
 <?php
 // S4u
 // ViewPagesError.php: View Errors from controller ctlPages
-// autor: Vinicius Alves
+// author: Vinicius Alves
 // ---------------------------------------------------------------------------
 // Error screen
 class ViewPagesErro {

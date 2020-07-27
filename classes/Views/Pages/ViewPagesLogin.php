@@ -1,12 +1,12 @@
 <?php
-// Boiler
-// ViewPagesLogin.php: definiçao da view de login do controller cEventos
-// autor: Dudu Waghabi
+// S4U
+// ViewPagesLogin.php
+//
 // ---------------------------------------------------------------------------
-// a view exibe um formulário para a realização de login
+// login View
 class ViewPagesLogin
 {
-    private $controllerModel;   // modelo modificado pelo controller
+    private $controllerModel;
 
     public function __construct($model)
     {

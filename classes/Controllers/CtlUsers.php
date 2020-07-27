@@ -1,7 +1,7 @@
 <?php
 // s4u
 // CtlUsers.php: users controller
-// autor: Support for you team
+// author: Support for you team
 // ---------------------------------------------------------------------------
 // - controller actions:
 // - login
@@ -54,8 +54,12 @@ class CtlUsers
         }
 
         $_SESSION['ID_USUARIO'] = $this->model->usuario->getUserId();
-        $_SESSION['USUARIO'] = $this->model->usuario->getUserLogin();
-        $_SESSION['NOME_USUARIO'] = $this->model->usuario->getFirstName();
+        $_SESSION['USER'] = $this->model->usuario->getUserLogin();
+        $_SESSION['NAME_USER'] = $this->model->usuario->getFirstName();
+
+     //   echo "ID_USUARIO  " .$_SESSION['ID_USUARIO'];
+    //    echo "USER " . $_SESSION['USER'] ;
+    //    echo "NAME_USER " . $_SESSION['NAME_USER'];
 
         // define a view de novo request
         $this->view = new ViewGetStarted();
@@ -74,9 +78,9 @@ class CtlUsers
 
     public function logout()
     {
-        unset($_SESSION['USUARIO']);
-        unset($_SESSION['ID_USUARIO']);
-        unset($_SESSION['NOME_USUARIO']);
+        unset($_SESSION['USER']);
+        unset($_SESSION['ID_USER']);
+        unset($_SESSION['NAME_USER']);
 //        unset($_SESSION['NIVAUT']);
 //        setcookie ('boilerchannel', '', time() - 1); // expira o cookie
         $this->view = new ViewPagesHome();
@@ -183,9 +187,9 @@ class CtlUsers
     public function userRegister()
     {
       //  $this->view = new ViewUserRegister();
-      //  $_SESSION['USUARIO']);
-      if (isset($_SESSION['USUARIO'])){
-        $this->model->user = MdlUsers::findUserLogin($_SESSION['USUARIO']);
+      //  $_SESSION['USER']);
+      if (isset($_SESSION['USER'])){
+        $this->model->user = MdlUsers::findUserLogin($_SESSION['USER']);
       }
       else
       {
@@ -203,8 +207,8 @@ class CtlUsers
     public function userUpdate()
     {
         // checks whether it's an update or insert
-        if (isset($_SESSION['USUARIO'])) {
-            $this->model->user = MdlUsers::findUserLogin($_SESSION['USUARIO']);
+        if (isset($_SESSION['USER'])) {
+            $this->model->user = MdlUsers::findUserLogin($_SESSION['USER']);
         } else {
             $this->model->user = new User();
             $this->model->user->setUserLogin($_POST['login']);
@@ -234,8 +238,8 @@ class CtlUsers
 
             // log user in
             $_SESSION['ID_USUARIO'] = $this->model->user->getUserId();
-            $_SESSION['USUARIO'] = $this->model->user->getUserLogin();
-            $_SESSION['NOME_USUARIO'] = $this->model->user->getFirstName();
+            $_SESSION['USER'] = $this->model->user->getUserLogin();
+            $_SESSION['NAME_USER'] = $this->model->user->getFirstName();
 
             // define the view
             $this->view = new ViewGetStarted();
@@ -245,7 +249,7 @@ class CtlUsers
             MdlUsers::updateUser($this->model->user);
 
             // user could have changed names...
-            $_SESSION['NOME_USUARIO'] = $this->model->user->getFirstName();
+            $_SESSION['NAME_USER'] = $this->model->user->getFirstName();
 
             // define the view
             $this->view = new ViewGetStarted();
@@ -346,12 +350,12 @@ class CtlUsers
 
         return TRUE;
     }
-    
+
     public static function checkUserSession(){
-        if(isset($_SESSION['ID_USUARIO']) == 0){
+        if(isset($_SESSION['ID_USER']) == 0){
             return new ViewPagesLogin(new MdlPages());
         }
-        
+
         return null;
     }
 }

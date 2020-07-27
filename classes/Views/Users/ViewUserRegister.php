@@ -34,7 +34,7 @@ class ViewUserRegister
         $output = str_replace('{s4uLogin}', $this->controllerModel->user->getUserLogin(), $output);
         $output = str_replace('{s4uPass}', "", $output);
 
-        if (isset($_SESSION['NOME_USUARIO'])) {
+        if (isset($_SESSION['NAME_USER'])) {
                   $output = str_replace('{s4uButton}', "Update", $output);
                   $output = str_replace('{s4uVisible}', "logHidden", $output);
         } else {

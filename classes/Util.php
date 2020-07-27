@@ -199,97 +199,10 @@ class Util
         return $image;
     }
 
-    // *******************************************************************************************************
-    // *** validaCPF
-    // *******************************************************************************************************
-    // ***
-    public static function validaCPF($cpf = null) {
-
-        // Verifica se um numero foi informado
-        if(empty($cpf)) {
-            return false;
-        }
-
-        // Elimina possivel mascara
-        $cpf = preg_replace('/[^0-9]/', '', $cpf);
-        $cpf = str_pad($cpf, 11, '0', STR_PAD_LEFT);
-        // Verifica se o numero de digitos informados e igual a 11
-        if (strlen($cpf) != 11) {
-            return false;
-        }
-        // Verifica se nenhuma das sequencias invalidas abaixo
-        // foi digitada. Caso afirmativo, retorna falso
-        else if ($cpf == '00000000000' ||
-            $cpf == '11111111111' ||
-            $cpf == '22222222222' ||
-            $cpf == '33333333333' ||
-            $cpf == '44444444444' ||
-            $cpf == '55555555555' ||
-            $cpf == '66666666666' ||
-            $cpf == '77777777777' ||
-            $cpf == '88888888888' ||
-            $cpf == '99999999999') {
-            return false;
-         // Calcula os digitos verificadores para verificar se o
-         // CPF � v�lido
-         } else {
-
-            for ($t = 9; $t < 11; $t++) {
-
-                for ($d = 0, $c = 0; $c < $t; $c++) {
-                    $d += $cpf{$c} * (($t + 1) - $c);
-                }
-                $d = ((10 * $d) % 11) % 10;
-                if ($cpf{$c} != $d) {
-                    return false;
-                }
-            }
-
-            return true;
-        }
-    }
-
-    //Luhn algorithm identifier verification
-    public static function checksum($card_number)
-    {
-        $card_number_checksum = '';
-
-        foreach (str_split(strrev((string) $card_number)) as $i => $d) {
-            $card_number_checksum .= $i %2 !== 0 ? $d * 2 : $d;
-        }
-
-        return array_sum(str_split($card_number_checksum)) % 10 === 0;
-    }
-
-    // realiza teste de expressao regular para determinar o tipo de cartao
-    public static function cardType($number)
-    {
-        $brands = array('visa'       => '/^4\d{12}(\d{3})?$/',
-                    	'mastercard' => '/^(5[1-5]\d{4}|677189)\d{10}$/',
-                    	'diners'     => '/^3(0[0-5]|[68]\d)\d{11}$/',
-                    	'discover'   => '/^6(?:011|5[0-9]{2})[0-9]{12}$/',
-                    	'elo'        => '/^((((636368)|(438935)|(509067)|(504175)|(451416)|(636297))\d{0,10})|((5067)|(4576)|(4011))\d{0,12})$/',
-                    	'amex'       => '/^3[47]\d{13}$/',
-                    	'jcb'        => '/^(?:2131|1800|35\d{3})\d{11}$/',
-                    	'aura'       => '/^(5078\d{2})(\d{2})(\d{11})$/',
-        //            	'hipercard'  => '/^(606282\d{10}(\d{3})?)|(3841\d{15})$/',
-        //            	'maestro'    => '/^(?:5[0678]\d\d|6304|6390|67\d\d)\d{8,15}$/',
-                    );
-        $number=preg_replace('/[^\d]/','',(string)$number);
-    	$brand = 'undefined';
-	    foreach ($brands as $_brand => $regex ) {
-		    if (preg_match($regex, $number ) ) {
-			    $brand = $_brand;
-			    break;
-		    }
-	    }
-	    return $brand;
-    }
-
     //  Executa query no banco de dados
     public static function query($query) {
         $db = Db::getInstance();
-        $dadosRetorno = array();
+        $fetchData = array();
 
         try {
             $result = $db->query($query);
@@ -304,9 +217,9 @@ class Util
         if (is_object($result)) {
             while($linha = $result->fetch_assoc()) {
 
-                array_push($dadosRetorno, $linha);
+                array_push($fetchData, $linha);
             }
-            return $dadosRetorno;
+            return $fetchData;
         } else {
             return $result;
         }
