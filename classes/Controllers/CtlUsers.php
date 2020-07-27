@@ -37,38 +37,29 @@ class CtlUsers
         if (isset($_POST['login'])) {
             $userLogin = $_POST['login'];
         }
+
         $this->model->usuario = MdlUsers::findUserLogin($userLogin);
 
         if ($this->model->usuario === NULL                                                               // user not found
-           or (isset($_POST['login']) AND !($this->model->usuario->checkUserPass($_POST['senha']))))     // OR wrong password (if via POST)
+           or (isset($_POST['login']) AND !($this->model->usuario->checkUserPass($_POST['password']))))     // OR wrong password (if via POST)
         {
             $mdl = new MdlPages();
             $mdl->msgError = 'User or password wrong';
-            $mdl->campoErro = 1;
+            $mdl->codError = 1;
             $this->view = new ViewPagesLogin($mdl);
             return;
         }
 
         $_SESSION['ID_USUARIO'] = $this->model->usuario->getUserId();
-        $_SESSION['USUARIO'] = $this->model->usuario->getUser_login();
-        $_SESSION['NOME_USUARIO'] = $this->model->usuario->getFirst_name();
+        $_SESSION['USUARIO'] = $this->model->usuario->getUserLogin();
+        $_SESSION['NOME_USUARIO'] = $this->model->usuario->getFirstName();
 
-        echo "<BR>passei no usuario";
-        echo "<BR> ". $_SESSION['NOME_USUARIO'];
-        echo "<BR>passei no usuario " . $_SESSION['ID_USUARIO'] ;
 
         // define a view de novo request
-        $mdl = new MdlRequests();
-        $this->view = new ViewNewRequest($mdl);
+        $this->view = new ViewNewRequest();
 
     }
 
-    //    $_SESSION['NIVAUT'] = $this->model->usuario->getNivelAutUsuario();
-
-        // cria cookie se solicitado
-  //      if (isset($_POST['lembrar']) && $_POST['lembrar'] == 'on') {
-  //          setcookie ('boilerchannel', $userLogin, time() + (3600 * 24 * 30));
-  //      }
 
         // verifica se a senha está expirada e chama a tela de troca de senha
 /*      if ($this->model->usuario->getDataExpiracaoSenha() < new DateTime()) {
@@ -78,44 +69,6 @@ class CtlUsers
             return;
         }
 */
-        // verifica se há uma URL de callback para desviar
-/*        if (isset($_SESSION['URL_CALLBACK'])) {
-            $url = 'https://' . $_SERVER['HTTP_HOST'] . $_SESSION['URL_CALLBACK'];
-            unset($_SESSION['URL_CALLBACK']);
-            header('Location: ' . $url);
-            exit;
-        }
-
-        // $mdl = new MdlAtletas();
-        // $mdl->usuario = $this->model->usuario;
-        // $mdl->atleta = MdlAtletas::encontraAtletaCPF($this->model->usuario->getCPFUsuario());
-        // em último caso, chama tela de cadastro de usuario
-        // $this->view = new ViewAtletasAtualizaCadastro($mdl);
-
-
-    }
-
-
-        // verifica se a senha está expirada e chama a tela de troca de senha        if ($this->model->usuario->getDataExpiracaoSenha() < new DateTime()) {
-            $this->model->msgErro = 'Sua senha expirou. Por favor, informe uma nova senha';
-            $this->model->campoErro = 1;
-            $this->view = new ViewUsuariosTrocaSenha($this->model);
-            return;
-      }
-
-
-        $mdl = new MdlAtletas();
-        $mdl->usuario = $this->model->usuario;
-        $mdl->atleta = MdlAtletas::encontraAtletaCPF($this->model->usuario->getCPFUsuario());
-
-        // prepara o acesso a foto do atleta, se houver
-        $mdl->atleta->setNomeArquivoFotoAtleta();
-
-        // em último caso, chama tela de cadastro de usuario
-        $this->view = new ViewAtletasAtualizaCadastro($mdl);
-
-    }
-*/
 
     public function logout()
     {
@@ -123,8 +76,8 @@ class CtlUsers
         unset($_SESSION['ID_USUARIO']);
         unset($_SESSION['NOME_USUARIO']);
         unset($_SESSION['NIVAUT']);
-        setcookie ('boilerchannel', '', time() - 1); // expira o cookie
-        $this->view = new ViewPagesLogin($this->model);
+//        setcookie ('boilerchannel', '', time() - 1); // expira o cookie
+        $this->view = new ViewPagesHome();
 
     }
 
@@ -225,9 +178,9 @@ class CtlUsers
         $this->view = new ViewUsuariosSucessoTrocaSenha($this->model);
     }
 
-    public function cadastraUsuario()
+    public function UserRegister()
     {
-        $this->view = new ViewCadastroUsuario();
+        $this->view = new ViewUserRegister();
     }
 
     public function register()

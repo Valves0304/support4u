@@ -1,6 +1,6 @@
 <?php
-// enquanto eu não conserto o autoloader....
-// Classe de utilitarios
+
+// Tools
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/Util.php';
 
 // Controllers
@@ -22,8 +22,10 @@
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Pages/ViewPagesLogin.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Pages/ViewPagesSemPermissao.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Pages/ViewPagesHome.php';
-    include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Pages/ViewNewRequest.php';
 
+    include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Requests/ViewNewRequest.php';
+
+    include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Users/ViewUserRegister.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Users/ViewUsersEmailList.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Users/ViewUsuariosCabecalhoHTML.php';
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/Views/Users/ViewUsuariosTrocaSenha.php';

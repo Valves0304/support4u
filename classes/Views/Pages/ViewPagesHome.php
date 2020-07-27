@@ -13,7 +13,7 @@ class ViewPagesHome
 
     public function output()
     {
-        $output .= file_get_contents('classes/Views/Pages/header.html');
+        $output = file_get_contents('classes/Views/Pages/header.html');
         $output .= file_get_contents('classes/Views/Pages/home.html');
         $output .= file_get_contents('classes/Views/Pages/footer.html');
 

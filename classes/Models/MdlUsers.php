@@ -163,6 +163,7 @@ class MdlUsers
 
             $userData = new User();
             $userData->setUser_id($user['user_id']);
+            $userData->setCryptUserPass($user['user_pass']);
             $userData->setFirstName($user['first_name']);
             $userData->setLast_name($user['last_name']);
             $userData->setEmail($user['email']);
@@ -211,6 +212,34 @@ class MdlUsers
 //
 // I dont have forget my password because I dont have way to send email
 //
+
+public function registerUser()
+{
+
+    // GET values
+    $userLogin  = isset($_GET['usuario']) ? $_GET['usuario'] : FALSE;
+
+    // condições de autorização INTERESSANTE!!!!
+    //if (($userLogin AND $userLogin != $_SESSION['USUARIO'])  {                // apenas adms podem alterar por idAtleta
+    //    $this->view = new ViewPagesSemPermissao();
+    //    return;
+    //}
+
+    // prepara o modelo
+    $this->model->user = new User();
+
+    // carrega informações atuais na tela
+    if ($userLogin) {
+        $this->model->user = MdlUsers::findUserLogin($userLogin);
+    }
+
+    $this->view = new ViewUserRegister($this->model);
+
+
+    // exibe informações para atualização/inclusão
+    //$this->view = new ViewAtletasAtualizaCadastro($this->model);
+}
+
 
 }
 // *******************************************************************************************************
@@ -348,7 +377,6 @@ class User
     public function checkUserPass($pass)
     {
       if (Util::hash_equals($this->user_pass, crypt($pass, $this->user_pass)))  {
-echo "<BR> Estou verificando senha";
         return true;
       } else {
         return false;

@@ -10,9 +10,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/loader.php';
 
 
 echo "<BR><BR> atualizando a senha no banco:";
-$usr = MdlUsers::findUserLogin("Noah");
+$usr = MdlUsers::findUserLogin("Lucas");
 
-$usr->setUserPass("1234");
+$usr->setUserPass("123456");
 echo "<BR>Atualização do usuário: ";
 try {
     MdlUsers::updateUser($usr);
@@ -26,4 +26,4 @@ try {
 echo "<BR>Usuário encontrado:" . $usr->getFirstName() . " " . $usr->getLasttName();
 echo "<BR><BR> testando senha:";
 echo "<BR>senha errada: " . ($usr->checkUserPass("qualquer coisa") ? "certa!" : "errada!");
-echo "<BR>senha certa: " . ($usr->checkUserPass("1234") ? "certa!" : "errada!");
+echo "<BR>senha certa: " . ($usr->checkUserPass("123456") ? "certa!" : "errada!");
