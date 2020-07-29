@@ -174,7 +174,7 @@ class MdlUsers
         {
             $query .= ' LIMIT ' . $limit;
         }
-        //echo $query;
+
         try
         {
             $result = $db->query($query);

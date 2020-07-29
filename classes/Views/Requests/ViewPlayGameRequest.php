@@ -3,11 +3,10 @@
 // ViewPagesHome.php: Home Page View Home definition from controller ctlPages
 // ---------------------------------------------------------------------------
 // view Home Page
-class ViewPhoneCall
+class ViewPlayGameRequest
 {
     private $controllerModel;   // model modified by controller
 
-    // ViewPagesHome Construtor
     public function __construct($model)
     {
         $this->controllerModel=$model;
@@ -16,18 +15,19 @@ class ViewPhoneCall
     public function output()
     {
         $output  = ViewPagesHTMLHeader::output();
-        $output .= file_get_contents('classes/Views/Requests/Request/reqPhoneCall.html');
+        $output .= file_get_contents('classes/Views/Requests/Request/requestPlayGame.html');
         $output .= file_get_contents('classes/Views/Pages/footer.html');
 
         // variables replacement
-        $output = str_replace('{s4uInsertRequest}', Util::createLink("CtlRequests","insertRequest","2","1"), $output);
+        $output = str_replace('{s4uInsertRequest}', Util::createLink("CtlRequests","insertRequest","2","2"), $output);
 
-        $output = str_replace('{s4uListLangs}',
-                              Util::createSelect(MdlLanguages::listLanguages(), 'getLangId', 'getLangName',
-                                                 (!empty($this->controllerModel->errorField)) ? $this->controllerModel->request->getRequestItems()[0]->getLangId() : NULL),
+        // tag <SELECT> for Games
+        $output = str_replace('{s4uListGames}',
+                              Util::createSelect(MdlGames::listGames(), 'getGameId', 'getGameName',
+                              (!empty($this->controllerModel->errorField)) ? $this->controllerModel->request->getRequestItems()[0]->getGameId() : NULL),
                               $output);
 
-        $output = str_replace('{s4uPhone}', !empty($this->controllerModel->errorField) ? $this->controllerModel->request->getRequestItems()[0]->getPhone() : '', $output);
+        $output = str_replace('{s4uGameName}', !empty($this->controllerModel->errorField) ? $this->controllerModel->request->getRequestItems()[0]->getGameName() : '', $output);
 
         $output = str_replace('{version}', getenv('VER'), $output);
 

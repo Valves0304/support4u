@@ -57,9 +57,6 @@ class CtlUsers
         $_SESSION['USER'] = $this->model->usuario->getUserLogin();
         $_SESSION['NAME_USER'] = $this->model->usuario->getFirstName();
 
-        echo "ID_USUARIO  " .$_SESSION['ID_USER'];
-        echo "USER " . $_SESSION['USER'] ;
-        echo "NAME_USER " . $_SESSION['NAME_USER'];
 
         // define a view de novo request
         $this->view = new ViewGetStarted();

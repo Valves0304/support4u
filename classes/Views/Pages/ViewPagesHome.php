@@ -8,7 +8,6 @@ class ViewPagesHome
     // ViewPagesHome Construtor
     public function __construct()
     {
-//        echo "<BR>Construtor da ViewPagesHome";
     }
 
     public function output()

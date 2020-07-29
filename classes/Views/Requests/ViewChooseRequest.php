@@ -14,7 +14,7 @@ class ViewChooseRequest
     public function output()
     {
         $output  = ViewPagesHTMLHeader::output();
-        $output .= file_get_contents('classes/Views/Requests/chooseRequestButtons.html');
+        $output .= file_get_contents('classes/Views/Requests/Request/chooseRequestButtons.html');
         $output .= file_get_contents('classes/Views/Pages/footer.html');
 
         // variables replacement

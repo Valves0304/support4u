@@ -4,7 +4,8 @@
 // autor: Vinicius Alves
 // ---------------------------------------------------------------------------
 // Error screen
-class ViewPagesErro {
+class ViewPagesErro
+{
     private $controllerModel;   // modelo modificado pelo controller
 
     public function __construct($model)
@@ -21,7 +22,7 @@ class ViewPagesErro {
                           <span class="glyphicon glyphicon glyphicon-thumbs-down logo red-boiler"></span>
                         </div>
                         <div class="col-sm-8 texto-erro">
-                          <h4>OOPS! Algo de errado aconteceu:</h4>';
+                          <h4>OOPS! Something went wrong:</h4>';
         $output .= '      <i>' . $this->controllerModel->codErro . ' - ' . $this->controllerModel->msgErro . '</i>';
         $output .= '      <div class="red-s4u"><BR><a href=s4u.php?c=CtlPages&action=home>Back to HomePage</a></div>';
         $output .= '</div></div></div>';

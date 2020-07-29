@@ -13,6 +13,5 @@ class ViewPagesAbout
         $output .= file_get_contents('classes/Views/Pages/footer.html');
         $output = str_replace('{version}', getenv('VER'), $output);
         return $output;
-
     }
 }

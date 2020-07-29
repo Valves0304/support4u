@@ -16,7 +16,7 @@ class ViewGroceryRequest
     public function output()
     {
         $output  = ViewPagesHTMLHeader::output();
-        $output .= file_get_contents('classes/Views/Requests/Request/reqGrocery.html');
+        $output .= file_get_contents('classes/Views/Requests/Request/requestGrocery.html');
         $output .= file_get_contents('classes/Views/Pages/footer.html');
 
         // variables replacement

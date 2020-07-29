@@ -33,7 +33,7 @@ class CtlRequests
     }
 
     public function chooseRequest()
-    { //It goes Requst options Buttons
+    { //It goes Request options Buttons
         $this->view = new ViewChooseRequest();
     }
 
@@ -55,16 +55,16 @@ class CtlRequests
 
     public function newDogRequest()
     {
-      $this->view = new ViewWalkDog($this->model);
+      $this->view = new ViewWalkDogRequest($this->model);
     }
 
     public function newPhoneRequest()
     {
-      $this->view = new ViewPhoneCall($this->model);
+      $this->view = new ViewPhoneCallRequest($this->model);
     }
     public function newPlayRequest()
     {
-      $this->view = new ViewPlayGame($this->model);
+      $this->view = new ViewPlayGameRequest($this->model);
     }
 
     public function insertRequest()
@@ -118,13 +118,13 @@ class CtlRequests
             if ($_GET['reqType'] == MdlRequests::GROCERY_REQUEST) {
                 $this->view = new ViewGroceryRequest($this->model);
             } elseif ($_GET['typeTime'] == MdlRequests::TALK) {
-                $this->view = new ViewPhoneCall($this->model);
+                $this->view = new ViewPhoneCallRequest($this->model);
             } elseif ($_GET['typeTime'] == MdlRequests::DOG) {
-                $this->view = new ViewWalkDog($this->model);
+                $this->view = new ViewWalkDogRequest($this->model);
             } elseif ($_GET['typeTime'] == MdlRequests::GAME) {
-                $this->view = new ViewPlayGame($this->model);
+                $this->view = new ViewPlayGameRequest($this->model);
             } else {
-                $this->view = new ViewPhoneCall($this->model);
+                $this->view = new ViewPhoneCallRequest($this->model);
             }
 
             return;
@@ -134,7 +134,7 @@ class CtlRequests
         MdlRequests::insertRequest($this->model->request);
 
         // define the view
-        $this->view = new ViewSuccessReq();
+        $this->view = new ViewSuccessfullyRequested();
     }
 
 
@@ -266,12 +266,18 @@ class CtlRequests
         }
     }
 
-       public function matchDonation()
-       {
-         MdlRequests::confirmDonation($_GET["reqId"],$_SESSION['ID_USER'],2);
-        $this->view = new ViewPagesThankYou($this->model);
+    public function matchDonation()
+    {
+        $this->model->request = MdlRequests::findRequest($_GET["reqId"]);
+        $this->model->request->setUserIdDonor($_SESSION['ID_USER']);
+        $this->model->request->setStatusRequest(MdlRequests::ENDED_REQUEST);
+        MdlRequests::updateRequest($this->model->request);
 
-        }
+//        MdlRequests::confirmDonation($_GET["reqId"],$_SESSION['ID_USER'],2);
+
+        $this->view = new ViewPagesThankYou($this->model);
+    }
+
         public function newWalkDogDonation()
         {
 

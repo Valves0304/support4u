@@ -14,7 +14,7 @@ class ViewChooseDonation
     public function output()
     {
         $output  = ViewPagesHTMLHeader::output();
-        $output .= file_get_contents('classes/Views/Requests/chooseDonationButtons.html');
+        $output .= file_get_contents('classes/Views/Requests/Donation/chooseDonationButtons.html');
         $output .= file_get_contents('classes/Views/Pages/footer.html');
 
         // variables replacement

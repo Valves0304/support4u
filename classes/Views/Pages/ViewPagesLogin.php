@@ -28,8 +28,8 @@ class ViewPagesLogin
             $output = str_replace('{estilo_erro}', '', $output);
             $output = str_replace('{s4uErrorMesage}', '', $output);
         }
-        $output = str_replace('{s4uLogin}', Util::createLink("CtlUsers","login"), $output);
-        $output = str_replace('{s4uRegister}', Util::createLink("CtlUsers","userRegister"), $output);
+        $output = str_replace('{s4uLogin}', Util::createLink("CtlUsers", "login"), $output);
+        $output = str_replace('{s4uRegister}', Util::createLink("CtlUsers", "userRegister"), $output);
         $output = str_replace('{version}', getenv('VER'), $output);
         return $output;
     }

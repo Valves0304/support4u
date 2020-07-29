@@ -36,25 +36,12 @@ class CtlPages
 
     public function login($campoErro, $msgErro = null)
     {
-
-        // check cookie
-        if(isset($_COOKIE['boilerchannel'])) {
-
-            $ctl = new CtlUsuarios();
-            $ctl->login($_COOKIE['boilerchannel']); // aqui era a chamada que te confundiu, passando o login via parâmetro
-            $this->view = $ctl->view;
-
-        } else {
-
-            // aqui ele coloca a mensagem de erro e campo que ele recebeu,
-            // porque ele pode estar chamando esta ação pela segunda vez, em caso de erro,
-            // e quer exibir a mensagem na tela
-            $this->model->msgErro = $msgErro;
-            $this->model->campoErro = $campoErro;
-            $this->view = new ViewPagesLogin($this->model);
-        }
-
+        $this->model->msgErro = $msgErro;
+        $this->model->campoErro = $campoErro;
+        $this->view = new ViewPagesLogin($this->model);
     }
+
+
 
     public function semPermissao()
     {
@@ -68,5 +55,4 @@ class CtlPages
         $this->model->codErro = $codErro;
         $this->view = new ViewPagesErro($this->model);
     }
-
 }
